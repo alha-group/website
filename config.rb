@@ -13,7 +13,7 @@ activate :asset_hash
 activate :directory_indexes
 activate :pagination
 activate :inline_svg
-activate :dato, token: ENV.fetch('DATO_API_TOKEN'), live_reload: false
+activate :dato, token: ENV.fetch('DATO_API_TOKEN'), live_reload: true
 
 webpack_command =
   if build?
@@ -89,7 +89,7 @@ helpers do
   # Custom helper to theme
   def site_nav_menu
     [
-      # dato.about_page,
+      dato.about_page,
       # dato.contact_page
     ]
   end
