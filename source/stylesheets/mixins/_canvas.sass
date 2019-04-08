@@ -1,0 +1,36 @@
+@mixin canvas-layout($width, $gutter: $grid-gutter)
+  .canvas__aside
+    left: - $width - $gutter
+    width: $width
+
+  .canvas.is-shifted
+    .canvas__aside,
+    .canvas__main
+      transform: translateX($width + $gutter)
+
+@mixin canvas-base
+  background: $canvas-background
+  max-height: 100%
+  overflow-y: auto
+  position: absolute
+  transform: translateX(0px)
+  z-index: $canvas-zindex
+
+@mixin canvas-position($position: left, $size: $canvas-size, $fixed: false)
+  @if $position == left
+    left: -$size
+    top: 0
+    width: $size
+  @else if $position == right
+    right: -$size
+    top: 0
+    width: $size
+
+
+  // Generates an open state class that matches the width of the menu
+  @at-root
+    .is-open-#{$position}
+      @if $position == left
+        transform: translateX($size)
+      @else if $position == right
+        transform: translateX(-$size)

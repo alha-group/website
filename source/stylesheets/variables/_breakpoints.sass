@@ -17,7 +17,8 @@
 // 0px            480px          720px           1024px          1500px            ∞
 
 // define breakpoints
-$breakpoint-widths: ('palm': 0px, 'tab': 480px, 'lap': 720px, 'desk': 1024px, 'wall': 1500px)
+$breakpoint-widths: () !default
+$breakpoint-widths: map-merge(("palm": 0px, "tab": 480px, "lap": 720px, "desk": 1024px, "monitor": 1280px, "wall": 1440px, "full": 1920px), $breakpoint-widths)
 
 // derived variables
 $breakpoint-names: breakpoint-names($breakpoint-widths)

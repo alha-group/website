@@ -1,0 +1,37 @@
+.card
+  background-color: transparent
+  max-width: 100%
+  position: relative
+
+@each $color, $value in $all-colors
+  .card--#{$color}
+    +bg-variant($value)
+    color: color-invert($value)
+    @supports (--css: variables)
+      background-color: var(--color-#{$color})
+      color: var(--color-white)
+
+.card__image
+  display: block
+  position: relative
+
+.card__header
+  align-items: stretch
+  display: flex
+
+.card__header__title
+  +heading-font-family
+  +padding(0.5)
+  align-items: center
+  display: flex
+  flex-grow: 1
+
+.card__header__subtitle
+  display: block
+
+.card__content
+  +padding(2)
+
+.card__footer
+  align-items: stretch
+  display: flex

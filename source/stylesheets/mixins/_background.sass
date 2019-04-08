@@ -1,0 +1,7 @@
+// Contextual backgrounds
+
+@mixin bg-variant($color)
+  background-color: $color
+
+@mixin bg-gradient-variant($color)
+  background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x

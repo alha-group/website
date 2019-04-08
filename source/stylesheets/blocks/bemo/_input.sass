@@ -1,11 +1,11 @@
 .input
-  position: relative
-  display: inline-block
   cursor: pointer
+  display: inline-block
+  position: relative
 
   input
-    position: absolute
     opacity: 0
+    position: absolute
     z-index: -1
 
     &:focus ~ .input__label:before
@@ -18,31 +18,72 @@
       opacity: 0.5
 
 .input__label:before
-  user-select: none
-  margin-right: 0.5em
-  font-size: 1.5em
+  +font-size(regular)
+  +margin-right(0.5)
   color: $base-body-color
+  user-select: none
   vertical-align: middle
-  +icon-setup
 
 .input--radio
   @extend .input
+
+  & ~ .input--radio
+    +margin-left(2)
+
+  .input__label
+    +padding-left(2)
+
+  .input__label::before
+    +position(absolute, 1px null null 1px)
+    border: 1px solid $base-body-color
+    border-radius: 100%
+    content: ""
+    height: 16px
+    width: 16px
+
+  .input__label::after
+    +position(absolute, 4px null null 4px)
+    background: $base-body-color
+    border-radius: 100%
+    content: ""
+    height: 10px
+    opacity: 0
+    transform: scale(0)
+    transition: all 0.2s ease
+    width: 10px
+
+  input:checked + .input__label::after
+    opacity: 1
+    transform: scale(1)
 
 .input--checkbox
   @extend .input
 
-  .input__label:before
-    +icon-content(checkbox-off)
+  ~ .input--checkbox
+    +margin-left(2)
 
-  input:checked ~ .input__label:before
-    +icon-content(checkbox-on)
+  .input__label
+    +padding-left(2)
 
-.input--radio
-  @extend .input
+  .input__label::before
+    +position(absolute, 3px null null 0)
+    border: 1px solid $base-body-color
+    content: ""
+    display: inline-block
+    height: 16px
+    width: 16px
 
-  .input__label:before
-    +icon-content(radio-off)
+  .input__label::after
+    +position(absolute, 7px null null 4px)
+    border-bottom: 2px solid $base-body-color
+    border-left: 2px solid $base-body-color
+    content: ""
+    display: inline-block
+    height: 5px
+    opacity: 0
+    transform: rotate(-45deg)
+    transition: all 0.2s ease
+    width: 9px
 
-  input:checked ~ .input__label:before
-    +icon-content(radio-on)
-
+  input:checked + .input__label::after
+    opacity: 1

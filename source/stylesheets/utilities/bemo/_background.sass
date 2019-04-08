@@ -1,0 +1,18 @@
+.background--transparent
+  background-color: transparent
+
+@each $color, $value in $all-colors
+  .background--#{$color}
+    +bg-variant($value)
+    color: color-invert($value)
+    @supports (--css: variables)
+      background-color: var(--color-#{$color})
+      color: var(--color-white)
+
+@if $enable-color-gradients
+  @each $color, $value in $all-colors
+    .background--gradient-#{$color}
+      +bg-gradient-variant($value)
+      color: color-invert($value)
+      @supports (--css: variables)
+        color: var(--color-#{$color})

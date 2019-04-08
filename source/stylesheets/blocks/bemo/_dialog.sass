@@ -4,33 +4,30 @@
   &.is-active
     display: block
 
-.dialog:before
-  +position(fixed, 0 null null 0)
-  content: ""
-  width: 100%
-  height: 100%
-  z-index: 1001
-  background-color: rgba(black, 0.8)
+  &::before
+    +position(fixed, 0 null null 0)
+    background-color: rgba($black-color, 0.8)
+    content: ""
+    height: 100%
+    width: 100%
+    z-index: 1001
 
 .dialog__frame
   +center(fixed)
-  top: 50%
-  left: 50%
-  width: 90%
-  max-width: 540px
-  max-height: 90%
-  z-index: 1002
-  box-sizing: border-box
   -webkit-overflow-scrolling: touch
   background-color: white
+  box-sizing: border-box
+  left: 50%
+  max-height: 90%
+  max-width: 60rem
   overflow-y: auto
+  top: 50%
+  width: 90%
+  z-index: 1002
 
 .dialog__body
   +padding(2)
 
 .dialog__close
-  position: absolute
+  +position(absolute, 0 0 null null)
   +padding(2)
-  top: 0
-  right: 0
-

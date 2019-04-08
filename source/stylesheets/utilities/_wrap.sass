@@ -1,0 +1,21 @@
+.wrap
+  +wrap
+  max-width: $base-wrap-width
+
+@each $name, $width in $wrap-widths
+  .wrap--#{$name}
+    +wrap
+    max-width: $width
+
+@each $name in $breakpoint-names
+  .wrap--on-#{$name}
+    +at-breakpoint($name)
+      +wrap
+      max-width: $base-wrap-width
+
+  @each $wrap, $width in $wrap-widths
+    .wrap--#{$wrap}-on-#{$name}
+      +at-breakpoint($name)
+        +wrap
+        max-width: $width
+

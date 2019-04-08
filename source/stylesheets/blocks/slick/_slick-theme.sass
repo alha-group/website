@@ -48,16 +48,16 @@
   left: -30px
 
   &:before
-    border-bottom: 1px solid $border-color
-    border-left: 1px solid $border-color
+    border-bottom: 1px solid #cecece
+    border-left: 1px solid #cecece
     transform: rotate(45deg)
 
 .slick-next
   right: -30px
 
   &:before
-    border-top: 1px solid $border-color
-    border-right: 1px solid $border-color
+    border-top: 1px solid #cecece
+    border-right: 1px solid #cecece
     transform: rotate(45deg)
 
 /* Dots
@@ -140,7 +140,7 @@
   +vertical-padding(0.5)
   .slick-slider__item
     +padding(0.5)
-    transition: opacity .2s $material-ease
+    transition: opacity .2s cubic-bezier(.55,0,.1,1)
     cursor: pointer
     img
       border-radius: 5px

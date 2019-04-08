@@ -1,0 +1,10 @@
+@supports (--css: variables)
+  \:root
+    +root-var($all-colors, 'color')
+    +root-var($breakpoint-widths, 'breakpoint')
+    +root-var($transition-functions, 'transition')
+
+  [data-theme="default"]
+    +root-var($all-colors, 'color')
+    +root-var($breakpoint-widths, 'breakpoint')
+    +root-var($transition-functions, 'transition')

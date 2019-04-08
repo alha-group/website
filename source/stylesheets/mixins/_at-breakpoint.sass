@@ -14,3 +14,6 @@
   @else
     @warn "Breakpoint ‘#{$media-query}’ does not exist"
 
+@mixin at-custom-breakpoint($min-width, $max-width)
+  @media #{$custom-breakpoint-media-queries($min-width, $max-width)}
+    @content

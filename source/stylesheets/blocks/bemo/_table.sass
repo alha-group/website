@@ -1,56 +1,54 @@
+//
+// Basic Bemo table
+//
+
 .table
-  width: 100%
-  table-layout: fixed
-  background-color: white
+  background-color: $table-bg // Reset for nesting within parents with `background-color`.
+  border: $table-border-width solid $table-border-color
+  border-collapse: collapse
+  color: $table-color
+  margin-bottom: $table-gutter
+  width: 100%;
 
-  td, th
+  th, td
+    border-top: $table-border-width solid $table-border-color
+    padding: $table-cell-padding
+    vertical-align: top
+
+  thead th
+    border-bottom: (2 * $table-border-width) solid $table-border-color
     text-align: left
-    +padding(1)
+    vertical-align: bottom
 
-  th
-    +heading-font-family
-    font-variant: small-caps
-    text-transform: uppercase
-    border-bottom: 1px solid $border-color
+  tbody + tbody
+    border-top: (2 * $table-border-width) solid $table-border-color
 
-  tr:nth-child(2n)
-    background-color: $light-bg-color
+// Border versions
+//
+// Add or remove borders all around the table and between all the columns.
 
-+at-breakpoint(lte-lap)
-  .table
-    display: block
-    border-bottom-width: 0
+.table---bordered
+  @extend .table
+  border: $table-border-width solid $table-border-color
 
-    thead, tbody, th, td, tr
-      display: block
+  th, td
+    border: $table-border-width solid $table-border-color
 
-    thead
-      background-color: transparent
-      border-width: 0
+  thead
+    th, td
+      border-bottom-width: 2 * $table-border-width
 
-      tr
-        position: absolute
-        top: -9999px
-        left: -9999px
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
-    tr
-      display: block
-      border: 1px solid $border-color
-      +margin-bottom(1)
+.table--striped
+  @extend .table
+  tbody tr:nth-of-type(#{$table-striped-order})
+    background-color: $table-accent-bg
 
-    td
-      border-bottom: 1px solid $border-color
-      white-space: normal
-      text-align: left
-
-      &:last-child
-        border-bottom-width: 0
-
-      &:before
-        color: $light-body-color
-        +font-size(milli)
-        content: attr(data-title)
-        font-variant: small-caps
-        text-transform: uppercase
-        display: block
-
+.table--scollable
+  @extend .table
+  display: block
+  overflow-x: auto
+  white-space: nowrap

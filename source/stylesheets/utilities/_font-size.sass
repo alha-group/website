@@ -2,12 +2,11 @@
   $size: map-get($heading-font-sizes, $name)
 
   .#{$name}
-    +heading-font-family
-    +rem-rule(font-size, $size)
+    +font-size($name)
 
 @each $name in map-keys($smallprint-font-sizes)
   $size: map-get($smallprint-font-sizes, $name)
 
   .#{$name}
-    +rem-rule(font-size, $size)
+    +font-size($name)
 

@@ -2,22 +2,17 @@
   fieldset
     +padding(2)
     +margin-bottom(2)
-    border-color: $border-color
 
     &:last-child
       margin-bottom: 0
 
     legend
       +font-size(beta)
-      padding: 0 10px
       margin: 0 -10px
+      padding: 0 10px
 
   hr
     +vertical-margin(2)
-
-.form__label
-  display: block
-  +margin-bottom(1)
 
 .form__field
   +margin-bottom(2)
@@ -25,30 +20,39 @@
   &:last-child
     margin-bottom: 0
 
+.form__label
+  +margin-bottom(1)
+  display: block
+
+.form__input
+  +font-size(regular)
+  +horizontal-padding(1)
+  +vertical-padding(0.5)
+  border: 1px solid $gray-color
+  border-radius: 0.1rem
+  transition: border 0.2s cubic-bezier(.55,0,.1,1)
+  width: 100%
+
 .form__actions
   +margin-top(2)
 
 .form__field--invalid
   #{$all-text-inputs}, textarea
-    border: 1px solid $alert-color
+    border: 1px solid $red-color
 
 .form__error
-  color: $alert-color
-  +margin-top(1)
   +font-size(milli)
+  +margin-top(1)
+  color: $red-color
 
 .form__hint
-  color: $light-body-color
-  +margin-top(1)
   +font-size(milli)
-
-.form__input--large
-  +font-size(gamma)
+  +margin-top(1)
+  color: $base-body-color
 
 .form__block
   +margin-bottom(3)
   +padding-bottom(3)
-  border-bottom: 1px solid $border-color
 
 .form__field--with-prefix
   position: relative
@@ -56,10 +60,9 @@
   .form__field__prefix
     +center-vertically
     left: 0px
-    width: 2em
     text-align: right
+    width: 2em
     z-index: 2
 
   .form__field__input *
     padding-left: 2.5em
-

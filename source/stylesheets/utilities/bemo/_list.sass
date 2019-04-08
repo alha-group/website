@@ -1,0 +1,20 @@
+.list
+  display: flex
+  flex-direction: column
+  margin-bottom: 0
+  padding-left: 0
+
+.list--horizontal
+  @extend .list
+  flex-direction: row
+
+.list__item
+  +margin-bottom(-1px)
+  +padding(1)
+  background-color: $white-color
+  border: 0.05rem solid $gray-color
+  display: block
+  position: relative
+  .list--horizontal &
+    +margin-right(-1px)
+    margin-bottom: 0

@@ -1,10 +1,30 @@
-$base-body-color: #2c2e38
-$light-body-color: #636363
+// Color system
+//
+$enable-color-gradients: false
 
-$light-bg-color: #f9f9f9
+// Color variables
+$white-color:    #ffffff
+$gray-color:     #6c757d
+$black-color:    #000000
+$red-color:      #ae0e0e
 
-$border-color: #d7d7d7
-$alert-color: #de0017
-$notice-color: #079acc
-$primary-color: #7f30d9
+// Base map color
+$base-colors: () !default
+$base-colors: map-merge(("white": $white-color, "gray": $gray-color, "black": $black-color), $base-colors)
 
+// Insert the custom color schema inside the bemo-colors map
+$bemo-colors: () !default
+$bemo-colors: map-merge((), $bemo-colors)
+
+// derived
+$all-colors:    map-merge($base-colors, $bemo-colors)
+
+$base-body-color: $black-color
+$base-body-background: $white-color
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:    $black-color
+$yiq-text-light:   $white-color

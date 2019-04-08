@@ -1,25 +1,3 @@
-@function round-decimals($number)
-  @return round($number * 1000) / 1000
-
-@mixin width-setup($namespace: "")
-  .#{$namespace}fill
-    width: 100%
-
-  @each $total in $grid-cols
-    @for $size from 1 to $total
-      .#{$namespace}#{$size}-#{$total}
-        width: round-decimals($size / $total * 100%)
-
-@mixin shift-setup($rule, $namespace: "")
-  .#{$namespace}0
-    #{$rule}: 0
-
-  @each $total in $grid-cols
-    @for $size from 1 to $total
-      .#{$namespace}#{$size}-#{$total}
-        position: relative
-        #{$rule}: round-decimals($size / $total * 100%)
-
 .grid
   +grid
 
@@ -74,18 +52,17 @@
   > .grid__item
     padding-left: $grid-gutter * 2
 
-+width-setup("width-")
++grid-width-setup("width-")
 
 @each $name in $grid-breakpoints
   +at-breakpoint($name)
-    +width-setup("#{$name}-")
+    +grid-width-setup("#{$name}-")
 
 @if length($grid-breakpoints) > 0
-  +shift-setup(right, "pull-")
-  +shift-setup(left, "push-")
+  +grid-shift-setup(right, "pull-")
+  +grid-shift-setup(left, "push-")
 
   @each $name in $grid-breakpoints
     +at-breakpoint($name)
-      +shift-setup(left, "#{$name}-push-")
-      +shift-setup(right, "#{$name}-pull-")
-
+      +grid-shift-setup(left, "#{$name}-push-")
+      +grid-shift-setup(right, "#{$name}-pull-")

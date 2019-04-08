@@ -1,0 +1,20 @@
+.tab
+  +margin(1)
+  align-items: center
+  border-bottom: $tab-border-width solid $tab-border-color
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+
+.tab__item
+  margin-top: 0
+  &.is-active
+    color: $black-color
+
+.tab__content
+  display: block
+
+.tab__content__item
+  display: none
+  &.is-active
+    display: block
