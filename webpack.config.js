@@ -48,8 +48,7 @@ var svgoConfig = {
 };
 
 const extractSass = new ExtractTextPlugin({
-  filename: "stylesheets/[name].css",
-  disable: process.env.NODE_ENV === "development"
+  filename: "stylesheets/[name].css"
 });
 
 module.exports = {
