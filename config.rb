@@ -89,66 +89,77 @@ helpers do
   # Custom helper to theme
   def site_nav_menu
     [
-      dato.about_page,
+      dato.about_page
       # dato.contact_page
     ]
   end
 end
 
-# dato.tap do |dato|
-#   dato.articles.each do |article|
-#     proxy(
-#       '/articles/#{article.slug}.html',
-#       '/templates/article.html',
-#       locals: { article: article }
-#     )
-#   end
+dato.tap do |dato|
+  langs.each do |locale|
+    I18n.with_locale(locale) do
+      proxy "/#{locale}/index.html",
+        "/localizable/index.html",
+        locals: { page: dato.homepage },
+        locale: locale
 
-#   paginate(
-#     dato.articles.sort_by(&:published_at).reverse,
-#     '/articles',
-#     '/templates/articles.html'
-#   )
+      proxy "/#{locale}/#{dato.about_page.slug}/index.html",
+        "/templates/about_page.html",
+        locals: { page: dato.about_page },
+        locale: locale
 
-#   MULTILANG SAMPLES
-#
-#   langs.each do |locale|
-#     I18n.with_locale(locale) do
-#       proxy "/#{locale}/index.html",
-#         "/localizable/index.html",
-#         locals: { page: dato.homepage },
-#         locale: locale
-#
-#       proxy "/#{locale}/#{dato.about_page.slug}/index.html",
-#         "/templates/about_page.html",
-#         locals: { page: dato.about_page },
-#         locale: locale
-#
-#       dato.aritcles.each do |article|
-#         I18n.locale = locale
-#         proxy "/#{locale}/articles/#{article.slug}/index.html", "/templates/article_template.html", :locals => { article: article }, ignore: true, locale: locale
-#       end
-#     end
-#   end
+      proxy "/#{locale}/#{dato.awards_page.slug}/index.html",
+        "/templates/awards_page.html",
+        locals: { page: dato.awards_page },
+        locale: locale
 
-#   langs.each do |locale|
-#     I18n.with_locale(locale) do
-#       I18n.locale = locale
-#       paginate dato.articles.select{|a| a.published == true}.sort_by(&:date).reverse, "/#{I18n.locale}/articles", "/templates/articles.html", locals: { locale: I18n.locale }
-#     end
-#   end
-# end
+      proxy "/#{locale}/#{dato.certification_page.slug}/index.html",
+        "/templates/certification_page.html",
+        locals: { page: dato.certification_page },
+        locale: locale
 
-langs.each do |locale|
-  I18n.with_locale(locale) do
-    proxy "/#{locale}/index.html",
-      "/localizable/index.html",
-      locale: locale
+      proxy "/#{locale}/#{dato.collaboration_page.slug}/index.html",
+        "/templates/collaboration_page.html",
+        locals: { page: dato.collaboration_page },
+        locale: locale
 
-    proxy "/#{locale}/contact/index.html",
-      "templates/contact_page.html",
-      locals: { locale: I18n.locale },
-      locale: locale
+      proxy "/#{locale}/#{dato.ethical_code_page.slug}/index.html",
+        "/templates/ethical_code_page.html",
+        locals: { page: dato.ethical_code_page },
+        locale: locale
+
+      dato.advanced_solution_pages.each do |advanced_solution|
+        I18n.locale = locale
+        proxy "/#{locale}/cargo-solutions/#{advanced_solution.slug}/index.html",
+          "/templates/advanced_solution_page.html",
+          locals: { page: advanced_solution },
+          locale: locale
+      end
+
+      dato.service_pages.each do |service|
+        I18n.locale = locale
+        proxy "/#{locale}/services/#{service.slug}/index.html",
+          "/templates/service_page.html",
+          locals: { page: service },
+          locale: locale
+      end
+
+      proxy "/#{locale}/#{dato.collection_news_page.slug}/index.html",
+        "/templates/collection_news_page.html",
+        locals: {
+          page: dato.collection_news_page,
+          news_pages: dato.news_pages
+        },
+        locale: locale
+
+      dato.news_pages.each do |news|
+        I18n.locale = locale
+        proxy "/#{locale}/#{dato.collection_news_page.slug}/#{news.slug}/index.html",
+          "/templates/news_page.html",
+          locals: { page: news },
+          locale: locale
+      end
+    end
   end
 end
 
