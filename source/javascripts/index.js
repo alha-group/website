@@ -6,11 +6,6 @@ import slick from 'slick-carousel';
 import anime from 'animejs/lib/anime';
 
 $(document).ready(function() {
-  // CANVAS ASIDE LEFT
-  $(".js-nav-toggler--left").click(function(e) {
-    e.preventDefault;
-    $(".canvas").addClass("is-shifted shift-left");
-  });
   // CANVAS ASIDE RIGHT
   $(".js-nav-toggler--right").click(function(e) {
     e.preventDefault;
@@ -32,10 +27,10 @@ $(document).ready(function() {
     adaptiveHeight: true
   })
 
-  anime({
-    targets: '.site-nav__logo',
-    translateX: 0,
-    rotate: '1turn',
-    duration: 1200
-  });
+//  anime({
+//    targets: '.site-nav__logo',
+//    translateX: 0,
+//    rotate: '1turn',
+//    duration: 1200
+//  });
 });

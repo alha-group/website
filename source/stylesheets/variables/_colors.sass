@@ -3,10 +3,15 @@
 $enable-color-gradients: false
 
 // Color variables
-$white-color:    #ffffff
-$gray-color:     #6c757d
-$black-color:    #000000
+$white-color:    #FFFFFF
+$gray-color:     #F0F0F0
+$black-color:    #464646
 $red-color:      #ae0e0e
+
+$blue-color:     #00509C
+$blue-l:         #007AD1
+$blue-xl:        #F1F6FB
+$orange-color:   #FF9900
 
 // Base map color
 $base-colors: () !default
@@ -14,7 +19,7 @@ $base-colors: map-merge(("white": $white-color, "gray": $gray-color, "black": $b
 
 // Insert the custom color schema inside the bemo-colors map
 $bemo-colors: () !default
-$bemo-colors: map-merge((), $bemo-colors)
+$bemo-colors: map-merge(("dark-blue": $blue-color, "blue": $blue-l, "sky": $blue-xl, "orange": $orange-color), $bemo-colors)
 
 // derived
 $all-colors:    map-merge($base-colors, $bemo-colors)
