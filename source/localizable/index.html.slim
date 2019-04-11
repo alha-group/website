@@ -1,11 +1,72 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-section
+header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)})"
+  .hero__body
+    .hero__body__inner
+      h1.hero__heading
+        = page.page_title
+  .hero__wrap
+    .wrap
+      .hero__social
+        - dato.contact.social_block.each do |social|
+          = link_to social.social_type,
+            social.url,
+            class: "hero__social__link"
+      .hero__label
+        .hero__label__text--scroll
+          = t("home.scroll-down")
+
+section.services
   .wrap
-    h1.space--both-1= lorem.sentence
-    .formatted-content
-      = lorem.paragraphs(5)
+    .grid--center
+      .grid__item.desk-7-12
+        h2.services__title= page.page_subtitle
+        .services__body
+          .formatted-content
+            = page.abstract
+    .grid
+      - dato.service_pages.each do |service|
+        = link_to "/#{I18n.locale}/services/#{service.slug}",
+          class: "grid__item desk-3-12" do
+          .service__block
+            .service__block__image
+              = inline_svg(service.icon.url, size: "130px*130px")
+            .service__block__title= service.page_title
+
+section.advanced_solutions
+  .wrap
+    .grid--center
+      .grid__item.desk-7-12
+        h2.advanced_solutions__title= page.cargo_title
+        .advanced_solutions__body
+          .formatted-content
+            = page.cargo_abstract
+  .flex--nospace
+    - dato.advanced_solution_pages.each do |solution|
+      = link_to "/#{I18n.locale}/cargo-solutions/#{solution.slug}",
+        class: "flex__item--nospace flex-desk-6-12" do
+        .advanced_solution__block
+          .advanced_solution__image
+            = image_tag(solution.cover.url(fm: :jpg, fit: :crop, h: 535, w: 1920))
+          .advanced_solution__content
+            .advanced_solution__title= solution.page_title
+            .advanced_solution__abstract= solution.presentation
+          .advanced_solution__plus
+            = i("plus")
+
+section.numerics
+  .numerics__content
+    .wrap
+      .grid--center
+        .grid__item.desk-7-12.monitor-5-12
+          .numerics__title= page.numeric_title
+      .grid
+        - page.numeric_block.each do |numeric|
+          .grid__item.desk-3-12
+            .numeric__block
+              .numeric__block__value= numeric.number
+              .numeric__block__text= numeric.title
 
 section.space--both-2
   .wrap
