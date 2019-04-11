@@ -1,2 +1,4 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+= partial "partials/hero", locals: { hero: page, hero_alpha: 95, hero_class: "header", hero_align_bg_col: "" }

@@ -1,2 +1,8 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+= partial "partials/hero", locals: { hero: page, hero_alpha: 40, hero_class: "header--large", hero_align_bg_col: "--column-gray" }
+
+- page.modular_block.each do |modular|
+  = partial "partials/modular-contents/#{modular.item_type.api_key}",
+    locals: {content: modular, variant: ""}

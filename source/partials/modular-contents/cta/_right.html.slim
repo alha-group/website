@@ -1,0 +1,21 @@
+section.cta-block
+  .wrap
+    .flex--nospace
+      .flex__item--nospace.flex-desk-6-12
+        .cta-block__data data-aos="fade-left"
+          - if !content.title.blank?
+            div class="cta-block__title"
+              h2= content.title
+          div class="cta-block__content"
+            - if !content.text.blank?
+              .formatted-content
+                = content.text
+            - if content.has_button
+              .cta-block__actions
+                = link_to content.label_link,
+                  content.url_link,
+                  class: "button--cta",
+                  target: "_blank"
+      .flex__item--nospace.flex-desk-6-12
+        .cta-block__cover data-aos="fade-right"
+          = image_tag(content.attachment.url(fit: :crop, h: 570, w: 1200, crop: "edges", format: :pjpeg))
