@@ -41,6 +41,9 @@ configure :development do
   activate :livereload
 end
 
+require "lib/menu_helpers"
+helpers MenuHelpers
+
 helpers do
   def active?(url)
     (url === "/#{I18n.locale}/" && current_page.url === "/#{I18n.locale}/") ||
@@ -89,7 +92,12 @@ helpers do
   # Custom helper to theme
   def site_nav_menu
     [
-      dato.about_page
+      dato.about_page,
+      MenuHelpers::CustomMenu.new(I18n.t('nav.services'), "#", dato.service_pages),
+      MenuHelpers::CustomMenu.new(I18n.t('nav.advanced_solutions'), "#", dato.advanced_solution_pages),
+      MenuHelpers::CustomMenu.new(I18n.t('nav.network'), "#", []),
+      dato.careers_page,
+      dato.collection_news_page
       # dato.contact_page
     ]
   end
@@ -106,6 +114,11 @@ dato.tap do |dato|
       proxy "/#{locale}/#{dato.about_page.slug}/index.html",
         "/templates/about_page.html",
         locals: { page: dato.about_page },
+        locale: locale
+
+      proxy "/#{locale}/#{dato.careers_page.slug}/index.html",
+        "/templates/careers_page.html",
+        locals: { page: dato.careers_page },
         locale: locale
 
       proxy "/#{locale}/#{dato.awards_page.slug}/index.html",
