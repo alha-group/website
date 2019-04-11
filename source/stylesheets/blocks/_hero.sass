@@ -5,6 +5,12 @@
   background-size: cover
   position: relative
 
+.hero--large
+  @extend .hero
+  height: 770px
+  .hero__body
+    height: 770px
+
 @each $color, $value in $all-colors
   .hero--#{$color}
     @extend .hero
@@ -24,10 +30,10 @@
 .hero__heading
   +heading-font-family
   +font-size(alpha)
-  line-height: 1.2
   margin-left: auto
   margin-right: auto
   max-width: 80rem
+  color: $white-color
 
 .hero__text
   +heading-font-family
@@ -40,5 +46,3 @@
   +margin-top(2)
 
 +at-breakpoint(desk)
-  .hero__heading
-    +font-size(40px)

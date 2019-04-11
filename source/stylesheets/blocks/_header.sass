@@ -1,0 +1,95 @@
+.header
+  position: relative
+
+.header--large
+  @extend .header
+
+.header--large--careers
+  @extend .header--large
+
+.header__hero
+  background-color: transparent
+  background-position: bottom center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  display: table
+  width: 100%
+  .header &
+    height: 360px
+  .header--large &
+    height: 770px
+
+.header__hero__body
+  display: table-cell
+  vertical-align: bottom
+  +padding-bottom(3.5)
+
+.header__hero__body__inner
+  +margin-bottom(5)
+  +wrap
+  max-width: $base-wrap-width
+  color: $white-color
+
+.header__hero__heading
+  +heading-font-family
+  +font-size(alpha)
+  position: relative
+
+.header__hero__heading__sub
+  width: 30%
+  +font-size(delta)
+
+.header__hero__label
+  content: ''
+  +position(absolute, null null -170% 3%)
+  width: 100%
+  height: 100px
+  border-left: 2px solid $orange-color
+  .header--large--careers &
+    transform: translateY(50%)
+
+.header__hero__label__text
+  +font-size(delta)
+  color: $black-color
+  +position(absolute, null null 0 0.8%)
+  transform: rotate(-90deg) translateX(-110%)
+  transform-origin: bottom left
+
+.header__text
+  +clearfix
+
+.header__text--center
+  text-align: center
+
+.header__text--center-gray
+  text-align: center
+  background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
+
+.header__text--column-gray
+  background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
+
+.header__text__inner
+  +padding-left(7)
+  +vertical-padding(7)
+  .header__text--center-gray &
+    background: $blue-xl
+  .header__text--column-gray &
+    background: $blue-xl
+    -webkit-columns: 100px 2
+    -moz-columns: 100px 2
+    columns: 100px 2
+  .header__text--column &
+    -webkit-columns: 100px 2
+    -moz-columns: 100px 2
+    columns: 100px 2
+
+.header__text__title
+  +heading-font-family
+  +font-size(beta)
+  color: $blue-color
+  +margin-bottom(3)
+  width: 70%
+
+.header__text__body
+  width: 70%

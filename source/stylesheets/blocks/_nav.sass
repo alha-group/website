@@ -1,7 +1,8 @@
 .site-nav
-  background: $base-body-color
-  +vertical-padding(2)
-  position: relative
+  background: transparent
+  position: absolute
+  width: 100%
+  z-index: 5
 
 .site-nav__inner
   display: flex
@@ -16,15 +17,19 @@
 
 .site-nav__logo
   display: block
+  height: 61px
+  svg
+    height: 100%
+    display: block
 
 .site-nav__right
-  flex: 1 0 60%
-  max-width: 60%
+  flex: 1 0 70%
+  max-width: 70%
   width: 100%
   text-align: right
 
 .site-nav__topbar
-  display: block
+  display: inline-block
 
 .site-nav__topbar__locale-switcher
   display: inline-block
@@ -49,12 +54,34 @@
 
 .site-nav__menu__link
   color: #FFFFFF
-
+  position: relative
+  &::before
+    content: ''
+    background: $orange-color
+    height: 1px
+    width: 0
+    +position(absolute, null null -10px 0)
+  &:hover
+    color: $white-color
+    &::before
+      width: 100%
   &.is-active
+    &::before
+      width: 100%
+
+.header-plus
+  background: $blue-color
+  color: $white-color
+  +horizontal-padding(4)
+  +vertical-padding(2.8)
+  display: inline-block
+  svg
+    height: 24px
+    width: 120px
 
 +at-breakpoint(desk)
   .site-nav__menu-toggler
     display: none
 
   .site-nav__menu
-    display: block
+    display: inline-block

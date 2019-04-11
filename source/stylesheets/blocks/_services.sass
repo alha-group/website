@@ -1,0 +1,45 @@
+.services
+  position: relative
+  +vertical-padding(5)
+  text-align: center
+  &::after
+    content: ''
+    background: $blue-xl
+    height: 40%
+    width: 100%
+    +position(absolute, null 0 0 null)
+    z-index: -1
+
+.services__title
+  text-align: center
+  color: $blue-color
+  +heading-font-family
+  +font-size(beta)
+  position: relative
+  +margin-bottom(4)
+  &::after
+    content: ''
+    background: $orange-color
+    +position(absolute, null null -20px 50%)
+    transform: translateX(-50%)
+    width: 220px
+    height: 3px
+
+.services__body
+  text-align: center
+  +margin-bottom(5)
+
+.service__block
+  background: $white-color
+  +margin(1)
+  +padding(1)
+  text-align: center
+
+.service__block__image
+  +padding(2)
+
+.service__block__title
+  color: $blue-color
+  +heading-font-family
+  +font-size(gamma)
+  +margin-bottom(2)

@@ -12,6 +12,14 @@
   @extend .flex
   flex-direction: column-reverse
 
+.flex--nospace
+  @extend .flex
+  margin: 0
+
+.flex__item--nospace
+  @extend .flex__item
+  padding: 0
+
 @each $content, $value in $flex-contents
   .justify--#{$content}
     justify-content: $value
