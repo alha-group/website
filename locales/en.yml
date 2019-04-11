@@ -19,6 +19,9 @@ en:
     menu: "Menu"
     home: "HOME"
     menu_close: "Close"
+    services: "Services"
+    advanced_solutions: "Advanced Cargo Solutions"
+    network: "Network"
 
   form:
     label:
