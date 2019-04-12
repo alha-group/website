@@ -36,3 +36,19 @@
 
 .flag__body
   width: 75%
+
+// Custom flag certifications
+.flag--certification
+  @extend .flag
+  +padding(7)
+  background: $white-color
+  border-bottom: 2px solid $blue-xl
+
+.flag__image--certification
+  @extend .flag__image
+  vertical-align: top
+
+.flag__body--certification
+  @extend .flag__body
+  vertical-align: top
+

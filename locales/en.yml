@@ -23,6 +23,9 @@ en:
     advanced_solutions: "Advanced Cargo Solutions"
     network: "Network"
 
+  certification:
+    link: "Go to site"
+
   form:
     label:
       first_name: "Name"
