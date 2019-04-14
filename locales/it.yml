@@ -26,6 +26,11 @@ it:
   certification:
     link: "Vai al sito"
 
+  footer:
+    collaborators: "Collaboratori"
+    newsletter: "Newsletter"
+    contacts: "Contatti"
+
   form:
     label:
       first_name: "Nome"

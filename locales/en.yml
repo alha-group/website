@@ -26,6 +26,11 @@ en:
   certification:
     link: "Go to site"
 
+  footer:
+    collaborators: "Collaborators"
+    newsletter: "Newsletter"
+    contacts: "Contacts"
+
   form:
     label:
       first_name: "Name"
