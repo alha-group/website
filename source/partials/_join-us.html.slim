@@ -1,0 +1,13 @@
+section.join-us
+  .wrap
+    .grid--center
+      .grid__item.desk-7-12
+        .join-us__inner
+          .join-us__inner__title= t("join-us.title")
+          .join-us__inner__abstract
+            .formatted-content
+              = t("join-us.abstract")
+          .join-us__inner__action
+            = link_to "#",
+              class: "join-us__inner__link" do
+              = t("join-us.link")

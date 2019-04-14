@@ -2,3 +2,17 @@
   == dato_meta_tags(page)
 
 = partial "partials/hero", locals: { hero: page, hero_alpha: 95, hero_class: "header", hero_align_bg_col: "" }
+
+section.news
+  .wrap
+    .grid
+      - news_pages.each do |news|
+        = link_to "/#{I18n.locale}/#{page.slug}/#{news.slug}",
+          class: "grid__item desk-4-12" do
+          .news-block
+            .news-block__image
+              = image_tag(news.cover.url(fm: :jpg, fit: :crop, w: 800, h: 450))
+            .new-block__content
+              .news-block__content__date= news.published_date.strftime("%d %b %Y")
+              .news-block__content__title
+                = news.title

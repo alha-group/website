@@ -2,3 +2,42 @@
   == dato_meta_tags(page)
 
 = partial "partials/hero", locals: { hero: page, hero_alpha: 40, hero_class: "header--large", hero_align_bg_col: "--column" }
+
+section.milestones
+  .wrap
+    .milestone__title= t("about.milestones")
+  .milestone-wrap
+    .milestone-wrap__arrows
+      .milestone-wrap__arrows__prev
+      .milestone-warp__arrows__next
+    .milestone-wrap__line
+      - milestones.each do |milestone|
+        .milestone-wrap__line__date
+          =link_to "##{milestone.id}",
+            class: "milestone-wrap__line__date__link"
+    .milestone-wrap__event
+      - milestones.each do |milestone|
+        .milestone-wrap__event__inner
+          .milestone-wrap__event__inner__title= milestone.title
+          .milestone-wrap__event__inner__image
+            = image_tag(milestone.attachment.url(fm: :jpg, fit: :crop, h: 350, w: 650))
+
+section.teams
+  .wrap
+    .grid--center
+      .grid__item.desk-7-12
+        .team__title= page.team_title
+        .team__abstract
+          .formatted-content
+            = page.team_abstract
+    .grid
+      - teams.each do |team|
+        .grid__item.desk-3-12
+          .team__block
+            .team__image
+              = image_tag(team.avatar.url(fm: :jpg, fit: :crop, h: 250, w: 250))
+            .team__inner
+              .team__inner__name= team.full_name
+              .team__inner__role= team.role
+
+= partial "partials/join-us"

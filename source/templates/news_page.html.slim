@@ -1,2 +1,25 @@
 - content_for(:head)
   == dato_meta_tags(page)
+
+header class="header--medium"
+  .header__news style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 85)})"
+    .wrap.padding--top-11
+      .grid--center
+        .grid__item.desk-7-12
+          .header__news__date
+            = page.published_date.strftime("%d %b %Y")
+          h1.header__news__heading
+            = page.title
+  .header__cover
+    .wrap
+      .grid--center
+        .grid__item.width-10-12
+          = image_tag(page.cover.url(fm: :jpg, fit: :crop, w: 1440, h: 770))
+
+section.page-body
+  .wrap
+    .grid--center
+      .grid__item.desk-8-12
+        .margin--bottom-5
+          .formatted-content
+            = page.body
