@@ -1,6 +1,9 @@
 .header
   position: relative
 
+.header--medium
+  @extend .header
+
 .header--large
   @extend .header
 
@@ -93,3 +96,29 @@
 
 .header__text__body
   width: 70%
+
+.header__news
+  background-color: transparent
+  background-position: bottom center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  display: table
+  width: 100%
+  color: $white-color
+  .header--medium &
+    height: 530px
+
+.header__news__date
+  +padding-top(5)
+  text-align: center
+  +margin-bottom(2)
+
+.header__news__heading
+  text-align: center
+  +heading-font-family
+  +font-size(beta)
+
+.header__cover
+  position: relative
+  +space-rule("top", -10)

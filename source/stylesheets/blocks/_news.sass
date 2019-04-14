@@ -1,0 +1,23 @@
+.news
+  background: $blue-xl
+  +vertical-padding(4)
+
+.news-block
+  +margin-bottom(2)
+
+.news-block__image
+  +margin-bottom(2)
+
+.new-block__content
+  max-height: 170px
+
+.news-block__content__date
+  text-transform: uppercase
+  +margin-bottom(1)
+
+.news-block__content__title
+  color: $blue-color
+  +font-size(delta)
+  +heading-font-family
+  .news-block:hover &
+    color: $orange-color

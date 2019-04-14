@@ -1,16 +1,20 @@
 .site-footer
-  background: $base-body-color
-  +vertical-padding(2)
   position: relative
 
+.site-footer__data
+  background: $blue-color
+  +vertical-padding(5)
+
+.footer-block
+
+.footer-block__title
+  color: $white-color
+  +heading-font-family
+
 .site-footer__inner
-  display: flex
-  align-content: center
-  justify-content: space-between
-  align-items: center
+  +vertical-padding(2)
 
 .site-footer__copy
   +font-size(milli)
-  color: #FFFFFF
   a
-    color: #FFFFFF
+    color: $black-color
