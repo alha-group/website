@@ -8,14 +8,17 @@ header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: 
         = page.page_title
   .hero__wrap
     .wrap
-      .hero__social
-        - dato.contact.social_block.each do |social|
-          = link_to social.social_type,
-            social.url,
-            class: "hero__social__link"
-      .hero__label
-        .hero__label__text--scroll
-          = t("home.scroll-down")
+      .grid
+        .grid__item.desk-2-12
+          .hero__label
+            .hero__label__text
+              = t("home.scroll-down")
+        .grid__item.desk-10-12
+          .hero__social
+            - dato.contact.social_block.each do |social|
+              = link_to social.social_type,
+                social.url,
+                class: "hero__social__link"
 
 section.services
   .wrap
