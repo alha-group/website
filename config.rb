@@ -113,7 +113,11 @@ dato.tap do |dato|
 
       proxy "/#{locale}/#{dato.about_page.slug}/index.html",
         "/templates/about_page.html",
-        locals: { page: dato.about_page },
+        locals: {
+          page: dato.about_page,
+          teams: dato.teams,
+          milestones: dato.timelines
+        },
         locale: locale
 
       proxy "/#{locale}/#{dato.careers_page.slug}/index.html",
