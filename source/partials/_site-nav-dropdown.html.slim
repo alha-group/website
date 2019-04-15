@@ -1,0 +1,11 @@
+- block_class ||= nil
+
+div class=block_class
+  .wrap
+    div class="#{block_class}__inner"
+      ul class="#{block_class}__inner__menu"
+        - items.each do |page|
+          li class="#{block_class}__menu__item"
+            = active_link_to page.menu_label,
+              "/#{I18n.locale}/#{page.slug}",
+              class: "#{block_class}__menu__link"

@@ -95,10 +95,9 @@ helpers do
       dato.about_page,
       MenuHelpers::CustomMenu.new(I18n.t('nav.services'), "#", dato.service_pages),
       MenuHelpers::CustomMenu.new(I18n.t('nav.advanced_solutions'), "#", dato.advanced_solution_pages),
-      MenuHelpers::CustomMenu.new(I18n.t('nav.network'), "#", []),
+      MenuHelpers::CustomMenu.new(I18n.t('nav.network'), dato.networks_page.slug, []),
       dato.careers_page,
       dato.collection_news_page
-      # dato.contact_page
     ]
   end
 end
@@ -158,6 +157,30 @@ dato.tap do |dato|
         proxy "/#{locale}/services/#{service.slug}/index.html",
           "/templates/service_page.html",
           locals: { page: service },
+          locale: locale
+      end
+
+      proxy "/#{locale}/#{dato.networks_page.slug}/index.html",
+        "/templates/networks_page.html",
+        locals: {
+          page: dato.networks_page,
+          network_terminal_pages: dato.network_terminal_pages,
+          network_airport_pages: dato.network_airport_pages
+        },
+        locale: locale
+
+      dato.network_terminal_pages.each do |terminal|
+        I18n.locale = locale
+        proxy "/#{locale}/#{dato.networks_page.slug}/#{terminal.slug}/index.html",
+          "/templates/terminal_page.html",
+          locals: { page: terminal },
+          locale: locale
+      end
+      dato.network_airport_pages.each do |airport|
+        I18n.locale = locale
+        proxy "/#{locale}/#{dato.networks_page.slug}/#{airport.slug}/index.html",
+          "/templates/airport_page.html",
+          locals: { page: airport },
           locale: locale
       end
 

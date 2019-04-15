@@ -1,0 +1,62 @@
+.milestones
+  +bg-variant($blue-xl)
+  +vertical-padding(5)
+
+.milestones__title
+  +heading-font-family
+  +font-size(beta)
+  +margin-bottom(4)
+  color: $blue-color
+  text-align: center
+
+.milestone-carousel
+  position: relative
+  width: 100%
+
+.milestone-wrap__arrows
+  position: absolute
+
+.milestone-wrap__arrows__prev
+.milestone-wrap__arrows__next
+
+.milestone-carousel__line
+  +margin-bottom(2)
+  align-items: center
+  height: 100%
+  position: relative
+  display: flex
+  &::before
+    +position(absolute, 0 null 0 null)
+    +bg-variant($blue-l)
+    content: ''
+    height: 1px
+    width: 100%
+
+.milestone-carousel__line__date
+  flex: 1 0 0
+  text-align: center
+  position: relative
+  z-index: 1
+
+.milestone-carousel__line__date__link
+  +padding-top(3)
+  +font-size(delta)
+  color: $blue-l
+  display: inline-block
+  &::before
+    +position(absolute, -24px null null 50%)
+    content: ''
+    height: 20px
+    width: 20px
+
+.milestone-carousel__content
+  +horizontal-padding(2)
+  text-align: center
+
+.milestone-carousel__content__title
+  color: $blue-color
+  +font-size(delta)
+  +horizontal-padding(4)
+
+.milestone-carousel__content__image
+  +margin-top(3)

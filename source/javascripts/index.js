@@ -25,7 +25,50 @@ $(document).ready(function() {
     infinite: true,
     autoplay: false,
     adaptiveHeight: true
-  })
+  });
+
+  $('.milestone-carousel').slick({
+    mobileFirst: true,
+    infinite: true,
+    arrows: true,
+    dots: false,
+    autoplay: false,
+    speed: 1100,
+    centerMode: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    rows: 0,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      }
+    ]
+  });
 
 //  anime({
 //    targets: '.site-nav__logo',

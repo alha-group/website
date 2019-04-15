@@ -23,6 +23,12 @@ en:
     advanced_solutions: "Advanced Cargo Solutions"
     network: "Network"
 
+  home:
+    scroll-down: "Scroll Down"
+
+  about:
+    milestones: "Milestone"
+
   certification:
     link: "Go to site"
 

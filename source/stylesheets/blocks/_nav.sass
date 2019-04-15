@@ -31,14 +31,38 @@
 .site-nav__topbar
   display: inline-block
 
-.site-nav__topbar__locale-switcher
+.site-nav__topbar__locale
   display: inline-block
-  +horizontal-padding(1)
+  +horizontal-padding(2)
+  background: $blue-l
+  +vertical-padding(2.8)
+  position: relative
 
-.site-nav__topbar__locale-switcher__link
+.site-nav__topbar__locale__switcher
+  color: $white-color
+  +heading-font-family
+  text-transform: uppercase
+
+.site-nav__topbar__locale__dropdown
+  display: none
+  +position(absolute, null null -100% 0)
+  background: $blue-l
+  width: 100%
+  text-align: center
+  .site-nav__topbar__locale:hover &
+    display: block
+
+.site-nav__topbar__locale__link
+  display: block
   color: #FFFFFF
-
+  text-transform: uppercase
+  +vertical-padding(1)
   &.is-current
+    background: $blue-color
+    color: $white-color
+  &:hover
+    background: $blue-color
+    color: $white-color
 
 .site-nav__menu-toggler
   display: block
@@ -51,6 +75,7 @@
 .site-nav__menu__item
   display: inline-block
   +horizontal-padding(1)
+  padding-bottom: 34px
 
 .site-nav__menu__link
   color: #FFFFFF
@@ -62,9 +87,7 @@
     width: 0
     +position(absolute, null null -10px 0)
   &:hover
-    color: $white-color
-    &::before
-      width: 100%
+    color: $orange-color
   &.is-active
     &::before
       width: 100%
@@ -73,11 +96,42 @@
   background: $blue-color
   color: $white-color
   +horizontal-padding(4)
-  +vertical-padding(2.8)
+  +vertical-padding(2.7)
   display: inline-block
   svg
     height: 24px
     width: 120px
+
+// Site dropdown
+.site-nav__menu__item__dropdown
+  display: none
+  +position(absolute, 91px 0 null 0)
+  width: 100%
+  background: $blue-l
+  +vertical-padding(2)
+  text-align: left
+  .site-nav__menu__item:hover &
+    display: block
+
+.site-nav__menu__item__dropdown__inner
+  display: flex
+  align-content: center
+  justify-content: flex-end
+  align-items: center
+
+.site-nav__menu__item__dropdown__inner__menu
+  flex: 1 0 70%
+  max-width: 70%
+  width: 100%
+
+.site-nav__menu__item__dropdown__menu__item
+
+.site-nav__menu__item__dropdown__menu__link
+  color: $white-color
+  display: block
+  +vertical-padding(0.5)
+  &:hover
+    color: $orange-color
 
 +at-breakpoint(desk)
   .site-nav__menu-toggler
@@ -85,3 +139,4 @@
 
   .site-nav__menu
     display: inline-block
+    +padding-right(2)

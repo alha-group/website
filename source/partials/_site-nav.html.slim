@@ -10,17 +10,20 @@ nav.site-nav
       .site-nav__right
         ul.site-nav__menu
           - site_nav_menu.each do |page|
-            li.site-nav__menu__item
+            li.site-nav__menu__item class="#{(!page.children.blank?) ? "has-triangle" : ""}"
               = active_link_to page.menu_label,
                 "/#{I18n.locale}/#{page.slug}",
                 class: "site-nav__menu__link"
+              - if !page.children.blank?
+                = partial "partials/site-nav-dropdown",
+                  locals: {block_class: "site-nav__menu__item__dropdown", items: page.children}
 
         .site-nav__topbar
           = link_to "#",
             class: "header-plus" do
             = i("cargoplus")
           = partial "partials/locale-switcher",
-            locals: {block_class: "site-nav__topbar__locale-switcher"}
+            locals: {block_class: "site-nav__topbar__locale"}
       = link_to "#",
         class: "site-nav__menu-toggler js-nav-toggler--right" do
         i.icon--hamburger
