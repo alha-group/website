@@ -1,0 +1,53 @@
+.networks
+  +vertical-padding(4)
+
+.networks__title
+  +heading-font-family
+  color: $orange-color
+  +font-size(beta)
+  +padding-bottom(2)
+  +margin-bottom(4)
+  border-bottom: 1px solid $blue-xl
+
+.network__block
+  +base-transition("ease-in-out", "base")
+  position: relative
+  display: block
+
+.network__block__inner__image
+  position: relative
+  &::before
+    content: ''
+    +position(absolute, 0 0 0 0)
+    width: 100%
+    height: 100%
+    background: $blue-color
+    opacity: 0.8
+    +base-transition("ease-in-out", "base")
+
+.network__block__inner__content
+  +position(absolute, 0 null null 0)
+  width: 100%
+  text-align: left
+  +padding(4)
+
+.network__block__inner__name
+  color: $white-color
+  +heading-font-family
+  +font-size(gamma)
+  +margin-bottom(6)
+  height: 70px
+
+.network__block__inner__address
+  +font-size(smallprint)
+  color: $white-color
+
+.network__block__inner__plus
+  +base-transition("ease-in-out", "base")
+  +position(absolute, null 0 0 null)
+  background: $blue-l
+  +vertical-padding(1.4)
+  +horizontal-padding(1.7)
+  color: $white-color
+  .network__block:hover &
+    background: $orange-color

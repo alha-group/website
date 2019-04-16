@@ -49,6 +49,11 @@ en:
     phone: "0039 02 74866701"
     email: "andrea.piai@alhagroup.com"
 
+  network:
+    terminal: "Cargo Terminals"
+    in_airport: "In Airport"
+    off_airport: "Off Airport"
+
   footer:
     collaborators: "Collaborators"
     newsletter: "Newsletter"

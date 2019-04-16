@@ -119,12 +119,23 @@ helpers do
   def networks_points
     (dato.network_terminal_pages + dato.network_airport_pages).map do |np|
       {
+        id: np.id,
         name: np.page_title,
         address: np.address,
         lat: np.location.latitude,
         long: np.location.longitude
       }
     end.to_json
+  end
+
+  def networks_point(page)
+    {
+      id: page.id,
+      name: page.page_title,
+      address: page.address,
+      lat: page.location.latitude,
+      long: page.location.longitude
+    }
   end
 end
 

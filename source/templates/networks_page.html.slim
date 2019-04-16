@@ -22,30 +22,51 @@ header class="header--map"
         .grid__item.width-11-12
           .header__text__inner
 
-section.newtworks
-  .wrap.space--both-2
-    .newtworks__title= t("network.terminal")
+section.networks
+  .wrap.margin--both-3
+    .networks__title= t("network.terminal")
     .grid
       - network_terminal_pages.each do |terminal|
-        .grid__item.deks-3-12
+        .grid__item.desk-3-12
           = link_to "#{I18n.locale}/terminal/#{terminal.slug}",
-            class: "newtwork__block" do
-            .newtwork__block__inner
+            class: "network__block",
+            id: "terminal.id" do
+            .network__block__inner__image
+              = image_tag(terminal.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
+            .network__block__inner__content
+              .network__block__inner__name= terminal.page_title
+              .network__block__inner__address= terminal.address
+            .network__block__inner__plus
+              = i("plus")
 
-  .wrap.space--both-2
-    .newtworks__title= t("network.in_airport")
+  .wrap.margin--both-3
+    .networks__title= t("network.in_airport")
     .grid
-      - network_airport_pages.select { |nap| nap.section == "in" }.each do |terminal|
-        .grid__item.deks-3-12
-          = link_to "#{I18n.locale}/terminal/#{terminal.slug}",
-            class: "newtwork__block" do
-            .newtwork__block__inner
+      - network_airport_pages.select { |nap| nap.section == "in" }.each do |airport|
+        .grid__item.desk-3-12
+          = link_to "#{I18n.locale}/airport/#{airport.slug}",
+            class: "network__block",
+            id: "terminal.id" do
+            .network__block__inner__image
+              = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
+            .network__block__inner__content
+              .network__block__inner__name= airport.page_title
+              .network__block__inner__address= airport.address
+            .network__block__inner__plus
+              = i("plus")
 
-  .wrap.space--both-2
-    .newtworks__title= t("network.off_airport")
+  .wrap.margin--both-3
+    .networks__title= t("network.off_airport")
     .grid
-      - network_airport_pages.select { |nap| nap.section == "off" }.each do |terminal|
-        .grid__item.deks-3-12
-          = link_to "#{I18n.locale}/terminal/#{terminal.slug}",
-            class: "newtwork__block" do
-            .newtwork__block__inner
+      - network_airport_pages.select { |nap| nap.section == "off" }.each do |airport|
+        .grid__item.desk-3-12
+          = link_to "#{I18n.locale}/airport/#{airport.slug}",
+            class: "network__block",
+            id: "terminal.id" do
+            .network__block__inner__image
+              = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
+            .network__block__inner__content
+              .network__block__inner__name= airport.page_title
+              .network__block__inner__address= airport.address
+            .network__block__inner__plus
+              = i("plus")
