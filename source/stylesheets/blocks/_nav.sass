@@ -1,5 +1,5 @@
 .site-nav
-  background: transparent
+  +bg-variant($white-color)
   position: absolute
   width: 100%
   z-index: 5
@@ -29,46 +29,12 @@
   width: 100%
   text-align: right
 
-.site-nav__topbar
-  display: inline-block
-
-.site-nav__topbar__locale
-  display: inline-block
-  +horizontal-padding(2)
-  background: $blue-l
-  +vertical-padding(2.8)
-  position: relative
-
-.site-nav__topbar__locale__switcher
-  color: $white-color
-  +heading-font-family
-  text-transform: uppercase
-
-.site-nav__topbar__locale__dropdown
-  display: none
-  +position(absolute, null null -100% 0)
-  background: $blue-l
-  width: 100%
-  text-align: center
-  .site-nav__topbar__locale:hover &
-    display: block
-
-.site-nav__topbar__locale__link
-  display: block
-  color: #FFFFFF
-  text-transform: uppercase
-  +vertical-padding(1)
-  &.is-current
-    background: $blue-color
-    color: $white-color
-  &:hover
-    background: $blue-color
-    color: $white-color
-
 .site-nav__menu-toggler
-  display: block
   +font-size(alpha)
   color: #FFFFFF
+  +bg-variant($orange-color)
+  flex: 1 0 80px
+  height: 80px
 
 .site-nav__menu
   display: none
@@ -95,14 +61,48 @@
     &::before
       width: 100%
 
+.site-nav__topbar
+  display: inline-block
+
+.site-nav__topbar__locale
+  display: none
+  background: $blue-l
+  position: relative
+
+.site-nav__topbar__locale__switcher
+  color: $white-color
+  +heading-font-family
+  text-transform: uppercase
+
+.site-nav__topbar__locale__dropdown
+  display: none
+  +position(absolute, 100% null null 0)
+  background: $blue-l
+  width: 100%
+  text-align: center
+  .site-nav__topbar__locale:hover &
+    display: block
+
+.site-nav__topbar__locale__link
+  display: block
+  color: #FFFFFF
+  text-transform: uppercase
+  +vertical-padding(1)
+  &.is-current
+    background: $blue-color
+    color: $white-color
+  &:hover
+    background: $blue-color
+    color: $white-color
+
 .header-plus
   background: $blue-color
   color: $white-color
-  +horizontal-padding(4)
-  +vertical-padding(2.7)
   display: inline-block
+  +horizontal-padding(2.5)
+  +vertical-padding(2)
+  +font-size(28px)
   svg
-    height: 24px
     width: 120px
 
 // Site dropdown
@@ -147,10 +147,76 @@
   &:hover
     color: $orange-color
 
++at-breakpoint(lap)
+  .site-nav__left
+    flex: 1 0 40%
+    max-width: 40%
+
+  .site-nav__logo
+    +vertical-padding(1)
+    height: 80px
+    svg
+      height: 100%
+      display: block
+
+  .site-nav__right
+    flex: 1 0 50%
+    max-width: 50%
+
 +at-breakpoint(desk)
+  .site-nav
+    background: transparent
+
+  .site-nav__left
+    flex: 1 0 20%
+    max-width: 20%
+
+  .site-nav__right
+    flex: 1 0 80%
+    max-width: 80%
+
   .site-nav__menu-toggler
     display: none
 
   .site-nav__menu
     display: inline-block
     +padding-right(2)
+
+  .site-nav__topbar__locale
+    display: inline-block
+    +horizontal-padding(1)
+    +vertical-padding(1.8)
+
+  .site-nav__topbar__locale__switcher
+    +font-size(smallprint)
+
+  .site-nav__topbar__locale__link
+    +font-size(smallprint)
+    +vertical-padding(1)
+
+  .header-plus
+    font-size: inherit
+    +horizontal-padding(2)
+    +vertical-padding(1.9)
+    svg
+      height: 20px
+      width: 100px
+
++at-breakpoint(monitor)
+  .site-nav__topbar__locale
+    +horizontal-padding(2)
+    +vertical-padding(2.78)
+
+  .site-nav__topbar__locale__switcher
+    +font-size(regular)
+
+  .site-nav__topbar__locale__link
+    +font-size(regular)
+    +vertical-padding(1)
+
+  .header-plus
+    +horizontal-padding(4)
+    +vertical-padding(2.8)
+    svg
+      height: 24px
+      width: 120px

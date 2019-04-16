@@ -5,7 +5,7 @@
   &::after
     content: ''
     background: $blue-xl
-    height: 40%
+    height: 60%
     width: 100%
     +position(absolute, null 0 0 null)
     z-index: -1
@@ -43,3 +43,10 @@
   +font-family($heading-font-family, 400)
   +font-size(gamma)
   +margin-bottom(2)
+
++at-breakpoint(lap)
+
++at-breakpoint(desk)
+  .services
+    &::after
+      height: 40%
