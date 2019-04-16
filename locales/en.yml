@@ -53,6 +53,9 @@ en:
     terminal: "Cargo Terminals"
     in_airport: "In Airport"
     off_airport: "Off Airport"
+    label:
+      opening: "Opening Hours"
+      address: "Address"
 
   footer:
     collaborators: "Collaborators"
