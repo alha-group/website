@@ -23,15 +23,15 @@ header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: 
 section.services
   .wrap
     .grid--center
-      .grid__item.desk-7-12
+      .grid__item.lap-9-12.desk-7-12
         h2.services__title= page.page_subtitle
         .services__body
           .formatted-content
             = page.abstract
-    .grid
+    .grid--center
       - dato.service_pages.each do |service|
         = link_to "/#{I18n.locale}/services/#{service.slug}",
-          class: "grid__item desk-3-12" do
+          class: "grid__item lap-5-12 desk-3-12" do
           .service__block
             .service__block__image
               = inline_svg(service.icon.url, size: "130px*130px")
@@ -40,7 +40,7 @@ section.services
 section.advanced_solutions
   .wrap
     .grid--center
-      .grid__item.desk-7-12
+      .grid__item.lap-9-12.desk-7-12
         h2.advanced_solutions__title= page.cargo_title
         .advanced_solutions__body
           .formatted-content
@@ -48,7 +48,7 @@ section.advanced_solutions
   .flex--nospace
     - dato.advanced_solution_pages.each do |solution|
       = link_to "/#{I18n.locale}/cargo-solutions/#{solution.slug}",
-        class: "flex__item--nospace flex-desk-6-12" do
+        class: "flex__item--nospace flex-lap-6-12" do
         .advanced_solution__block
           .advanced_solution__image
             = image_tag(solution.cover.url(fm: :jpg, fit: :crop, h: 890, w: 1920))
@@ -62,11 +62,11 @@ section.numerics
   .numerics__content
     .wrap
       .grid--center
-        .grid__item.desk-7-12.monitor-5-12
+        .grid__item.desk-7-12.monitor-6-12
           .numerics__title= page.numeric_title
       .grid
         - page.numeric_block.each do |numeric|
-          .grid__item.desk-3-12
+          .grid__item.lap-3-12
             .numeric__block
               .numeric__block__value= numeric.number
               .numeric__block__text= numeric.title

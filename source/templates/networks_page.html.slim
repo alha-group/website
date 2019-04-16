@@ -28,7 +28,7 @@ section.networks
     .grid
       - network_terminal_pages.each do |terminal|
         .grid__item.desk-3-12
-          = link_to "#{I18n.locale}/terminal/#{terminal.slug}",
+          = link_to "/#{I18n.locale}/terminal/#{terminal.slug}",
             class: "network__block",
             id: "terminal.id" do
             .network__block__inner__image
@@ -44,7 +44,7 @@ section.networks
     .grid
       - network_airport_pages.select { |nap| nap.section == "in" }.each do |airport|
         .grid__item.desk-3-12
-          = link_to "#{I18n.locale}/airport/#{airport.slug}",
+          = link_to "/#{I18n.locale}/airport/#{airport.slug}",
             class: "network__block",
             id: "terminal.id" do
             .network__block__inner__image
@@ -60,7 +60,7 @@ section.networks
     .grid
       - network_airport_pages.select { |nap| nap.section == "off" }.each do |airport|
         .grid__item.desk-3-12
-          = link_to "#{I18n.locale}/airport/#{airport.slug}",
+          = link_to "/#{I18n.locale}/airport/#{airport.slug}",
             class: "network__block",
             id: "terminal.id" do
             .network__block__inner__image

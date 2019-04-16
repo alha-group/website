@@ -12,10 +12,11 @@ section.cta-block
                 = content.text
             - if content.has_button
               .cta-block__actions
-                = link_to content.label_link,
-                  content.url_link,
+                = link_to content.url_link,
                   class: "button--cta",
-                  target: "_blank"
+                  target: "_blank" do
+                  = content.label_link
+                  = i("arrow_dx")
       .flex__item--nospace.flex-desk-6-12
         .cta-block__cover data-aos="fade-right"
           = image_tag(content.attachment.url(fit: :crop, h: 570, w: 1200, crop: "edges", format: :pjpeg))

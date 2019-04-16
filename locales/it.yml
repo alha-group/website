@@ -53,6 +53,7 @@ it:
     label:
       opening: "Opening Hours"
       address: "Address"
+      contact: "Contact"
 
   footer:
     collaborators: "Collaboratori"

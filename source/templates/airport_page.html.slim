@@ -1,7 +1,7 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
-header class="header--map"
+header class="header--airport"
   .header__hero style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 80)})"
     .header__hero__body
       .header__hero__body__inner
@@ -12,9 +12,10 @@ header class="header--map"
               = t("network.label.opening")
         p.header__hero__heading__sub= page.page_labeltitle
         .header__hero__heading__info
-          .header__hero__heading__info__label= t("network.label.address")
-          .header__hero__heading__info__text
-            = page.address
+          .header__hero__heading__info__col
+            .header__hero__heading__info__label= t("network.label.address")
+            .header__hero__heading__info__text
+              = page.address
         .header__hero__map
           = partial "partials/single_map", locals: {point: networks_point(page).to_json}
   div class="header__text--center-gray"

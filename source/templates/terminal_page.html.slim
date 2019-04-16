@@ -1,0 +1,35 @@
+- content_for(:head)
+  == dato_meta_tags(page)
+
+header class="header--terminal"
+  .header__hero style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 45)})"
+    .header__hero__body
+      .header__hero__body__inner
+        h1.header__hero__heading
+          = page.page_title
+          .header__hero__label
+            .header__hero__label__text
+              = t("network.label.contact")
+        p.header__hero__heading__sub= page.page_labeltitle
+        .header__hero__heading__info
+          .header__hero__heading__info__col
+            .header__hero__heading__info__label= t("network.label.address")
+            .header__hero__heading__info__text
+              = page.address
+          .header__hero__heading__info__col
+            .header__hero__heading__info__label= t("network.label.opening")
+            .header__hero__heading__info__text
+              = page.openings
+  div class="header__text--terminal"
+    .wrap
+      .grid
+        .grid__item.width-1-12
+        .grid__item.width-5-12
+          .header__info__inner
+            .header__info__inner__label= t("network.terminal.manager")
+            .header__info__inner__text
+            .header__info__inner__label= t("network.terminal.email")
+            .header__info__inner__text
+        .grid__item.width-6-12
+          .header__text__inner
+            = page.abstract

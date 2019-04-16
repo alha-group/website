@@ -22,14 +22,14 @@ section.milestones
 section.teams
   .wrap
     .grid--center
-      .grid__item.desk-7-12
+      .grid__item.lap-9-12.desk-7-12
         .teams__title= page.team_title
         .teams__abstract
           .formatted-content
             = page.team_abstract
     .grid
       - teams.each do |team|
-        .grid__item.desk-3-12
+        .grid__item.lap-4-12.desk-3-12
           .team__block
             .team__image
               = image_tag(team.avatar.url(fm: :jpg, fit: :crop, h: 350, w: 350))

@@ -6,7 +6,6 @@
 
 //
 // Button Sizes
-//
 @if $enable-button-size
   .button--small
     @extend .button
@@ -14,7 +13,6 @@
 
 //
 // Alternate buttons
-//
 @if $enable-button-colored
   @each $color, $value in $all-colors
     .button--#{$color}
@@ -26,9 +24,17 @@
       @extend .button
       @include button-outline-variant($value)
 
+.button--cta
+  +button
+  @include button-size(10px, 24px, "smallprint", 0px)
+  @include button-variant($orange-color, $orange-color)
+  color: $white-color
+  svg
+    +font-size(gamma)
+    +margin-left(1)
+
 //
 // Block button
-//
 .button--expand
   @extend .button
   display: block
