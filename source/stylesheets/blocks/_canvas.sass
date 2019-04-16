@@ -1,28 +1,28 @@
 .canvas
-  overflow: hidden
   position: relative
+  overflow: hidden
 
   &.is-shifted
-    +position(absolute, 0px 0px 0px 0px)
-    overflow: hidden
+    +position(fixed, 0px 0px 0px 0px)
 
 .canvas__main
-  +base-transition("material", "base")
+  transition: transform 0.5s cubic-bezier(.55,0,.1,1)
 
 .canvas__aside
   background-color: $gray-color
   bottom: 0
   box-shadow: 0 0 0 transparent
-  overflow-y: auto
   position: absolute
   top: 0
   transition: transform 0.5s cubic-bezier(.55,0,.1,1), box-shadow 0.5s cubic-bezier(.55,0,.1,1)
   z-index: 2
 
+.canvas__aside--right
+  @extend .canvas__aside
   .canvas.is-shifted &
-    box-shadow: 3px 0 5px rgba($gray-color, 0.5)
+    box-shadow: -3px 0 5px rgba(#000, 0.2)
 
-+canvas-layout(290px)
++canvas-layout(290px, "right")
 
 +at-breakpoint(lap)
-  +canvas-layout(400px)
+  +canvas-layout(400px, "right")

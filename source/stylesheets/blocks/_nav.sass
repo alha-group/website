@@ -24,6 +24,7 @@
     display: block
 
 .site-nav__right
+  display: none
   flex: 1 0 80%
   max-width: 80%
   width: 100%
@@ -33,8 +34,8 @@
   +font-size(alpha)
   color: #FFFFFF
   +bg-variant($orange-color)
-  flex: 1 0 80px
   height: 80px
+  width: 80px
 
 .site-nav__menu
   display: none
@@ -42,7 +43,6 @@
 .site-nav__menu__item
   display: inline-block
   +horizontal-padding(1)
-  padding-bottom: 34px
 
 .site-nav__menu__link
   +heading-font-family
@@ -108,7 +108,7 @@
 // Site dropdown
 .site-nav__menu__item__dropdown
   display: none
-  +position(absolute, 91px 0 null 0)
+  +position(absolute, 78px 0 null 0)
   width: 100%
   background: $blue-l
   +vertical-padding(2)
@@ -160,8 +160,12 @@
       display: block
 
   .site-nav__right
+    display: block
     flex: 1 0 50%
     max-width: 50%
+
+  .site-nav__menu-toggler
+    flex: 1 0 80px
 
 +at-breakpoint(desk)
   .site-nav
@@ -182,10 +186,13 @@
     display: inline-block
     +padding-right(2)
 
+  .site-nav__menu__item
+    padding-bottom: 24px
+
   .site-nav__topbar__locale
     display: inline-block
     +horizontal-padding(1)
-    +vertical-padding(1.8)
+    +vertical-padding(2.4)
 
   .site-nav__topbar__locale__switcher
     +font-size(smallprint)
@@ -197,12 +204,15 @@
   .header-plus
     font-size: inherit
     +horizontal-padding(2)
-    +vertical-padding(1.9)
+    +vertical-padding(2.2)
     svg
-      height: 20px
-      width: 100px
+      height: 24px
+      width: 110px
 
 +at-breakpoint(monitor)
+  .site-nav__menu__item
+    padding-bottom: 34px
+
   .site-nav__topbar__locale
     +horizontal-padding(2)
     +vertical-padding(2.78)
@@ -220,3 +230,6 @@
     svg
       height: 24px
       width: 120px
+
+  .site-nav__menu__item__dropdown
+    +position(absolute, 91px 0 null 0)
