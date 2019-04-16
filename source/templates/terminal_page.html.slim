@@ -33,3 +33,9 @@ header class="header--terminal"
         .grid__item.width-6-12
           .header__text__inner
             = page.abstract
+
+- page.modular_block.each do |modular|
+  = partial "partials/modular-contents/#{modular.item_type.api_key}",
+    locals: {content: modular, variant: ""}
+
+= partial "partials/certifications"

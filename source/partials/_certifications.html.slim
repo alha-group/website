@@ -1,0 +1,34 @@
+section.certification-part
+  .wrap
+    .grid--center
+      .grid__item.desk-10-12
+        .certification-part__inner
+          .certification-part__inner__title= t("certification.partial.title")
+          .grid--middle
+            .grid__item.lap-4-12
+              .certification-part__inner__block
+                .certification-part__inner__block__image
+                  = image_tag("certifications/dnv-gl.png")
+                .certification-part__inner__block__content
+                  .certification-part__inner__block__name= t("certification.partial.block.dnv_gl")
+                  = link_to t("certification.discover"),
+                    "/#{I18n.locale}/#{dato.certification_page.slug}",
+                    class: "certification-part__inner__block__link"
+            .grid__item.lap-4-12
+              .certification-part__inner__block
+                .certification-part__inner__block__image
+                  = image_tag("certifications/ceiv.png")
+                .certification-part__inner__block__content
+                  .certification-part__inner__block__name= t("certification.partial.block.ceiv")
+                  = link_to t("certification.discover"),
+                    "/#{I18n.locale}/#{dato.certification_page.slug}",
+                    class: "certification-part__inner__block__link"
+            .grid__item.lap-4-12
+              .certification-part__inner__block
+                .certification-part__inner__block__image
+                  = image_tag("certifications/tapa.png")
+                .certification-part__inner__block__content
+                  .certification-part__inner__block__name= t("certification.partial.block.tapa")
+                  = link_to t("certification.discover"),
+                    "/#{I18n.locale}/#{dato.certification_page.slug}",
+                    class: "certification-part__inner__block__link"

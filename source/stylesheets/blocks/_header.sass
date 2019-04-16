@@ -74,13 +74,20 @@
   +clearfix
 
 .header__text--center
+  @extend .header__text
   text-align: center
 
 .header__text--center-gray
+  @extend .header__text
   text-align: center
   background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
 
 .header__text--column-gray
+  @extend .header__text
+  background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
+
+.header__text--terminal
+  @extend .header__text
   background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
 
 .header__text__inner

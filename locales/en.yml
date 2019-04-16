@@ -34,6 +34,13 @@ en:
 
   certification:
     link: "Go to site"
+    discover: "Discover more"
+    partial:
+      block:
+        dnv_gl: "Quality Management System: ISO 9001"
+        ceiv: "IATA CEIV Pharma Certification"
+        tapa: "TAPA TSR 1"
+      title: "Certifications"
 
   join_us:
     title: "Vuoi entrare a far parte del nostro team di esperti?"
