@@ -19,6 +19,9 @@
 .milestone-wrap__arrows__prev
 .milestone-wrap__arrows__next
 
+.milestone-carousel__item
+  +padding-top(3)
+
 .milestone-carousel__line
   +margin-bottom(2)
   align-items: center
@@ -27,7 +30,7 @@
   display: flex
   &::before
     +position(absolute, 0 null 0 null)
-    +bg-variant($blue-l)
+    +bg-variant(#D9EBFC)
     content: ''
     height: 1px
     width: 100%
@@ -44,10 +47,22 @@
   color: $blue-l
   display: inline-block
   &::before
-    +position(absolute, -24px null null 50%)
+    +position(absolute, -15px null null 50%)
+    transform: translatex(-50%)
     content: ''
-    height: 20px
-    width: 20px
+    height: 30px
+    width: 30px
+    border-radius: 50%
+    border: 1px solid #D9EBFC
+    +bg-variant($white-color)
+  &::after
+    +position(absolute, -5px null null 50%)
+    transform: translatex(-50%)
+    content: ''
+    height: 10px
+    width: 10px
+    border-radius: 50%
+    +bg-variant($blue-l)
 
 .milestone-carousel__content
   +horizontal-padding(2)
@@ -59,4 +74,4 @@
   +horizontal-padding(4)
 
 .milestone-carousel__content__image
-  +margin-top(3)
+  +margin-top(4)

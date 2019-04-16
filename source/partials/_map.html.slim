@@ -1,15 +1,154 @@
-#map class="map__google" style="width: 100%; height: 620px; background: #ececec; position: relative; z-index: 1;"
+#map class="map__google" style="width: 100%; height: 740px; background: #ececec; position: relative; z-index: 1;"
 
 javascript:
-  var map_style = [];
+  var map_style = [
+    {
+      "featureType": "administrative",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative.country",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "administrative.province",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "landscape",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "visibility": "on"
+        },
+        {
+          "color": "#e3e3e3"
+        }
+      ]
+    },
+    {
+      "featureType": "landscape.natural",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "all",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "all",
+      "stylers": [
+        {
+          "color": "#cccccc"
+        }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "transit",
+      "elementType": "labels.icon",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "elementType": "labels.text",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.station.airport",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "transit.station.airport",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "labels",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    }
+  ];
 
+  var points = #{points}
   function initMap() {
     var isDraggable = jQuery(document).width() > 480 ? true : false;
     var container = document.getElementById('map');
-    var position = new google.maps.LatLng('43.769616', '11.215202');
+    var bounds = new google.maps.LatLngBounds();
     var map = new google.maps.Map(container, {
       zoom: 14,
-      center: position,
       mapTypeControl: false,
       zoomControl: true,
       zoomControlOptions: {
@@ -27,14 +166,27 @@ javascript:
       new google.maps.Size(40, 40),
       new google.maps.Point(0, 0),
       new google.maps.Point(0, 0),
-      new google.maps.Size(25, 25)
+      new google.maps.Size(20, 20)
     );
 
-    var marker = new google.maps.Marker({
-      position: position,
-      map: map,
-      icon: image
+    jQuery.each(points, function(i, elem) {
+      var position = new google.maps.LatLng(elem.lat, elem.long);
+      var infowindow = new google.maps.InfoWindow({
+        content: "<div class='marker__info'><div class='marker__info__heading'>"+elem.name+"</div><div class='marker__info__body'>"+elem.address+"</div></div>"
+      });
+
+      var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        icon: image,
+        title: "Alha Group"
+      });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
+      bounds.extend(marker.position);
     });
 
-    infowindow.open(map, marker);
+    map.fitBounds(bounds);
   }

@@ -18,3 +18,45 @@
   +font-size(milli)
   a
     color: $black-color
+
+.footer-block
+
+.footer-block__title
+  +heading-font-family
+  +margin-bottom(2)
+
+.footer-block__logos
+  display: flex
+  flex: 0 1 auto
+  flex-direction: row
+  flex-wrap: wrap
+  width: 60%
+
+.footer-block__logos__image
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  flex: 0 0 auto
+  width: 100%
+  max-width: 50%
+  flex: 0 0 50%
+  +padding-bottom(1)
+  +padding-right(4)
+
+.footer-block__infos
+  width: 65%
+
+.footer-block__infos__content
+  vertical-align: top
+  display: flex
+  +margin-bottom(1.2)
+  color: $white-color
+  span
+    +font-size(milli)
+    display: inline-block
+    width: 30%
+  p
+    display: inline-block
+    +font-size(smallprint)
+    +margin-left(1)
+    width: 60%

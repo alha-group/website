@@ -93,12 +93,38 @@ helpers do
   def site_nav_menu
     [
       dato.about_page,
-      MenuHelpers::CustomMenu.new(I18n.t('nav.services'), "#", dato.service_pages),
-      MenuHelpers::CustomMenu.new(I18n.t('nav.advanced_solutions'), "#", dato.advanced_solution_pages),
-      MenuHelpers::CustomMenu.new(I18n.t('nav.network'), dato.networks_page.slug, []),
+      MenuHelpers::CustomMenu.new(I18n.t('nav.services'), "#", services_child),
+      MenuHelpers::CustomMenu.new(I18n.t('nav.advanced_solutions'), "#", advanced_solutions_child),
+      MenuHelpers::CustomMenu.new(I18n.t('nav.network'), dato.networks_page.slug, networks_child),
       dato.careers_page,
       dato.collection_news_page
     ]
+  end
+
+  def services_child
+    [MenuHelpers::Children.new("", "services", dato.service_pages)]
+  end
+
+  def advanced_solutions_child
+    [MenuHelpers::Children.new("", "cargo-solutions", dato.advanced_solution_pages)]
+  end
+
+  def networks_child
+    [
+      MenuHelpers::Children.new(I18n.t('nav.network_child.terminal'), "terminal", dato.network_terminal_pages),
+      MenuHelpers::Children.new(I18n.t('nav.network_child.airport'), "airport", dato.network_airport_pages)
+    ]
+  end
+
+  def networks_points
+    (dato.network_terminal_pages + dato.network_airport_pages).map do |np|
+      {
+        name: np.page_title,
+        address: np.address,
+        lat: np.location.latitude,
+        long: np.location.longitude
+      }
+    end.to_json
   end
 end
 
@@ -171,14 +197,14 @@ dato.tap do |dato|
 
       dato.network_terminal_pages.each do |terminal|
         I18n.locale = locale
-        proxy "/#{locale}/#{dato.networks_page.slug}/#{terminal.slug}/index.html",
+        proxy "/#{locale}/terminal/#{terminal.slug}/index.html",
           "/templates/terminal_page.html",
           locals: { page: terminal },
           locale: locale
       end
       dato.network_airport_pages.each do |airport|
         I18n.locale = locale
-        proxy "/#{locale}/#{dato.networks_page.slug}/#{airport.slug}/index.html",
+        proxy "/#{locale}/airport/#{airport.slug}/index.html",
           "/templates/airport_page.html",
           locals: { page: airport },
           locale: locale

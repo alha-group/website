@@ -1,0 +1,51 @@
+- content_for(:head)
+  == dato_meta_tags(page)
+
+header class="header--map"
+  .header__hero style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 80)})"
+    .header__hero__body
+      .header__hero__body__inner
+        h1.header__hero__heading
+          = page.page_title
+          - if page.respond_to?(:page_labeltitle)
+            .header__hero__label
+              .header__hero__label__text
+                = page.page_labeltitle
+        - if page.respond_to?(:page_subtitle)
+          p.header__hero__heading__sub= page.page_subtitle
+        .header__hero__map
+          = partial "partials/map", locals: {points: networks_points}
+  div class="header__text--center-gray"
+    .wrap
+      .grid
+        .grid__item.width-1-12
+        .grid__item.width-11-12
+          .header__text__inner
+
+section.newtworks
+  .wrap.space--both-2
+    .newtworks__title= t("network.terminal")
+    .grid
+      - network_terminal_pages.each do |terminal|
+        .grid__item.deks-3-12
+          = link_to "#{I18n.locale}/terminal/#{terminal.slug}",
+            class: "newtwork__block" do
+            .newtwork__block__inner
+
+  .wrap.space--both-2
+    .newtworks__title= t("network.in_airport")
+    .grid
+      - network_airport_pages.select { |nap| nap.section == "in" }.each do |terminal|
+        .grid__item.deks-3-12
+          = link_to "#{I18n.locale}/terminal/#{terminal.slug}",
+            class: "newtwork__block" do
+            .newtwork__block__inner
+
+  .wrap.space--both-2
+    .newtworks__title= t("network.off_airport")
+    .grid
+      - network_airport_pages.select { |nap| nap.section == "off" }.each do |terminal|
+        .grid__item.deks-3-12
+          = link_to "#{I18n.locale}/terminal/#{terminal.slug}",
+            class: "newtwork__block" do
+            .newtwork__block__inner

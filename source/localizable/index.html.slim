@@ -51,7 +51,7 @@ section.advanced_solutions
         class: "flex__item--nospace flex-desk-6-12" do
         .advanced_solution__block
           .advanced_solution__image
-            = image_tag(solution.cover.url(fm: :jpg, fit: :crop, h: 535, w: 1920))
+            = image_tag(solution.cover.url(fm: :jpg, fit: :crop, h: 890, w: 1920))
           .advanced_solution__content
             .advanced_solution__title= solution.page_title
             .advanced_solution__abstract= solution.presentation
@@ -71,14 +71,24 @@ section.numerics
               .numeric__block__value= numeric.number
               .numeric__block__text= numeric.title
 
-section.space--both-2
+- page.modular_block.each do |modular|
+  = partial "partials/modular-contents/#{modular.item_type.api_key}",
+    locals: {content: modular, variant: ""}
+
+section.gallery-news
   .wrap
-    .grid--center
-      .grid__item.desk-8-12
-        .carousel
-          .carousel__item
-            = image_tag("//via.placeholder.com/1920x750/FF0000", alt: "placeholder")
-          .carousel__item
-            = image_tag("//via.placeholder.com/1920x750/0000FF", alt: "placeholder")
-          .carousel__item
-            = image_tag("//via.placeholder.com/1920x750/008000", alt: "placeholder")
+    .gallery-news__carousel
+      - page.gallery_news.each do |gallery|
+        .gallery-news__carousel__item
+          .gallery-news__carousel__item__inner
+            .gallery-news__carousel__item__image
+              = image_tag(gallery.attachment.url(fm: :jpg, fit: :crop, h: 550, w: 750))
+            .gallery-news__carousel__item__content
+              .gallery-arrows
+                button class="slick-prev-gallery" type="button"= i("arrow-left")
+                button class="slick-next-gallery" type="button"= i("arrow-right")
+              .gallery-news__carousel__item__content__inner
+                .gallery-news__carousel__item__title= gallery.title
+                .gallery-news__carousel__item__text
+                  .formatted-content
+                    = gallery.text

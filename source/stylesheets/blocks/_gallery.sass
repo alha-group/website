@@ -1,0 +1,85 @@
+.gallery-news
+  +vertical-margin(8)
+  position: relative
+
+.gallery-news__carousel
+  &::before
+    content: ''
+    +position(absolute, -50px -70px null null)
+    width: 270px
+    height: 300px
+    +bg-variant($orange-color)
+  .slick-dots
+    +position(absolute, null 0 0 null)
+    width: 50%
+    text-align: left
+    +padding-top(3)
+    +horizontal-padding(5)
+    +padding-bottom(0)
+    +bg-variant($white-color)
+    li
+      width: 40px
+      height: 3px
+      button
+        width: 40px
+        height: 3px
+        &::before
+          content: ''
+          opacity: 1
+          +bg-variant($gray-color)
+          width: 40px
+          height: 3px
+      &.slick-active
+        button::before
+          content: ''
+          +bg-variant($orange-color)
+          opacity: 1
+
+.gallery-news__carousel__item__inner
+  display: flex
+  flex: 0 1 auto
+  flex-direction: row
+  flex-wrap: nowrap
+
+.gallery-news__carousel__item__image
+  flex: 0 0 50%
+  max-width: 50%
+  width: 100%
+
+.gallery-news__carousel__item__content
+  flex: 0 0 50%
+  max-width: 50%
+  width: 100%
+  +bg-variant($blue-xl)
+  +padding(7)
+  position: relative
+
+.gallery-arrows
+  +position(absolute, null 0 60px null)
+  width: 100%
+  text-align: right
+
+.slick-prev-gallery,
+.slick-next-gallery
+  +bg-variant($blue-l)
+  width: 60px
+  height: 60px
+  position: relative
+  color: $white-color
+  border: none
+  vertical-align: top
+  +font-size(gamma)
+
+.slick-prev-gallery
+  +bg-variant($blue-color)
+
+.gallery-news__carousel__item__content__inner
+  width: 70%
+
+.gallery-news__carousel__item__title
+  +heading-font-family
+  +font-size(gamma)
+  color: $blue-l
+
+.gallery-news__carousel__item__text
+  +margin-top(3)

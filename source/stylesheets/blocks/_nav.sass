@@ -119,10 +119,21 @@
   justify-content: flex-end
   align-items: center
 
-.site-nav__menu__item__dropdown__inner__menu
+.site-nav__menu__item__dropdown__inner__right
   flex: 1 0 70%
   max-width: 70%
   width: 100%
+
+.site-nav__menu__item__dropdown__inner__menu
+  display: inline-block
+  +margin-right(3)
+
+.site-nav__menu__item__dropdown__label
+  +font-size(milli)
+  color: $white-color
+  border-bottom: 1px solid $orange-color
+  +padding-bottom(0.5)
+  +margin-bottom(0.5)
 
 .site-nav__menu__item__dropdown__menu__item
 

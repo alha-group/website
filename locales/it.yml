@@ -32,10 +32,30 @@ it:
   certification:
     link: "Vai al sito"
 
+  join_us:
+    title: "Vuoi entrare a far parte del nostro team di esperti?"
+    abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+    link: "Invia candidatura"
+
+  contact_us:
+    title: "Contact us"
+    abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    role: "Sales Manager"
+    full_name: "Andrea D. Piai Walpot"
+    label: "Contact"
+    phone: "0039 02 74866701"
+    email: "andrea.piai@alhagroup.com"
+
   footer:
     collaborators: "Collaboratori"
     newsletter: "Newsletter"
     contacts: "Contatti"
+    contact:
+      address: "Indirizzo"
+      phone: "Telefono"
+      fax: "Fax"
+      email: "Email"
+      pec: "Pec"
 
   form:
     label:

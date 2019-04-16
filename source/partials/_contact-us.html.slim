@@ -2,20 +2,21 @@ section.contact-us
   .wrap
     .grid--center
       .grid__item.desk-7-12
-        .join-us__inner
-          .contact-us__inner__title= t("contact-us.title")
+        .contact-us__inner
+          .contact-us__inner__title= t("contact_us.title")
           .contact-us__inner__abstract
             .formatted-content
-              = t("contact-us.abstract")
+              = t("contact_us.abstract")
           .contact-us__inner__person
             .grid
+              .grid__item.desk-3-12
+                .align--center
+                  = image_tag("person.jpg")
               .grid__item.desk-4-12
-                = image_tag("person.jpg")
-              .grid__item.desk-4-12
-                .contact-us__person__role= t("contact-us.role")
-                .contact-us__person__full_name= t("contact-us.full_name")
-              .grid__item.desk-4-12
+                .contact-us__person__role= t("contact_us.role")
+                .contact-us__person__full_name= t("contact_us.full_name")
+              .grid__item.desk-5-12
                 .contact-us__person__data
-                  .contact-us__person__data__label= t("contact-us.label")
-                  .contact-us__person__data__phone= t("contact-us.phone")
-                  .contact-us__person__data__email= t("contact-us.email")
+                  .contact-us__person__data__label= t("contact_us.label")
+                  .contact-us__person__data__phone= t("contact_us.phone")
+                  .contact-us__person__data__email= t("contact_us.email")

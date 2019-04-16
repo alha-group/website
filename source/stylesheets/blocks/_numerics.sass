@@ -1,6 +1,7 @@
 .numerics
   position: relative
   +vertical-padding(8)
+  +vertical-margin(5)
   background-image: image-url('alha-global-supplier.jpg')
   background-position: center
   background-size: cover
@@ -22,11 +23,11 @@
   +heading-font-family
   +font-size(beta)
   position: relative
-  +margin-bottom(6)
+  +margin-bottom(8)
   &::after
     content: ''
     background: $orange-color
-    +position(absolute, null null -30px 50%)
+    +position(absolute, null null -40px 50%)
     transform: translateX(-50%)
     width: 220px
     height: 3px

@@ -5,6 +5,15 @@ footer.site-footer
         .grid__item.desk-4-12
           .footer-block
             .footer-block__title= t("footer.collaborators")
+            .footer-block__logos
+              .footer-block__logos__image
+                = image_tag("collaborations/iata.png")
+              .footer-block__logos__image
+                = image_tag("collaborations/tapa.png")
+              .footer-block__logos__image
+                = image_tag("collaborations/pharma.png")
+              .footer-block__logos__image
+                = image_tag("collaborations/tiaca.png")
 
         .grid__item.desk-4-12
           .footer-block
@@ -13,6 +22,22 @@ footer.site-footer
         .grid__item.desk-4-12
           .footer-block
             .footer-block__title= t("footer.contacts")
+            .footer-block__infos
+              .footer-block__infos__content
+                span= t("footer.contact.address")
+                p= dato.contact.address
+              .footer-block__infos__content
+                span= t("footer.contact.phone")
+                p= dato.contact.phone
+              .footer-block__infos__content
+                span= t("footer.contact.fax")
+                p= dato.contact.fax
+              .footer-block__infos__content
+                span= t("footer.contact.email")
+                p= dato.contact.email
+              .footer-block__infos__content
+                span= t("footer.contact.pec")
+                p= dato.contact.pec
 
   .site-footer__inner
     .wrap

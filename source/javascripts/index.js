@@ -17,14 +17,18 @@ $(document).ready(function() {
   });
 
   // CAROUSEL WITH SLICK
-  $(".carousel").slick({
+  $(".gallery-news__carousel").slick({
     mobileFirst: true,
     slidesToShow: 1,
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
     autoplay: false,
-    adaptiveHeight: true
+    speed: 1100,
+    fade: true,
+    rows: 0,
+    prevArrow: $(".gallery-news__carousel .slick-prev-gallery"),
+    nextArrow: $(".gallery-news__carousel .slick-next-gallery")
   });
 
   $('.milestone-carousel').slick({

@@ -1,2 +1,39 @@
 .join-us
+  +padding-top(7)
+  +vertical-margin(6)
+  position: relative
+  &::before
+    content: ''
+    +position(absolute, 0 0 null 0)
+    width: 100%
+    height: 80%
+    +bg-variant($blue-xl)
+    z-index: -1
 
+.join-us__inner
+  +padding(5)
+  +bg-variant($white-color)
+  text-align: center
+
+.join-us__inner__title
+  +heading-font-family
+  +font-size(gamma)
+  color: $blue-color
+  width: 60%
+  margin-left: auto
+  margin-right: auto
+
+.join-us__inner__abstract
+  +vertical-margin(2)
+
+.join-us__inner__action
+  +padding-top(2)
+
+.join-us__inner__link
+  +font-size(smallprint)
+  color: $blue-l
+  &:hover
+    color: $blue-l
+  svg
+    +font-size(gamma)
+    +margin-left(1)

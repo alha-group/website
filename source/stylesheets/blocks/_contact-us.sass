@@ -1,2 +1,56 @@
 .contact-us
+  +padding-top(7)
+  +vertical-margin(6)
+  position: relative
+  &::before
+    content: ''
+    +position(absolute, 0 0 null 0)
+    width: 100%
+    height: 80%
+    +bg-variant($blue-xl)
+    z-index: -1
+
+.contact-us__inner
+  text-align: center
+
+.contact-us__inner__title
+  +heading-font-family
+  +font-size(gamma)
+  color: $blue-color
+  width: 60%
+  margin-left: auto
+  margin-right: auto
+
+.contact-us__inner__abstract
+  +vertical-margin(2)
+  width: 80%
+  margin-left: auto
+  margin-right: auto
+
+.contact-us__inner__person
+  +bg-variant($white-color)
+  +padding(3)
+  +margin-top(4)
+  text-align: left
+
+.contact-us__person__role
+  color: $blue-l
+  +font-size(smallprint)
+  +margin-bottom(1)
+  +margin-top(2)
+
+.contact-us__person__full_name
+
+.contact-us__person__data
+
+.contact-us__person__data__label
+  color: $blue-l
+  +font-size(smallprint)
+  +margin-bottom(1)
+  +margin-top(2)
+
+.contact-us__person__data__phone
+  +margin-bottom(0.5)
+
+.contact-us__person__data__email
 
