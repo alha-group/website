@@ -74,6 +74,19 @@ $(document).ready(function() {
     ]
   });
 
+  $(".info-gallery__gallery").slick({
+    mobileFirst: true,
+    slidesToShow: 1,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    autoplay: false,
+    speed: 1100,
+    fade: true,
+    rows: 0
+  });
+
+
 //  anime({
 //    targets: '.site-nav__logo',
 //    translateX: 0,

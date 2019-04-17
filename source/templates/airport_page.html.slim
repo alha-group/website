@@ -18,12 +18,53 @@ header class="header--airport"
               = page.address
         .header__hero__map
           = partial "partials/single_map", locals: {point: networks_point(page).to_json}
-  div class="header__text--center-gray"
+  div class="header__text"
     .wrap
       .grid
         .grid__item.width-1-12
         .grid__item.width-11-12
           .header__text__inner
+            .grid
+              - if !page.office.blank?
+                .grid__item.desk-2-12
+                  .header__text__inner__label= t("airport.office")
+                  = page.office
+              - if !page.warehouse.blank?
+                .grid__item.desk-2-12
+                  .header__text__inner__label= t("airport.warehouse")
+                  = page.warehouse
+
+section.info-gallery
+  .wrap
+    .grid--center
+      .grid__item.desk-11-12
+        .grid
+          .grid__item.desk-6-12
+            .info-gallery__info
+              .info-gallery__info__inner
+                .info-gallery__info__inner__title
+                  = t("airport.contact")
+                .grid
+                  .grid__item.desk-4-12
+                    .info-gallery__info__inner__image
+                      = image_tag(page.contact_photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
+                  .grid__item.desk-8-12
+                    .info-gallery__info__inner__data
+                      .info-gallery__info__inner__data__label= page.contact_role
+                      .info-gallery__info__inner__data__text= page.contact_name
+                      - if !page.contact_email.blank?
+                        .info-gallery__info__inner__data__label= t("airport.email")
+                        .info-gallery__info__inner__data__text
+                          = page.contact_email
+                      - if !page.contact_phone.blank?
+                        .info-gallery__info__inner__data__label= t("airport.phone")
+                        .info-gallery__info__inner__data__text
+                          = page.contact_phone
+          .grid__item.desk-6-12
+            .info-gallery__gallery
+              - page.gallery.each do |image|
+                .info-gallery__gallery__item
+                  = image_tag(image.url(fm: :jpg, fit: :crop, w: 630, h: 480))
 
 = partial "partials/certifications",
   locals: { certs: page.certification_block }

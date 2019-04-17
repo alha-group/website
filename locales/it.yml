@@ -66,6 +66,13 @@ it:
       address: "Address"
       contact: "Contact"
 
+  airport:
+    office: "Uffici"
+    warehouse: "Magazzino"
+    contact: "Contact"
+    email: "Email"
+    phone: "Phone"
+
   footer:
     collaborators: "Collaboratori"
     newsletter: "Newsletter"

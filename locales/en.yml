@@ -69,6 +69,13 @@ en:
       address: "Address"
       contact: "Contact"
 
+  airport:
+    office: "Office"
+    warehouse: "Warehouse"
+    contact: "Contact"
+    email: "Email"
+    phone: "Phone"
+
   footer:
     collaborators: "Collaborators"
     newsletter: "Newsletter"
