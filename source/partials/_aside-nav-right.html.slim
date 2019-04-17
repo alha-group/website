@@ -1,0 +1,27 @@
+nav.aside-nav
+  .aside-nav__inner
+    ul.aside-nav__menu
+      - site_nav_menu.each do |page|
+        li.aside-nav__menu__item class="#{(!page.children.blank?) ? "has-triangle" : ""}"
+          = active_link_to page.menu_label,
+            "/#{I18n.locale}/#{page.slug}",
+            class: "aside-nav__menu__link"
+          - if !page.children.blank?
+            = partial "partials/aside-nav-dropdown",
+              locals: {block_class: "aside-nav__menu__item__dropdown", items: page.children}
+
+    .aside-nav__topbar
+      = link_to "#",
+        class: "aside-nav__topbar__header-plus" do
+        = i("cargoplus")
+      = partial "partials/locale-switcher",
+        locals: {block_class: "aside-nav__topbar__locale"}
+    .aside-nav__social
+      .aside-nav__social__inner
+        .aside-nav__social__inner__label= t("aside.social.label")
+        .aside-nav__social__inner__links
+          - dato.contact.social_block.each do |social|
+            = link_to social.social_type,
+              social.url,
+              class: "aside-nav__social__inner__link"
+

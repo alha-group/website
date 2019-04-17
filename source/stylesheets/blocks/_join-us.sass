@@ -32,8 +32,12 @@
 .join-us__inner__link
   +font-size(smallprint)
   color: $blue-l
-  &:hover
-    color: $blue-l
   svg
-    +font-size(gamma)
+    +base-transition("ease-in-out", "base")
+    +font-size(35px)
     +margin-left(1)
+  &:hover
+    color: $orange-color
+    svg
+      +base-transition("ease-in-out", "base")
+      transform: translateX(15px)

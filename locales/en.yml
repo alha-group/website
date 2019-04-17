@@ -26,6 +26,10 @@ en:
       terminal: "Cargo Terminals"
       airport: "In Airport"
 
+  aside:
+    social:
+      label: "Social"
+
   home:
     scroll-down: "Scroll Down"
 

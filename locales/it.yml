@@ -23,6 +23,10 @@ it:
     advanced_solutions: "Advanced Cargo Solutions"
     network: "Network"
 
+  aside:
+    social:
+      label: "Social"
+
   home:
     scroll-down: "Scroll Down"
 

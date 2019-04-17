@@ -168,7 +168,10 @@ dato.tap do |dato|
 
       proxy "/#{locale}/#{dato.certification_page.slug}/index.html",
         "/templates/certification_page.html",
-        locals: { page: dato.certification_page },
+        locals: {
+          page: dato.certification_page,
+          certifications: dato.certifications
+        },
         locale: locale
 
       proxy "/#{locale}/#{dato.collaboration_page.slug}/index.html",

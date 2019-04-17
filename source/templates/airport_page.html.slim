@@ -25,4 +25,5 @@ header class="header--airport"
         .grid__item.width-11-12
           .header__text__inner
 
-= partial "partials/certifications"
+= partial "partials/certifications",
+  locals: { certs: page.certification_block }

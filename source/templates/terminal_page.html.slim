@@ -39,4 +39,5 @@ header class="header--terminal"
   = partial "partials/modular-contents/#{modular.item_type.api_key}",
     locals: {content: modular, variant: ""}
 
-= partial "partials/certifications"
+= partial "partials/certifications",
+  locals: { certs: page.certification_block }

@@ -1,6 +1,6 @@
 .aside-nav
   background: $blue-color
-  +vertical-padding(2)
+  padding-top: 80px
   position: relative
 
 .aside-nav__inner
@@ -12,16 +12,128 @@
   text-align: center
 
 .aside-nav__menu__item
+  text-align: left
   display: block
-  +vertical-padding(1)
+  border-bottom: 1px solid $blue-l
 
 .aside-nav__menu__link
-  color: #FFFFFF
-
+  +heading-font-family
+  +vertical-padding(1.5)
+  +horizontal-padding(2)
+  color: $white-color
+  display: block
+  +font-size(delta)
+  position: relative
+  &:hover,
+  &:focus,
+  &:active
+    color: $orange-color
   &.is-active
+    color: $orange-color
+  .has-triangle &
+    &::after
+      content: ''
+      border-left: 6px solid transparent
+      border-right: 8px solid transparent
+      border-top: 15px solid $orange-color
+      +position(absolute, 40% 18px null null)
 
 .aside-nav__menu-toggler
   +font-size(alpha)
   +position(absolute, 20px 20px null null)
   color: #FFFFFF
   z-index: 9
+
+.aside-nav__menu__item__dropdown
+  display: none
+  .aside-nav__menu__item:hover &
+    display: block
+
+.aside-nav__menu__item__dropdown__label
+  +font-size(regular)
+  color: $white-color
+  border-bottom: 1px solid $orange-color
+  +padding-bottom(0.5)
+  +margin-bottom(0.5)
+  +horizontal-padding(2)
+
+.aside-nav__menu__item__dropdown__menu__item
+
+.aside-nav__menu__item__dropdown__menu__link
+  +heading-font-family
+  +vertical-padding(1.5)
+  +horizontal-padding(2)
+  color: $white-color
+  display: block
+  +font-size(delta)
+  &:hover,
+  &:focus,
+  &:active
+    color: $orange-color
+
+.aside-nav__topbar
+
+.aside-nav__topbar__header-plus
+  display: block
+  border-top: 2px solid $white-color
+  border-bottom: 2px solid $white-color
+  text-align: center
+  +padding(2)
+  svg
+    height: 30px
+    width: 150px
+
+.aside-nav__topbar__locale
+
+.aside-nav__topbar__locale__switcher
+  +bg-variant($blue-l)
+  +font-size(delta)
+  +heading-font-family
+  +padding(1)
+  display: block
+  text-align: center
+  color: $white-color
+  text-transform: uppercase
+
+.aside-nav__topbar__locale__dropdown
+  display: none
+  .aside-nav__topbar__locale:hover &
+    display: block
+
+.aside-nav__topbar__locale__link
+  +bg-variant($blue-l)
+  +font-size(delta)
+  +heading-font-family
+  +padding(1)
+  display: block
+  text-align: center
+  color: $white-color
+  text-transform: uppercase
+  &.is-current
+    +bg-variant($blue-color)
+
+.aside-nav__social
+  +vertical-padding(1)
+  +horizontal-padding(2)
+.aside-nav__social__inner
+  display: flex
+  flex-wrap: nowrap
+  vertical-align: middle
+
+
+.aside-nav__social__inner__label
+  flex: 1 0 30%
+  max-width: 30%
+  width: 100%
+  color: $orange-color
+
+.aside-nav__social__inner__links
+  flex: 1 0 70%
+  max-width: 70%
+  width: 100%
+  text-align: right
+
+.aside-nav__social__inner__link
+  +vertical-padding(1)
+  color: $white-color
+  +margin-left(2)
