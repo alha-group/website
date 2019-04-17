@@ -44,6 +44,8 @@
   +heading-font-family
   +font-size(beta)
   position: relative
+  span
+    display: block
 
 .header__hero__heading__sub
   +margin-top(1)
@@ -60,7 +62,8 @@
     transform: translateY(50%)
   .header--map &
     transform: translateY(170%)
-  .header--terminal &,
+  .header--terminal &
+    transform: translateY(170%)
   .header--airport &
     transform: translateY(240%)
 
@@ -184,6 +187,7 @@
       transform: translateY(50%)
     .header--map &
       transform: translateY(170%)
-    .header--terminal &,
+    .header--terminal &
+      transform: translateY(170%)
     .header--airport &
       transform: translateY(240%)

@@ -35,6 +35,9 @@
 
 .advanced_solution__image
   position: relative
+  overflow: hidden
+  img
+    +base-transition("ease-in-out", "advanced")
   &::before
     +base-transition("ease-in-out", "base")
     content: ''
@@ -43,16 +46,21 @@
     +position(absolute, 0 0 0 0)
     width: 100%
     height: 100%
+    z-index: 5
   .advanced_solution__block:hover &
     &::before
       background: $blue-color
       opacity: 0.8
+    img
+      +base-transition("ease-in-out", "advanced")
+      transform: scale(1.8)
 
 .advanced_solution__content
   +position(absolute, null null 0 0)
   width: 100%
   text-align: left
   +padding(3)
+  z-index: 7
 
 .advanced_solution__title
   color: $white-color
@@ -78,5 +86,6 @@
   +vertical-padding(1)
   +horizontal-padding(1.3)
   color: $white-color
+  z-index: 8
   .advanced_solution__block:hover &
     background: $orange-color

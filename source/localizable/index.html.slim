@@ -34,7 +34,7 @@ section.services
           class: "grid__item lap-5-12 desk-3-12" do
           .service__block
             .service__block__image
-              = inline_svg(service.icon.url, size: "130px*130px")
+              = inline_svg(service.icon.url, size: "130px*130px", no_defs: true)
             .service__block__title= service.page_title
 
 section.advanced_solutions
@@ -73,7 +73,7 @@ section.numerics
 
 - page.modular_block.each do |modular|
   = partial "partials/modular-contents/#{modular.item_type.api_key}",
-    locals: {content: modular, variant: ""}
+    locals: {content: modular, variant: "--homepage"}
 
 section.gallery-news
   .wrap

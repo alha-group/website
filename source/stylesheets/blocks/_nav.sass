@@ -12,8 +12,8 @@
 
 .site-nav__left
   +padding-left(4)
-  flex: 1 0 20%
-  max-width: 20%
+  flex: 1 0 40%
+  max-width: 40%
   width: 100%
 
 .site-nav__logo
@@ -21,7 +21,6 @@
   height: 61px
   svg
     height: 100%
-    display: block
 
 .site-nav__right
   display: none
@@ -75,6 +74,14 @@
 .site-nav__menu__item
   display: inline-block
   +horizontal-padding(1)
+  &.has-triangle
+    +padding-right(1.4)
+    &::after
+      content: ''
+      border-left: 3px solid transparent
+      border-right: 4px solid transparent
+      border-top: 6px solid $orange-color
+      +position(absolute, 20% 0 null null)
 
 .site-nav__menu__link
   +heading-font-family
@@ -92,6 +99,13 @@
   &.is-active
     &::before
       width: 100%
+  .has-triangle &
+    &::after
+      content: ''
+      border-left: 3px solid transparent
+      border-right: 4px solid transparent
+      border-top: 6px solid $orange-color
+      +position(absolute, null -14px 3px null)
 
 .site-nav__topbar
   display: inline-block
@@ -187,9 +201,6 @@
   .site-nav__logo
     +vertical-padding(1)
     height: 80px
-    svg
-      height: 100%
-      display: block
 
   .site-nav__right
     display: block

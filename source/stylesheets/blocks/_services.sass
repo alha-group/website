@@ -30,16 +30,21 @@
   +margin-bottom(5)
 
 .service__block
+  +base-transition("ease-in-out", "base")
+  color: $blue-color
   background: $white-color
   +margin(1)
   +padding(1)
   text-align: center
+  &:hover,
+  &:active
+    +base-transition("ease-in-out", "base")
+    color: $orange-color
 
 .service__block__image
   +padding(2)
 
 .service__block__title
-  color: $blue-color
   +font-family($heading-font-family, 400)
   +font-size(gamma)
   +margin-bottom(2)
