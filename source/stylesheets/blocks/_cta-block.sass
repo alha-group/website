@@ -1,8 +1,8 @@
 .cta-block
 
 .cta-block__data
-  +padding(6)
-  width: 80%
+  +vertical-padding(6)
+  width: 70%
 
 .cta-block__cover
   height: 100%
@@ -12,11 +12,23 @@
 
 .cta-block__title
   +heading-font-family
-  +font-size(beta)
+  +font-size(gamma)
   color: $blue-color
+  width: 60%
 
 .cta-block__content
   +margin-top(2)
 
 .cta-block__actions
   +margin-top(3)
+
++at-breakpoint(lap)
+
++at-breakpoint(desk)
+  .cta-block__data
+    +padding(6)
+    width: 80%
+
+  .cta-block__title
+    +font-size(beta)
+    width: 100%

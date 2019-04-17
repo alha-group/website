@@ -27,10 +27,10 @@ section.networks
     .networks__title= t("network.terminal")
     .grid
       - network_terminal_pages.each do |terminal|
-        .grid__item.desk-3-12
+        .grid__item.lap-6-12.desk-3-12
           = link_to "/#{I18n.locale}/terminal/#{terminal.slug}",
             class: "network__block",
-            id: "terminal.id" do
+            id: "#{terminal.id}" do
             .network__block__inner__image
               = image_tag(terminal.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
             .network__block__inner__content
@@ -43,10 +43,10 @@ section.networks
     .networks__title= t("network.in_airport")
     .grid
       - network_airport_pages.select { |nap| nap.section == "in" }.each do |airport|
-        .grid__item.desk-3-12
+        .grid__item.lap-6-12.desk-3-12
           = link_to "/#{I18n.locale}/airport/#{airport.slug}",
             class: "network__block",
-            id: "terminal.id" do
+            id: "#{airport.id}" do
             .network__block__inner__image
               = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
             .network__block__inner__content
@@ -59,10 +59,10 @@ section.networks
     .networks__title= t("network.off_airport")
     .grid
       - network_airport_pages.select { |nap| nap.section == "off" }.each do |airport|
-        .grid__item.desk-3-12
+        .grid__item.lap-6-12.desk-3-12
           = link_to "/#{I18n.locale}/airport/#{airport.slug}",
             class: "network__block",
-            id: "terminal.id" do
+            id: "#{airport.id}" do
             .network__block__inner__image
               = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
             .network__block__inner__content

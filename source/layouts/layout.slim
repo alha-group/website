@@ -4,8 +4,8 @@ html lang=I18n.locale
   body
     .svg-sprite-inliner= partial "fonts/svg/sprite.svg"
     .canvas
+      = partial "partials/site-nav"
       main.canvas__main
-        = partial "partials/site-nav"
         = yield
         = partial "partials/site-footer"
       aside.canvas__aside--right

@@ -9,7 +9,7 @@
   transition: transform 0.5s cubic-bezier(.55,0,.1,1)
 
 .canvas__aside
-  background-color: $gray-color
+  background-color: $blue-color
   bottom: 0
   box-shadow: 0 0 0 transparent
   position: absolute
@@ -22,7 +22,7 @@
   .canvas.is-shifted &
     box-shadow: -3px 0 5px rgba(#000, 0.2)
 
-+canvas-layout(290px, "right")
++canvas-layout(100%, "right")
 
 +at-breakpoint(lap)
-  +canvas-layout(400px, "right")
+  +canvas-layout(100%, "right")

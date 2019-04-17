@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="assets" stroke="none" stroke-width="1" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-940.000000, -124.000000)" fill-rule="nonzero">
+    <g id="assets" stroke="none" stroke-width="1">
+        <g id="Artboard" transform="translate(-940.000000, -124.000000)">
             <g id="Group" transform="translate(940.000000, 199.000000)">
                 <path d="M0.986111111,20.5 L0.986111111,0.5 L512.986111,0.5 L512.986111,20.5 L0.986111111,20.5 Z M0.986111111,191.5 L0.986111111,171.5 L512.986111,171.5 L512.986111,191.5 L0.986111111,191.5 Z M0.986111111,362.5 L0.986111111,342.5 L512.986111,342.5 L512.986111,362.5 L0.986111111,362.5 Z" id="Shape"></path>
             </g>

@@ -31,11 +31,43 @@
   text-align: right
 
 .site-nav__menu-toggler
-  +font-size(alpha)
-  color: #FFFFFF
   +bg-variant($orange-color)
   height: 80px
   width: 80px
+  +padding(1)
+  text-align: center
+  position: relative
+
+.site-nav__menu-toggler__box
+  +position(absolute, 18px null null 1rem)
+  +base-transition("material", "base")
+  width: 65%
+  height: 2px
+  border-radius: 4px
+  background: $white-color
+  &::before,
+  &::after
+    +base-transition("material", "base")
+    content: ''
+    background: $white-color
+    border-radius: 4px
+    height: 2px
+    width: 100%
+  &::before
+    +position(absolute, 20px null null 0)
+  &::after
+    +position(absolute, 40px null null 0)
+
+  .is-shifted &
+    +base-transition("material", "base")
+    transform: translate3d(0,20px,0) rotate(45deg)
+    &::before
+      +base-transition("material", "base")
+      transform: rotate(-45deg) translate3d(-5.71429px,-6px,0)
+      opacity: 0
+    &::after
+      +base-transition("material", "base")
+      transform: translate3d(0,-40px,0) rotate(-90deg)
 
 .site-nav__menu
   display: none

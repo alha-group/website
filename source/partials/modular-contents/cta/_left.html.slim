@@ -1,9 +1,6 @@
 section.cta-block
   .wrap
-    .flex--nospace
-      .flex__item--nospace.flex-desk-6-12
-        .cta-block__cover data-aos="fade-right"
-          = image_tag(content.attachment.url(fit: :crop, h: 570, w: 1200, crop: "edges", format: :pjpeg))
+    .flex--nospace--reverse
       .flex__item--nospace.flex-desk-6-12
         .cta-block__data data-aos="fade-left"
           - if !content.title.blank?
@@ -20,3 +17,6 @@ section.cta-block
                   target: "_blank" do
                   = content.label_link
                   = i("arrow_dx")
+      .flex__item--nospace.flex-desk-6-12
+        .cta-block__cover data-aos="fade-right"
+          = image_tag(content.attachment.url(fit: :crop, h: 570, w: 1200, crop: "edges", format: :pjpeg))

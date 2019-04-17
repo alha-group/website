@@ -1,18 +1,33 @@
 @mixin canvas-layout($width, $position: "left", $gutter: $grid-gutter)
   .canvas__aside--#{$position}
     @if $position == "left"
-      left: - $width - $gutter
+      @if type-of($width) == "number" and unit($width) == "px"
+        left: - $width - $gutter
+      @else
+        left: - $width
     @else
-      right: - $width - $gutter
-    width: $width + $gutter
+      @if type-of($width) == "number" and unit($width) == "px"
+        right: - $width - $gutter
+      @else
+        right: - $width
+    @if type-of($width) == "number" and unit($width) == "px"
+      width: $width + $gutter
+    @else
+      width: $width
 
   .canvas.is-shifted.shift-#{$position}
     .canvas__aside,
     .canvas__main
       @if $position == "left"
-        transform: translateX($width + $gutter)
+        @if type-of($width) == "number" and unit($width) == "px"
+          transform: translateX($width + $gutter)
+        @else
+          transform: translateX($width)
       @else
-        transform: translateX(-($width + $gutter))
+        @if type-of($width) == "number" and unit($width) == "px"
+          transform: translateX(-$width + $gutter)
+        @else
+          transform: translateX(-$width)
 
 @mixin canvas-base
   background: $canvas-background

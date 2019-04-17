@@ -16,6 +16,8 @@
 
 .network__block__inner__image
   position: relative
+  max-height: 300px
+  overflow: hidden
   &::before
     content: ''
     +position(absolute, 0 0 0 0)
@@ -51,3 +53,10 @@
   color: $white-color
   .network__block:hover &
     background: $orange-color
+
++at-breakpoint(lap)
+
++at-breakpoint(desk)
+  .network__block__inner__image
+    max-height: 100%
+    overflow: visible
