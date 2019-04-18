@@ -1,7 +1,12 @@
+::placeholder
+  color: $white-color
+  opacity: 1
+
 .input
   cursor: pointer
   display: inline-block
   position: relative
+  +font-size(milli)
 
   input
     opacity: 0
@@ -18,9 +23,9 @@
       opacity: 0.5
 
 .input__label:before
-  +font-size(regular)
+  +font-size(smallprint)
   +margin-right(0.5)
-  color: $base-body-color
+  color: $white-color
   user-select: none
   vertical-align: middle
 
@@ -58,16 +63,25 @@
 
 .input--checkbox
   @extend .input
+  a
+    color: $white-color
+    &:hover,
+    &:active,
+    &:focus
+      color: $white-color
 
   ~ .input--checkbox
     +margin-left(2)
 
   .input__label
+    display: block
+    +padding-top(0.3)
+    color: $white-color
     +padding-left(2)
 
   .input__label::before
     +position(absolute, 3px null null 0)
-    border: 1px solid $base-body-color
+    border: 1px solid $white-color
     content: ""
     display: inline-block
     height: 16px
@@ -75,8 +89,8 @@
 
   .input__label::after
     +position(absolute, 7px null null 4px)
-    border-bottom: 2px solid $base-body-color
-    border-left: 2px solid $base-body-color
+    border-bottom: 2px solid $white-color
+    border-left: 2px solid $white-color
     content: ""
     display: inline-block
     height: 5px

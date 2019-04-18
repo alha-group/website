@@ -73,9 +73,9 @@
 
 .site-nav__menu__item
   display: inline-block
-  +horizontal-padding(1)
+  +padding-right(2)
   &.has-triangle
-    +padding-right(1.4)
+    +padding-right(4)
     &::after
       content: ''
       border-left: 3px solid transparent
@@ -163,22 +163,18 @@
     display: block
 
 .site-nav__menu__item__dropdown__inner
-  display: flex
-  align-content: center
-  justify-content: flex-end
-  align-items: center
+  +horizontal-margin(2)
 
 .site-nav__menu__item__dropdown__inner__right
-  flex: 1 0 70%
-  max-width: 70%
-  width: 100%
+  +margin-right(22)
+  text-align: right
 
 .site-nav__menu__item__dropdown__inner__menu
   display: inline-block
   +margin-right(3)
 
 .site-nav__menu__item__dropdown__label
-  +font-size(milli)
+  +font-size(smallprint)
   color: $white-color
   border-bottom: 1px solid $orange-color
   +padding-bottom(0.5)
@@ -187,6 +183,7 @@
 .site-nav__menu__item__dropdown__menu__item
 
 .site-nav__menu__item__dropdown__menu__link
+  +font-size(gamma)
   color: $white-color
   display: block
   +vertical-padding(0.5)
@@ -232,6 +229,9 @@
 
   .site-nav__menu__item
     padding-bottom: 24px
+    +padding-right(2)
+    &.has-triangle
+      +padding-right(3)
 
   .site-nav__topbar__locale
     display: inline-block
@@ -256,6 +256,9 @@
 +at-breakpoint(monitor)
   .site-nav__menu__item
     padding-bottom: 34px
+    +padding-right(2)
+    &.has-triangle
+      +padding-right(4)
 
   .site-nav__topbar__locale
     +horizontal-padding(2)

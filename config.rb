@@ -92,34 +92,54 @@ helpers do
   # Custom helper to theme
   def site_nav_menu
     [
-      dato.about_page,
+      MenuHelpers::CustomMenu.new(I18n.t('nav.about'), "#", about_child),
       MenuHelpers::CustomMenu.new(I18n.t('nav.services'), "#", services_child),
       MenuHelpers::CustomMenu.new(I18n.t('nav.advanced_solutions'), "#", advanced_solutions_child),
       MenuHelpers::CustomMenu.new(I18n.t('nav.network'), dato.networks_page.slug, networks_child),
-      dato.careers_page,
       dato.collection_news_page
     ]
   end
 
+  def about_child
+    [
+      MenuHelpers::Children.new("", "", [
+        dato.about_page,
+        dato.collaboration_page,
+        dato.certification_page,
+        dato.awards_page,
+        dato.careers_page
+      ])
+    ]
+  end
+
   def services_child
-    [MenuHelpers::Children.new("", "services", dato.service_pages)]
+    [MenuHelpers::Children.new("", "/services", dato.service_pages)]
   end
 
   def advanced_solutions_child
-    [MenuHelpers::Children.new("", "cargo-solutions", dato.advanced_solution_pages)]
+    [MenuHelpers::Children.new("", "/cargo-solutions", dato.advanced_solution_pages)]
   end
 
   def networks_child
     [
-      MenuHelpers::Children.new(I18n.t('nav.network_child.terminal'), "terminal", dato.network_terminal_pages),
-      MenuHelpers::Children.new(I18n.t('nav.network_child.airport'), "airport", dato.network_airport_pages)
+      MenuHelpers::Children.new(I18n.t('nav.network_child.terminal'), "/terminal", dato.network_terminal_pages),
+      MenuHelpers::Children.new(I18n.t('nav.network_child.airport'), "/airport", dato.network_airport_pages)
     ]
+  end
+
+  def current_type_network(page)
+    if page.item_type.api_key == "network_terminal_page"
+      return "terminal"
+    else
+      return "airport"
+    end
   end
 
   def networks_points
     (dato.network_terminal_pages + dato.network_airport_pages).map do |np|
       {
         id: np.id,
+        path: "/#{I18n.locale}/#{current_type_network(np)}/#{np.slug}",
         name: np.page_title,
         address: np.address,
         lat: np.location.latitude,

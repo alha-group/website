@@ -9,5 +9,5 @@ div class=block_class
           - item.pages.each do |page|
             li class="#{block_class}__menu__item"
               = active_link_to page.menu_label,
-                "/#{I18n.locale}/#{item.base_slug}/#{page.slug}",
+                "/#{I18n.locale}#{item.base_slug}/#{page.slug}",
                 class: "#{block_class}__menu__link"

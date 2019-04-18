@@ -163,16 +163,16 @@ javascript:
 
     var image = new google.maps.MarkerImage(
       window.location.origin+"#{image_path("map-marker.png")}",
-      new google.maps.Size(40, 40),
+      new google.maps.Size(30, 30),
       new google.maps.Point(0, 0),
       new google.maps.Point(0, 0),
-      new google.maps.Size(20, 20)
+      new google.maps.Size(30, 30)
     );
 
     jQuery.each(points, function(i, elem) {
       var position = new google.maps.LatLng(elem.lat, elem.long);
       var infowindow = new google.maps.InfoWindow({
-        content: "<div class='marker__info'><div class='marker__info__heading'>"+elem.name+"</div><div class='marker__info__body'>"+elem.address+"</div></div>"
+        content: "<div class='marker__info'><div class='marker__info__heading'><a href='"+elem.path+"'>"+elem.name+"<a/></div><div class='marker__info__body'>"+elem.address+"</div></div>"
       });
 
       var marker = new google.maps.Marker({

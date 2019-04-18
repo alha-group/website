@@ -19,9 +19,13 @@ it:
     menu: "Menu"
     home: "HOME"
     menu_close: "Chiudi"
+    about: "Azienda"
     services: "Servizi"
     advanced_solutions: "Advanced Cargo Solutions"
     network: "Network"
+    network_child:
+      terminal: "Cargo Terminals"
+      airport: "In Airport"
 
   aside:
     social:
@@ -95,12 +99,12 @@ it:
       email: "Email"
       phone: "Telefono"
       message: "Messaggio"
-      privacy: "Privacy"
+      privacy: "Accetto le condizioni della"
     placeholder:
       first_name: "Nome"
       last_name: "Cognome"
       email: "Email"
       phone: "Telefono"
       message: "Messaggio"
-      privacy: "Privacy"
-    submit: "Invia"
+      privacy: "Accetto le condizioni della"
+    submit: "Registrati"

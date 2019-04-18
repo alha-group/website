@@ -25,13 +25,15 @@
   display: block
 
 .form__input
-  +font-size(regular)
+  +font-size(smallprint)
   +horizontal-padding(1)
   +vertical-padding(0.5)
-  border: 1px solid $gray-color
-  border-radius: 0.1rem
+  border: none
+  border-bottom: 2px solid $blue-xl
+  border-radius: 0
   transition: border 0.2s cubic-bezier(.55,0,.1,1)
   width: 100%
+  background: transparent
 
 .form__actions
   +margin-top(2)

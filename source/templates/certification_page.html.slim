@@ -4,20 +4,20 @@
 = partial "partials/hero", locals: { hero: page, hero_alpha: 40, hero_class: "header--large", hero_align_bg_col: "--center" }
 
 section.certifications
-- certifications.each do |content|
-  .wrap
-    .grid--center
-      .grid__item.desk-9-12
-        .flag--certification
-          .flag__image--certification
-            = image_tag(content.logo.url(fm: :jpg, fit: :fill, h: 200, w: 200))
-          .flag__body--certification
-            .certification__title= content.title
-            .certification__content
-              .formatted-content
-                = content.text
-            .certification__action
-              = link_to content.url_site,
-                class: "certification--link" do
-                = t("certification.link")
-                = i("arrow_dx")
+  - certifications.each do |content|
+    .wrap
+      .grid--center
+        .grid__item.desk-9-12
+          .flag--certification
+            .flag__image--certification
+              = image_tag(content.logo.url(fm: :jpg, fit: :fill, h: 200, w: 200))
+            .flag__body--certification
+              .certification__title= content.title
+              .certification__content
+                .formatted-content
+                  = content.text
+              .certification__action
+                = link_to content.url_site,
+                  class: "certification--link" do
+                  = t("certification.link")
+                  = i("arrow_dx")

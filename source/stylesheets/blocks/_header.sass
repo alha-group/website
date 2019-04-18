@@ -6,6 +6,7 @@
 
 .header--large
   @extend .header
+  +margin-bottom(6)
 
 .header--map,
 .header--airport,
@@ -68,10 +69,11 @@
     transform: translateY(240%)
 
 .header__hero__label__text
+  +body-font-family
   +font-size(delta)
   color: $black-color
   +position(absolute, null null 0 0.8%)
-  transform: rotate(-90deg) translateX(-110%)
+  transform: rotate(-90deg) translateX(-130%)
   transform-origin: bottom left
 
 .header__text
@@ -184,11 +186,9 @@
 .header__hero__heading__info__label
   text-transform: uppercase
   color: $orange-color
-  +font-size(smallprint)
   +margin-bottom(2)
 
 .header__hero__heading__info__text
-  +font-size(smallprint)
 
 +at-breakpoint(lap)
 

@@ -29,9 +29,14 @@
   @include button-size(10px, 24px, "smallprint", 0px)
   @include button-variant($orange-color, $orange-color)
   color: $white-color
+  +padding-right(3)
   svg
+    +base-transition("bounce", "base")
     +font-size(gamma)
     +margin-left(1)
+  &:hover
+    svg
+      transform: translateX(15px)
 
 //
 // Block button
