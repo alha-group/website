@@ -18,6 +18,8 @@
   position: relative
   max-height: 300px
   overflow: hidden
+  img
+    +base-transition("ease-in-out", "advanced")
   &::before
     content: ''
     +position(absolute, 0 0 0 0)
@@ -26,12 +28,18 @@
     background: $blue-color
     opacity: 0.8
     +base-transition("ease-in-out", "base")
+    z-index: 5
+  .network__block:hover &
+    img
+      +base-transition("ease-in-out", "advanced")
+      transform: scale(1.3)
 
 .network__block__inner__content
   +position(absolute, 0 null null 0)
   width: 100%
   text-align: left
   +padding(4)
+  z-index: 6
 
 .network__block__inner__name
   color: $white-color
@@ -44,7 +52,16 @@
   +font-size(smallprint)
   color: $white-color
 
+.network__block__inner__info
+  +font-size(smallprint)
+  color: $white-color
+  +margin-top(1.8)
+  span
+    display: block
+    +padding-bottom(0.3)
+
 .network__block__inner__plus
+  z-index: 7
   +base-transition("ease-in-out", "base")
   +position(absolute, null 0 0 null)
   background: $blue-l
@@ -59,4 +76,3 @@
 +at-breakpoint(desk)
   .network__block__inner__image
     max-height: 100%
-    overflow: visible

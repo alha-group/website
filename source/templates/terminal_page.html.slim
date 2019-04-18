@@ -27,10 +27,10 @@ header class="header--terminal"
         .grid__item.width-1-12
         .grid__item.width-5-12
           .header__info__inner
-            .header__info__inner__label= t("network.terminal.manager")
-            .header__info__inner__text
-            .header__info__inner__label= t("network.terminal.email")
-            .header__info__inner__text
+            .header__info__inner__label= page.contact_role
+            .header__info__inner__text= page.contact_name
+            .header__info__inner__label= t("terminal.email")
+            .header__info__inner__text= page.contact_email
         .grid__item.width-6-12
           .header__text__inner
             = page.abstract

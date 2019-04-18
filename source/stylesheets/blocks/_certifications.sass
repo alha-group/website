@@ -36,7 +36,7 @@
 
 .certification-part
   +padding-top(7)
-  +vertical-margin(6)
+  +margin-bottom(6)
   position: relative
   &::before
     content: ''
@@ -49,6 +49,14 @@
 .certification-part__inner
   +bg-variant($white-color)
   +padding(4)
+
+.certification-part__inner__title
+  +font-family($heading-font-family, 400)
+  +font-size(gamma)
+  color: $blue-color
+  border-bottom: 2px solid $blue-xl
+  +padding-bottom(1)
+  +margin-bottom(2)
 
 .certification-part__inner__block
   display: flex

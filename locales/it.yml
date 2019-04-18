@@ -66,12 +66,16 @@ it:
       address: "Address"
       contact: "Contact"
 
+  terminal:
+    email: "Email"
+
   airport:
     office: "Uffici"
     warehouse: "Magazzino"
     contact: "Contact"
     email: "Email"
     phone: "Phone"
+    additional_info: "Informazioni Addizionali"
 
   footer:
     collaborators: "Collaboratori"

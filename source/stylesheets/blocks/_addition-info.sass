@@ -1,0 +1,36 @@
+.addition-info
+  +bg-variant($blue-xl)
+  +padding-top(3)
+  +margin-bottom(-7)
+
+.addition-info__inner
+  +bg-variant($white-color)
+  +padding(4)
+  +padding-bottom(0)
+
+.addition-info__inner__title
+  +font-family($heading-font-family, 400)
+  +font-size(gamma)
+  color: $blue-color
+  border-bottom: 2px solid $blue-xl
+  +padding-bottom(1)
+  +margin-bottom(2)
+
+.addition-info__inner__list
+  list-style: none
+  -webkit-columns: 100px 3
+  -moz-columns: 100px 3
+  columns: 100px 3
+
+.addition-info__inner__item
+  +font-size(delta)
+  +vertical-padding(1)
+  +padding-left(3)
+  position: relative
+  &::before
+    content: ''
+    +position(absolute, 40% null null 0)
+    width: 10px
+    height: 10px
+    transform: rotate(45deg) skew(10deg, 10deg)
+    +bg-variant($blue-color)

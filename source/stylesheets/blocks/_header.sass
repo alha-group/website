@@ -108,6 +108,8 @@
     -webkit-columns: 100px 2
     -moz-columns: 100px 2
     columns: 100px 2
+  .header--airport &
+    +padding-left(0)
 
 .header__text__inner__label
   color: $blue-l
@@ -124,6 +126,19 @@
 
 .header__text__body
   width: 70%
+
+.header__info__inner
+  +padding-top(7)
+  +padding-left(2)
+
+.header__info__inner__label
+  color: $blue-l
+  +heading-font-family
+  +font-size(smallprint)
+  +margin-bottom(1)
+
+.header__info__inner__text
+  +margin-bottom(3)
 
 .header__news
   background-color: transparent
@@ -152,7 +167,7 @@
   +space-rule("top", -10)
 
 .header__hero__map
-  +position(absolute, null 10% -200px null)
+  +position(absolute, null 24px -200px null)
   width: 50%
 
 .header__hero__heading__info
@@ -197,3 +212,7 @@
       transform: translateY(170%)
     .header--airport &
       transform: translateY(240%)
+
++at-breakpoint(wall)
+  .header__hero__map
+    +position(absolute, null 0% -200px null)

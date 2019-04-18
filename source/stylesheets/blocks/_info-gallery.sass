@@ -31,6 +31,29 @@
   +margin-bottom(2)
 
 .info-gallery__gallery
+  .slick-arrow
+    width: 50px
+    height: 50px
+    top: 0
+    transform: none
+    color: $white-color
+    opacity: 1
+    &:hover
+      color: $white-color
+      opacity: 1
+      &::before
+        border-color: $white-color
+  .slick-prev
+    left: 0
+    +bg-variant($blue-color)
+    &:hover
+      +bg-variant($blue-l)
+  .slick-next
+    right: auto
+    left: 50px
+    +bg-variant($blue-l)
+    &:hover
+      +bg-variant($blue-color)
 
 .info-gallery__gallery__item
 

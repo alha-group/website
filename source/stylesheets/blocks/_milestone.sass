@@ -12,6 +12,17 @@
 .milestone-carousel
   position: relative
   width: 100%
+  .slick-arrow
+    top: 7%
+    width: 50px
+    height: 50px
+    border: 1px solid #D9EBFC
+    border-radius: 50%
+    +bg-variant($blue-xl)
+    &::before
+      border-color: $blue-color
+      width: 10px
+      height: 10px
 
 .milestone-wrap__arrows
   position: absolute
@@ -73,6 +84,7 @@
   +font-family($heading-font-family, 400)
   +font-size(delta)
   +horizontal-padding(4)
+  height: 60px
 
 .milestone-carousel__content__image
   +margin-top(4)
