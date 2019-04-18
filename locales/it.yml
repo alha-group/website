@@ -81,6 +81,9 @@ it:
     phone: "Phone"
     additional_info: "Informazioni Addizionali"
 
+  news:
+    read_more: "Leggi la news"
+
   footer:
     collaborators: "Collaboratori"
     newsletter: "Newsletter"

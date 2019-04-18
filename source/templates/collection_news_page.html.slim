@@ -3,6 +3,25 @@
 
 = partial "partials/hero", locals: { hero: page, hero_alpha: 95, hero_class: "header", hero_align_bg_col: "" }
 
+- evidence_news = news_pages.first
+
+section.news-evidence
+  .wrap
+    .grid
+      .grid__item.desk-6-12
+        = image_tag(evidence_news.cover.url(fm: :jpg, fit: :crop, w: 1200, h: 850))
+      .grid__item.desk-6-12
+        .news-evidence__block
+          .news-evidence__block__date= evidence_news.published_date.strftime("%d %b %Y")
+          .news-evidence__block__title= evidence_news.title
+          .news-evidence__block__abstract= evidence_news.abstract
+          .news-evidence__block__action
+            = link_to "/#{I18n.locale}/#{page.slug}/#{evidence_news.slug}",
+              class: "news-evidence__block__link" do
+              = t("news.read_more")
+              = i("arrow_dx")
+
+- if news_pages.length > 1
 section.news
   .wrap
     .grid

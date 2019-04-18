@@ -1,6 +1,6 @@
 .news
   background: $blue-xl
-  +vertical-padding(4)
+  +vertical-padding(8)
 
 .news-block
   +margin-bottom(2)
@@ -21,3 +21,36 @@
   +heading-font-family
   .news-block:hover &
     color: $orange-color
+
+.news-evidence
+  +vertical-padding(5)
+
+.news-evidence__block
+  +vertical-padding(4)
+  width: 70%
+
+.news-evidence__block__date
+  text-transform: uppercase
+  +margin-bottom(2)
+
+.news-evidence__block__title
+  +heading-font-family
+  color: $blue-color
+  +font-size(beta)
+  +margin-bottom(2)
+
+.news-evidence__block__abstract
+  +margin-bottom(4)
+
+.news-evidence__block__link
+  color: $blue-l
+  +font-size(smallprint)
+  svg
+    +base-transition("bounce", "base")
+    +font-size(35px)
+    +margin-left(1)
+  &:hover
+    color: $blue-l
+    svg
+      color: $orange-color
+      transform: translateX(15px)

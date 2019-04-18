@@ -10,13 +10,13 @@ section.contact-us
           .contact-us__inner__person
             .grid
               .grid__item.lap-3-12
-                .align--center
-                  = image_tag("person.jpg")
+                .contact-us__person__image
+                  = image_tag(page.contact_photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
               .grid__item.lap-4-12
-                .contact-us__person__role= t("contact_us.role")
-                .contact-us__person__full_name= t("contact_us.full_name")
+                .contact-us__person__role= page.contact_role
+                .contact-us__person__full_name= page.contact_name
               .grid__item.lap-5-12
                 .contact-us__person__data
                   .contact-us__person__data__label= t("contact_us.label")
-                  .contact-us__person__data__phone= t("contact_us.phone")
-                  .contact-us__person__data__email= t("contact_us.email")
+                  .contact-us__person__data__phone= page.contact_phone
+                  .contact-us__person__data__email= page.contact_email
