@@ -22,6 +22,7 @@
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/preset-env": "^7.3.1",
     "animejs": "^3.0.1",
+    "aos": "^2.3.4",
     "autoprefixer": "7.2.5",
     "babel-loader": "^8.0.5",
     "bemo-sass": "damjack/bemo#master",

@@ -25,9 +25,11 @@ section.news-evidence
 section.news
   .wrap
     .grid
+      - idx = 0
       - news_pages.each do |news|
         = link_to "/#{I18n.locale}/#{page.slug}/#{news.slug}",
-          class: "grid__item desk-4-12" do
+          class: "grid__item desk-4-12",
+          data: { aos: "fade-right", 'aos-offset': "#{200 + (idx*100)}" } do
           .news-block
             .news-block__image
               = image_tag(news.cover.url(fm: :jpg, fit: :crop, w: 800, h: 450))
@@ -35,3 +37,4 @@ section.news
               .news-block__content__date= news.published_date.strftime("%d %b %Y")
               .news-block__content__title
                 = news.title
+        - idx += 1

@@ -5,7 +5,8 @@
 
 section.milestones
   .wrap
-    .milestones__title= t("about.milestones")
+    .milestones__title data-aos="fade-down"
+      = t("about.milestones")
     .milestone-carousel
       - milestones.each do |milestone|
         .milestone-carousel__item
@@ -19,12 +20,13 @@ section.milestones
             .milestone-carousel__content__image
               = image_tag(milestone.attachment.url(fm: :jpg, fit: :crop, h: 450, w: 650, sat: "-100"))
 
-section.teams
+section.teams id="teams"
   .wrap
     .grid--center
       .grid__item.lap-9-12.desk-7-12
-        .teams__title= page.team_title
-        .teams__abstract
+        .teams__title data-aos="fade-down"
+          = page.team_title
+        .teams__abstract data-aos="fade-down" data-aos-offset="300"
           .formatted-content
             = page.team_abstract
     .grid

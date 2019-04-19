@@ -4,7 +4,7 @@
 header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)})"
   .hero__body
     .hero__body__inner
-      h1.hero__heading
+      h1.hero__heading data-aos="fade-down"
         = page.page_title
   .hero__wrap
     .wrap
@@ -24,8 +24,9 @@ section.services
   .wrap
     .grid--center
       .grid__item.lap-9-12.desk-7-12
-        h2.services__title= page.page_subtitle
-        .services__body
+        h2.services__title data-aos="fade-down"
+          = page.page_subtitle
+        .services__body data-aos="fade-down" data-aos-offset="100"
           .formatted-content
             = page.abstract
     .grid--center
@@ -41,8 +42,9 @@ section.advanced_solutions
   .wrap
     .grid--center
       .grid__item.lap-9-12.desk-7-12
-        h2.advanced_solutions__title= page.cargo_title
-        .advanced_solutions__body
+        h2.advanced_solutions__title data-aos="fade-down"
+          = page.cargo_title
+        .advanced_solutions__body data-aos="fade-down" data-aos-offset="300"
           .formatted-content
             = page.cargo_abstract
   .flex--nospace

@@ -5,13 +5,13 @@ header class="header--airport"
   .header__hero style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 80)})"
     .header__hero__body
       .header__hero__body__inner
-        h1.header__hero__heading
+        h1.header__hero__heading data-aos="fade-down" data-aos-offset="300"
           = page.page_title
           .header__hero__label
             .header__hero__label__text
               = t("network.label.opening")
         p.header__hero__heading__sub= page.page_labeltitle
-        .header__hero__heading__info
+        .header__hero__heading__info data-aos="fade-down" data-aos-offset="300"
           .header__hero__heading__info__col
             .header__hero__heading__info__label= t("network.label.address")
             .header__hero__heading__info__text
@@ -41,7 +41,7 @@ section.info-gallery
       .grid__item.desk-11-12
         .grid
           .grid__item.desk-6-12
-            .info-gallery__info
+            .info-gallery__info data-aos="zoom-in" data-aos-offset="300"
               .info-gallery__info__inner
                 .info-gallery__info__inner__title
                   = t("airport.contact")

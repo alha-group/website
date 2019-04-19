@@ -2,7 +2,7 @@ header class="#{hero_class}"
   .header__hero style="background-image: url(#{hero.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: hero_alpha)})"
     .header__hero__body
       .header__hero__body__inner
-        h1.header__hero__heading
+        h1.header__hero__heading data-aos="fade-down" data-aos-offset="300"
           = hero.page_title
           - if hero.respond_to?(:page_labeltitle)
             .header__hero__label
@@ -16,7 +16,7 @@ header class="#{hero_class}"
         .grid
           .grid__item.width-1-12
           .grid__item.width-11-12
-            .header__text__inner
+            .header__text__inner data-aos="fade-left" data-aos-offset="0"
               - if hero.respond_to?(:abstract_title)
                 h2.header__text__title= hero.abstract_title
               .header__text__body

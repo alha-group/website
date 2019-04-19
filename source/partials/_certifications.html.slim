@@ -7,7 +7,7 @@ section.certification-part
           .certification-part__inner__title= t("certification.partial.title")
           .grid--middle
             - certs.each do |cert|
-              .grid__item.lap-4-12
+              .grid__item.lap-4-12 data-aos="fade-right" data-aos-offset="0"
                 .certification-part__inner__block
                   .certification-part__inner__block__image
                     = image_tag(cert.logo.url(fm: :jpg, fit: :fill, h: 200, w: 200))

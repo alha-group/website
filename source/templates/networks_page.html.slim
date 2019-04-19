@@ -5,7 +5,7 @@ header class="header--map"
   .header__hero style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 80)})"
     .header__hero__body
       .header__hero__body__inner
-        h1.header__hero__heading
+        h1.header__hero__heading data-aos="fade-down" data-aos-offset="300"
           = page.page_title
           - if page.respond_to?(:page_labeltitle)
             .header__hero__label
@@ -13,7 +13,7 @@ header class="header--map"
                 = page.page_labeltitle
         - if page.respond_to?(:page_subtitle)
           p.header__hero__heading__sub= page.page_subtitle
-        .header__hero__map
+        .header__hero__map data-aos="fade-left" data-aos-offset="100"
           = partial "partials/map", locals: {points: networks_points}
   div class="header__text--center-gray"
     .wrap

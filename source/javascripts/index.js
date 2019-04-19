@@ -3,9 +3,11 @@ global.jQuery = $;
 
 import modernizr from 'modernizr';
 import slick from 'slick-carousel';
-import anime from 'animejs/lib/anime';
+import AOS from 'aos';
 
 $(document).ready(function() {
+  AOS.init();
+
   // CANVAS ASIDE RIGHT
   $(".js-nav-toggler--right").click(function(e) {
     e.preventDefault;
@@ -86,11 +88,20 @@ $(document).ready(function() {
     rows: 0
   });
 
+  $(".js-form-send").submit(function(e) {
+    e.preventDefault();
+    var form = $(".js-form-send");
+    var url = form.data("hook-main");
+    var form_data = form.serialize();
 
-//  anime({
-//    targets: '.site-nav__logo',
-//    translateX: 0,
-//    rotate: '1turn',
-//    duration: 1200
-//  });
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: form_data,
+      success: function() {
+        $('.feedback').addClass("show-success-message");
+        ga('send', 'event', 'Contact Form', 'Sent successfully');
+      }
+    });
+  });
 });
