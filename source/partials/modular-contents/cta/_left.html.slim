@@ -2,7 +2,7 @@ section.cta-block
   .wrap
     .flex--nospace--reverse
       .flex__item--nospace.flex-desk-6-12
-        .cta-block__data data-aos="fade-left"
+        .cta-block__data data-aos="fade-left" data-aos-duration="1500"
           - if !content.title.blank?
             div class="cta-block__title"
               h2= content.title
@@ -18,5 +18,5 @@ section.cta-block
                   = content.label_link
                   = i("arrow_dx")
       .flex__item--nospace.flex-desk-6-12
-        .cta-block__cover data-aos="fade-right"
+        .cta-block__cover data-aos="fade-right" data-aos-duration="1500"
           = image_tag(content.attachment.url(fit: :crop, h: 570, w: 1200, crop: "edges", format: :pjpeg))
