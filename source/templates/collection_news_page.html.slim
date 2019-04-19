@@ -9,7 +9,7 @@ section.news-evidence
   .wrap
     .grid
       .grid__item.desk-6-12
-        = image_tag(evidence_news.cover.url(fm: :jpg, fit: :crop, w: 1200, h: 850))
+        = image_tag(evidence_news.cover.url(fm: :jpg, fit: :crop, w: 1024, h: 850))
       .grid__item.desk-6-12
         .news-evidence__block
           .news-evidence__block__date= evidence_news.published_date.strftime("%d %b %Y")

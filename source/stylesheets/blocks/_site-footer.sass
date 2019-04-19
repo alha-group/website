@@ -30,7 +30,8 @@
   flex: 0 1 auto
   flex-direction: row
   flex-wrap: wrap
-  width: 60%
+  width: 90%
+  +margin-bottom(2)
 
 .footer-block__logos__image
   -moz-box-sizing: border-box
@@ -44,7 +45,8 @@
   +padding-right(4)
 
 .footer-block__form
-  width: 65%
+  width: 90%
+  +margin-bottom(2)
 
 .footer-block__infos
   width: 65%
@@ -64,12 +66,21 @@
     +margin-left(1)
     width: 60%
 
++at-breakpoint(tab)
+  .footer-block__logos
+    width: 70%
+
 +at-breakpoint(lap)
   .footer-block__logos
     width: 80%
+    +margin-bottom(0)
 
   .footer-block__logos__image
     +padding-right(1)
+
+  .footer-block__form
+    width: 65%
+    +margin-bottom(0)
 
 +at-breakpoint(desk)
   .footer-block__logos
