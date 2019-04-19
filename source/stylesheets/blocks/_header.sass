@@ -97,19 +97,12 @@
   background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
 
 .header__text__inner
-  +padding-left(7)
-  +vertical-padding(7)
+  +padding-left(4)
+  +vertical-padding(5)
   .header__text--center-gray &
     background: $blue-xl
   .header__text--column-gray &
     background: $blue-xl
-    -webkit-columns: 100px 2
-    -moz-columns: 100px 2
-    columns: 100px 2
-  .header__text--column &
-    -webkit-columns: 100px 2
-    -moz-columns: 100px 2
-    columns: 100px 2
   .header--airport &
     +padding-left(0)
 
@@ -127,7 +120,7 @@
   width: 70%
 
 .header__text__body
-  width: 70%
+  width: 100%
 
 .header__info__inner
   +padding-top(7)
@@ -212,6 +205,23 @@
       transform: translateY(170%)
     .header--airport &
       transform: translateY(240%)
+
+  .header__text__inner
+    +padding-left(7)
+    +vertical-padding(7)
+    .header__text--column-gray &
+      -webkit-columns: 100px 2
+      -moz-columns: 100px 2
+      columns: 100px 2
+    .header__text--column &
+      -webkit-columns: 100px 2
+      -moz-columns: 100px 2
+      columns: 100px 2
+    .header--airport &
+      +padding-left(0)
+
+  .header__text__body
+    width: 70%
 
 +at-breakpoint(wall)
   .header__hero__map

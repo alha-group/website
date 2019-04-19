@@ -21,7 +21,7 @@
   text-align: center
   color: $white-color
   +heading-font-family
-  +font-size(beta)
+  +font-size(gamma)
   position: relative
   +margin-bottom(8)
   &::after
@@ -36,13 +36,32 @@
   text-align: center
   color: $white-color
   +heading-font-family
+  +margin-bottom(2)
 
 .numeric__block__value
-  +font-size(60px)
+  +font-size(40px)
   color: $orange-color
 
 .numeric__block__text
   +heading-font-family
-  +font-size(delta)
-  width: 55%
+  +font-size(regular)
+  width: 65%
   margin: 0 auto
+
++at-breakpoint(tab)
+  .numeric__block
+    +margin-bottom(0)
+
+  .numerics__title
+    +font-size(beta)
+
+  .numeric__block__value
+    +font-size(60px)
+
+  .numeric__block__text
+    +font-size(delta)
+    width: 55%
+    margin: 0 auto
+
++at-breakpoint(desk)
+

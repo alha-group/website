@@ -9,19 +9,20 @@
     height: 80%
     +bg-variant($blue-xl)
     z-index: -1
+  .wrap
+    +padding-left(0)
 
 .join-us__inner
   +padding(5)
+  +horizontal-padding(3)
   +bg-variant($white-color)
-  text-align: center
+  text-align: left
 
 .join-us__inner__title
   +heading-font-family
   +font-size(gamma)
   color: $blue-color
-  width: 60%
-  margin-left: auto
-  margin-right: auto
+  width: 80%
 
 .join-us__inner__abstract
   +vertical-margin(2)
@@ -41,3 +42,20 @@
     svg
       color: $orange-color
       transform: translateX(15px)
+
++at-breakpoint(lap)
+  .join-us
+    .wrap
+      +padding-left(2)
+
+  .join-us__inner
+    +horizontal-padding(5)
+    text-align: center
+
+  .join-us__inner__title
+    width: 60%
+    margin-left: auto
+    margin-right: auto
+
++at-breakpoint(desk)
+

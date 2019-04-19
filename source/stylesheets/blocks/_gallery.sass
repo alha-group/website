@@ -1,22 +1,23 @@
 .gallery-news
   +vertical-margin(8)
   position: relative
-
-.gallery-news__carousel
   &::before
     content: ''
-    +position(absolute, -50px -70px null null)
-    width: 270px
-    height: 300px
-    +bg-variant($orange-color)
+    +position(absolute, 20% 0 null 0)
+    width: 100%
+    height: 80%
+    +bg-variant($blue-xl)
+    z-index: -1
+
+.gallery-news__carousel
   .slick-dots
     +position(absolute, null 0 0 null)
-    width: 50%
+    width: 80%
     text-align: left
-    +padding-top(3)
+    +padding-top(1)
     +horizontal-padding(5)
     +padding-bottom(0)
-    +bg-variant($white-color)
+    +bg-variant($blue-xl)
     li
       width: 40px
       height: 3px
@@ -39,23 +40,24 @@
   display: flex
   flex: 0 1 auto
   flex-direction: row
-  flex-wrap: nowrap
+  flex-wrap: wrap
 
 .gallery-news__carousel__item__image
-  flex: 0 0 50%
-  max-width: 50%
+  flex: 1 0 100%
+  max-width: 100%
   width: 100%
 
 .gallery-news__carousel__item__content
-  flex: 0 0 50%
-  max-width: 50%
+  flex: 1 0 100%
+  max-width: 100%
   width: 100%
   +bg-variant($blue-xl)
-  +padding(7)
+  +padding(2)
+  +vertical-padding(4)
   position: relative
 
 .gallery-arrows
-  +position(absolute, null 0 60px null)
+  +position(absolute, -60px 0 auto null)
   width: 100%
   text-align: right
 
@@ -74,7 +76,7 @@
   +bg-variant($blue-color)
 
 .gallery-news__carousel__item__content__inner
-  width: 70%
+  width: 100%
 
 .gallery-news__carousel__item__title
   +font-family($heading-font-family, 400)
@@ -83,3 +85,63 @@
 
 .gallery-news__carousel__item__text
   +margin-top(3)
+
++at-breakpoint(tab)
+  .gallery-news__carousel__item__content__inner
+    width: 70%
+
++at-breakpoint(desk)
+  .gallery-news
+    &::before
+      content: none
+
+  .gallery-news__carousel
+    &::before
+      content: ''
+      +position(absolute, -50px -70px null null)
+      width: 270px
+      height: 300px
+      +bg-variant($orange-color)
+    .slick-dots
+      +position(absolute, null 0 0 null)
+      width: 50%
+      text-align: left
+      +padding-top(3)
+      +horizontal-padding(5)
+      +padding-bottom(0)
+      +bg-variant($white-color)
+      li
+        width: 40px
+        height: 3px
+        button
+          width: 40px
+          height: 3px
+          &::before
+            content: ''
+            opacity: 1
+            +bg-variant($gray-color)
+            width: 40px
+            height: 3px
+        &.slick-active
+          button::before
+            content: ''
+            +bg-variant($orange-color)
+            opacity: 1
+
+  .gallery-news__carousel__item__inner
+    flex-wrap: nowrap
+
+  .gallery-news__carousel__item__image
+    flex: 0 0 50%
+    max-width: 50%
+
+  .gallery-news__carousel__item__content
+    flex: 0 0 50%
+    max-width: 50%
+    +padding(7)
+    +vertical-padding(7)
+
+  .gallery-arrows
+    +position(absolute, auto 0 60px null)
+    width: 100%
+    text-align: right

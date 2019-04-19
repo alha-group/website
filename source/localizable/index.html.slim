@@ -14,7 +14,7 @@ header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: 
             .hero__label__text
               = t("home.scroll-down")
         .flex__item.flex-desk-3-12
-          .hero__social
+          .hero__social.visible--on-desk
             - dato.contact.social_block.each do |social|
               = link_to social.social_type,
                 social.url,
@@ -66,7 +66,7 @@ section.numerics
           .numerics__title= page.numeric_title
       .grid
         - page.numeric_block.each do |numeric|
-          .grid__item.lap-3-12
+          .grid__item.width-6-12.lap-3-12
             .numeric__block
               .numeric__block__value= numeric.number
               .numeric__block__text= numeric.title
@@ -82,7 +82,7 @@ section.gallery-news
         .gallery-news__carousel__item
           .gallery-news__carousel__item__inner
             .gallery-news__carousel__item__image
-              = image_tag(gallery.attachment.url(fm: :jpg, fit: :crop, h: 550, w: 750))
+              = image_tag(gallery.attachment.url(fm: :jpg, fit: :crop, h: 750, w: 1024))
             .gallery-news__carousel__item__content
               .gallery-arrows
                 button class="slick-prev-gallery" type="button"= i("arrow-left")

@@ -29,7 +29,7 @@ section.teams
             = page.team_abstract
     .grid
       - teams.each do |team|
-        .grid__item.lap-4-12.desk-3-12
+        .grid__item.tab-6-12.lap-4-12.desk-3-12
           .team__block
             .team__image
               = image_tag(team.avatar.url(fm: :jpg, fit: :crop, h: 350, w: 350))
