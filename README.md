@@ -40,7 +40,6 @@ You can find the base config data inside `data/config.json` and another inside `
 ```env
 DATO_API_TOKEN=XXXXXXXXXXXXXXXX
 BASE_URL=https://XXX.XXX
-NODE_ENV=development
 BUILD_ENV=development
 LANGS=yy
 ```
