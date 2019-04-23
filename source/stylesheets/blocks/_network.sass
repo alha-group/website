@@ -13,6 +13,7 @@
   +base-transition("ease-in-out", "base")
   position: relative
   display: block
+  +margin-bottom(3)
 
 .network__block__inner__image
   position: relative
@@ -74,5 +75,8 @@
 +at-breakpoint(lap)
 
 +at-breakpoint(desk)
+  .network__block
+    +margin-bottom(2)
+
   .network__block__inner__image
     max-height: 100%

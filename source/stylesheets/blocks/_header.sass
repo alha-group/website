@@ -50,7 +50,7 @@
 
 .header__hero__heading__sub
   +margin-top(1)
-  width: 30%
+  width: 70%
   +font-size(regular)
 
 .header__hero__label
@@ -64,7 +64,7 @@
   .header--map &
     transform: translateY(170%)
   .header--terminal &
-    transform: translateY(170%)
+    transform: translateY(320%)
   .header--airport &
     transform: translateY(240%)
 
@@ -172,8 +172,8 @@
   +margin-bottom(5)
 
 .header__hero__heading__info__col
-  flex: 1 0 20%
-  max-width: 20%
+  flex: 1 0 60%
+  max-width: 60%
   width: 100%
 
 .header__hero__heading__info__label
@@ -230,6 +230,14 @@
 
   .header__news__heading
     +font-size(beta)
+
+  .header__hero__heading__sub
+    width: 30%
+
+  .header__hero__heading__info__col
+    flex: 1 0 20%
+    max-width: 20%
+    width: 100%
 
 +at-breakpoint(wall)
   .header__hero__map

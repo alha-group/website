@@ -16,13 +16,13 @@ header class="header--airport"
             .header__hero__heading__info__label= t("network.label.address")
             .header__hero__heading__info__text
               = page.address
-        .header__hero__map data-aos="fade-left" data-aos-offset="0" data-aos-duration="1800"
+        .header__hero__map.visible--on-desk data-aos="fade-left" data-aos-offset="0" data-aos-duration="1800"
           = partial "partials/single_map", locals: {point: networks_point(page).to_json}
   div class="header__text"
     .wrap
       .grid
-        .grid__item.width-1-12
-        .grid__item.width-11-12
+        .grid__item.width-2-12.tab-1-12
+        .grid__item.width-10-12.tab-11-12
           .header__text__inner data-aos="fade-left" data-aos-offset="0" data-aos-duration="2000"
             .grid
               - if !page.office.blank?

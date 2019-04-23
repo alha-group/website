@@ -13,7 +13,7 @@ header class="header--map"
                 = page.page_labeltitle
         - if page.respond_to?(:page_subtitle)
           p.header__hero__heading__sub= page.page_subtitle
-        .header__hero__map data-aos="fade-left" data-aos-offset="100" data-aos-duration="1500"
+        .header__hero__map.visible--on-desk data-aos="fade-left" data-aos-offset="100" data-aos-duration="1500"
           = partial "partials/map", locals: {points: networks_points}
   div class="header__text--center-gray"
     .wrap

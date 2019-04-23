@@ -6,7 +6,7 @@ import slick from 'slick-carousel';
 import AOS from 'aos';
 
 $(document).ready(function() {
-  AOS.init();
+  AOS.init({disable: 'mobile'});
 
   // CANVAS ASIDE RIGHT
   $(".js-nav-toggler--right").click(function(e) {
