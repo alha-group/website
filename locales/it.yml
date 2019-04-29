@@ -80,6 +80,7 @@ it:
     email: "Email"
     phone: "Phone"
     additional_info: "Informazioni Addizionali"
+    google_map: "Vedi sulla mappa"
 
   news:
     read_more: "Leggi la news"
