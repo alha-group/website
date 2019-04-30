@@ -88,6 +88,7 @@ it:
   footer:
     collaborators: "Collaboratori"
     newsletter: "Newsletter"
+    newsletter_success: "Iscritto alla newsletter"
     contacts: "Contatti"
     contact:
       address: "Indirizzo"

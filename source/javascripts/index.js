@@ -99,8 +99,9 @@ $(document).ready(function() {
       url: url,
       data: form_data,
       success: function() {
-        $('.feedback').addClass("show-success-message");
-        ga('send', 'event', 'Contact Form', 'Sent successfully');
+        form.hide('slow').delay(1000).show('slow');
+        $('.feedback').show('slow').delay(1000).hide('slow');
+        form[0].reset();
       }
     });
   });
