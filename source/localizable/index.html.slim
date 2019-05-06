@@ -4,7 +4,7 @@
 header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)})"
   .hero__body
     .hero__body__inner
-      h1.hero__heading data-aos="fade-down" data-aos-duration="1500"
+      h1.hero__heading
         = page.page_title
   .hero__wrap
     .wrap
@@ -24,9 +24,9 @@ section.services
   .wrap
     .grid--center
       .grid__item.lap-9-12.desk-7-12
-        h2.services__title data-aos="fade-down" data-aos-duration="1500"
+        h2.services__title
           = page.page_subtitle
-        .services__body data-aos="fade-down" data-aos-offset="100" data-aos-duration="1500"
+        .services__body
           .formatted-content
             = page.abstract
     .grid--center
