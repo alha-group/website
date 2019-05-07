@@ -27,6 +27,7 @@
   .header &
     height: 360px
   .header--large &
+    +padding-top(10)
     height: 530px
 
 .header__hero__body
@@ -64,14 +65,14 @@
   .header--map &
     transform: translateY(230%)
   .header--terminal &
-    transform: translateY(320%)
+    transform: translateY(210%)
   .header--airport &
-    transform: translateY(350%)
+    transform: translateY(380%)
 
 .header__hero__label__text
   +body-font-family
-  +font-size(delta)
   color: $black-color
+  +font-size(regular)
   +position(absolute, null null 0 0.8%)
   transform: rotate(-90deg) translateX(-130%)
   transform-origin: bottom left
@@ -85,7 +86,7 @@
 
 .header__text--center-gray
   @extend .header__text
-  text-align: center
+  text-align: left
   background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
 
 .header__text--column-gray
@@ -94,7 +95,9 @@
 
 .header__text--terminal
   @extend .header__text
-  background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
+
+.header__text__before__inner
+  +bg-variant($gray-color)
 
 .header__text__inner
   +padding-left(4)
@@ -105,6 +108,11 @@
     background: $blue-xl
   .header--airport &
     +padding-left(0)
+    p
+      +margin-bottom(2)
+  .header--terminal &
+    +padding-left(0)
+    +padding-right(2)
 
 .header__text__inner__label
   color: $blue-l
@@ -117,7 +125,9 @@
   +font-size(beta)
   color: $blue-color
   +margin-bottom(3)
-  width: 70%
+  width: 100%
+  .header--large--careers &
+    +font-size(regular)
 
 .header__text__body
   width: 100%
@@ -159,7 +169,7 @@
 
 .header__cover
   position: relative
-  +space-rule("top", -6)
+  +space-rule("top", -12)
 
 .header__hero__map
   +position(absolute, null 24px -200px null)
@@ -200,6 +210,26 @@
       transform: translateX(15px)
 
 +at-breakpoint(lap)
+  .header__text--terminal
+    background: linear-gradient(to right, #FFFFFF 50%, #F1F6FB 50%)
+
+  .header__hero__label__text
+    +font-size(delta)
+
+  .header__text--center
+    text-align: center
+
+  .header__text--center-gray
+    text-align: center
+
+  .header__text__before__inner
+    background: transparent
+
+  .header__text__inner
+    .header--terminal &
+      +padding-left(4)
+      +padding-right(0)
+
   .header__news__heading
     +font-size(beta)
 
@@ -212,6 +242,12 @@
   .header__hero
     .header--large &
       height: 770px
+
+  .header__text__title
+    width: 70%
+
+  .header__news__date
+    +padding-top(0)
 
 +at-breakpoint(desk)
   .header__hero__heading__link_map

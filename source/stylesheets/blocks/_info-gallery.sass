@@ -3,7 +3,8 @@
   +bg-variant($blue-xl)
 
 .info-gallery__info
-  width: 80%
+  width: 100%
+  +margin-bottom(2)
 
 .info-gallery__info__inner
   +padding(4)
@@ -20,6 +21,7 @@
 .info-gallery__info__inner__image
 
 .info-gallery__info__inner__data
+  +margin-top(2)
 
 .info-gallery__info__inner__data__label
   color: $blue-l
@@ -57,3 +59,10 @@
 
 .info-gallery__gallery__item
 
++at-breakpoint(desk)
+  .info-gallery__info
+    width: 80%
+    +margin-bottom(0)
+
+  .info-gallery__info__inner__data
+    +margin-top(0)

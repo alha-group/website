@@ -40,15 +40,30 @@
 // Custom flag certifications
 .flag--certification
   @extend .flag
-  +padding(7)
+  +horizontal-padding(2)
   background: $white-color
   border-bottom: 2px solid $blue-xl
 
 .flag__image--certification
   @extend .flag__image
   vertical-align: top
+  display: table-row
+  img
+    width: 40%
 
 .flag__body--certification
   @extend .flag__body
+  display: table-row
   vertical-align: top
 
++at-breakpoint(lap)
+  .flag--certification
+    +padding(7)
+
+  .flag__image--certification
+    display: table-cell
+    img
+      width: 100%
+
+  .flag__body--certification
+    display: table-cell

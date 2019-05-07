@@ -63,7 +63,8 @@
   flex: 0 1 auto
   flex-direction: row
   flex-wrap: nowrap
-  align-items: center
+  align-items: flex-start
+  +margin-bottom(3)
 
 .certification-part__inner__block__image
   flex: 1 0 35%
@@ -83,3 +84,7 @@
 .certification-part__inner__block__link
   color: $blue-l
   +font-size(smallprint)
+
++at-breakpoint(lap)
+  .certification-part__inner__block
+    +margin-bottom(0)

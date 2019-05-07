@@ -6,7 +6,7 @@
 .addition-info__inner
   +bg-variant($white-color)
   +padding(4)
-  +padding-bottom(0)
+  +padding-bottom(4)
 
 .addition-info__inner__title
   +font-family($heading-font-family, 400)
@@ -18,9 +18,9 @@
 
 .addition-info__inner__list
   list-style: none
-  -webkit-columns: 100px 3
-  -moz-columns: 100px 3
-  columns: 100px 3
+  -webkit-columns: 100px 1
+  -moz-columns: 100px 1
+  columns: 100px 1
 
 .addition-info__inner__item
   +font-size(delta)
@@ -34,3 +34,20 @@
     height: 10px
     transform: rotate(45deg) skew(10deg, 10deg)
     +bg-variant($blue-color)
+
++at-breakpoint(lap)
+  .addition-info__inner__list
+    list-style: none
+    -webkit-columns: 100px 2
+    -moz-columns: 100px 2
+    columns: 100px 2
+
++at-breakpoint(desk)
+  .addition-info__inner__list
+    list-style: none
+    -webkit-columns: 100px 3
+    -moz-columns: 100px 3
+    columns: 100px 3
+
+  .addition-info__inner
+    +padding-bottom(0)

@@ -24,14 +24,14 @@ header class="header--terminal"
   div class="header__text--terminal"
     .wrap
       .grid
-        .grid__item.width-2-12.tab-1-12
-        .grid__item.width-10-12.tab-5-12
+        .grid__item.width-4-12.tab-1-12
+        .grid__item.width-8-12.tab-5-12
           .header__info__inner data-aos="fade-left" data-aos-offset="0" data-aos-duration="1800"
             .header__info__inner__label= page.contact_role
             .header__info__inner__text= page.contact_name
             .header__info__inner__label= t("terminal.email")
             .header__info__inner__text= page.contact_email
-        .grid__item.width-12-12.tab-6-12
+        .grid__item.tab-6-12.header__text__before__inner
           .header__text__inner data-aos="fade-left" data-aos-offset="0" data-aos-duration="1800"
             = page.abstract
 
