@@ -7,9 +7,22 @@ meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"
 link rel="dns-prefetch" href="https://www.datocms-assets.com"
 link rel="preconnect" href="https://www.datocms-assets.com"
 link rel="stylesheet" href="https://use.typekit.net/wyj0btw.css"
+
 - if ENV['BUILD_ENV'] == "staging"
   meta name="robots" content="noindex, nofollow"
 
 = yield_content :head
-= dato_favicon_meta_tags
 = stylesheet_link_tag "styles"
+
+link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"
+link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
+link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"
+link rel="manifest" href="/site.webmanifest"
+link rel="mask-icon" href="/safari-pinned-tab.svg" color="#01509a"
+meta name="msapplication-TileColor" content="#01509a"
+meta name="theme-color" content="#ffffff"
+
+- localized_paths_for(current_page).each do |locale, path|
+  link rel="alternate" hreflang=locale href="#{ENV['BASE_URL']}#{path}"
+  - if locale.to_sym == :en
+    link rel="alternate" hreflang="x-default" href="#{ENV['BASE_URL']}#{path}"
