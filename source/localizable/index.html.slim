@@ -16,7 +16,7 @@ header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: 
         .flex__item.flex-desk-3-12
           .hero__social.visible--on-desk
             - dato.contact.social_block.each do |social|
-              = link_to social.social_type,
+              = link_to t("home.social.#{social.social_type}"),
                 social.url,
                 class: "hero__social__link"
 
@@ -34,7 +34,7 @@ section.services
       - dato.service_pages.each do |service|
         = link_to "/#{I18n.locale}/services/#{service.slug}",
           class: "grid__item lap-5-12 desk-3-12",
-          data: { aos: "fade-right", 'aos-offset': "#{100 + (idx*100)}", 'aos-duration': "1500" } do
+          data: { aos: "fade-right", 'aos-duration': "#{1000 + (idx*100)}" } do
           .service__block
             .service__block__image
               = inline_svg(service.icon.url, size: "130px*130px", no_defs: true)

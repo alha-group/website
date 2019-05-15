@@ -33,6 +33,9 @@ en:
 
   home:
     scroll-down: "Scroll Down"
+    social:
+      twitter: "twitter"
+      linkedin: "linkedin"
 
   about:
     milestones: "Milestone"
@@ -86,7 +89,7 @@ en:
     read_more: "Leggi la news"
 
   footer:
-    collaborators: "Collaborators"
+    collaborators: "Collaborations"
     newsletter: "Newsletter"
     newsletter_success: "Subscribed at newsletter"
     contacts: "Contacts"
