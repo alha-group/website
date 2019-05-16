@@ -81,20 +81,21 @@ section.numerics
   = partial "partials/modular-contents/#{modular.item_type.api_key}",
     locals: {content: modular, variant: "--homepage"}
 
-section.gallery-news
-  .wrap
-    .gallery-news__carousel
-      - page.gallery_news.each do |gallery|
-        .gallery-news__carousel__item
-          .gallery-news__carousel__item__inner
-            .gallery-news__carousel__item__image
-              = image_tag(gallery.attachment.url(fm: :jpg, fit: :crop, h: 750, w: 1024))
-            .gallery-news__carousel__item__content
-              .gallery-arrows
-                button class="slick-prev-gallery" type="button"= i("arrow-left")
-                button class="slick-next-gallery" type="button"= i("arrow-right")
-              .gallery-news__carousel__item__content__inner
-                .gallery-news__carousel__item__title= gallery.title
-                .gallery-news__carousel__item__text
-                  .formatted-content
-                    = gallery.text
+- if news_pages.count > 0
+  section.gallery-news
+    .wrap
+      .gallery-news__carousel
+        - news_pages.take(3).each do |news|
+          .gallery-news__carousel__item
+            .gallery-news__carousel__item__inner
+              .gallery-news__carousel__item__image
+                = image_tag(news.cover.url(fm: :jpg, fit: :crop, h: 750, w: 1024))
+              .gallery-news__carousel__item__content
+                .gallery-arrows
+                  button class="slick-prev-gallery" type="button"= i("arrow-left")
+                  button class="slick-next-gallery" type="button"= i("arrow-right")
+                .gallery-news__carousel__item__content__inner
+                  .gallery-news__carousel__item__title= news.title
+                  .gallery-news__carousel__item__text
+                    .formatted-content
+                      = news.abstract

@@ -164,7 +164,10 @@ dato.tap do |dato|
     I18n.with_locale(locale) do
       proxy "/#{locale}/index.html",
         "/localizable/index.html",
-        locals: { page: dato.homepage },
+        locals: {
+          page: dato.homepage,
+          news_pages: dato.news_pages
+        },
         locale: locale
 
       proxy "/#{locale}/#{dato.about_page.slug}/index.html",

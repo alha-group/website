@@ -105,4 +105,28 @@ $(document).ready(function() {
       }
     });
   });
+
+  if (window.innerWidth > 1024) {
+    $(".site-nav__menu__item").hover(function(e){
+      e.preventDefault();
+      console.log(this)
+      var right = this.offsetLeft + this.offsetWidth;
+      var w_width = window.innerWidth;
+      console.log(w_width - right)
+      $(this).find(".site-nav__menu__item__dropdown__inner__right").css("margin-right", (w_width - right)+"px");
+    })
+  }
 });
+
+window.onresize = function() {
+  if (window.innerWidth > 1024) {
+    $(".site-nav__menu__item").hover(function(e){
+      e.preventDefault();
+      console.log(this)
+      var right = this.offsetLeft + this.offsetWidth;
+      var w_width = window.innerWidth;
+      console.log(w_width - right)
+      $(this).find(".site-nav__menu__item__dropdown__inner__right").css("margin-right", (w_width - right)+"px");
+    })
+  }
+}
