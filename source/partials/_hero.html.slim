@@ -20,5 +20,6 @@ header class="#{hero_class}"
               - if hero.respond_to?(:abstract_title)
                 h2.header__text__title= hero.abstract_title
               .header__text__body
-                .formatted-content
-                  = hero.abstract_text
+                .header__text__body__inner
+                  .formatted-content
+                    = hero.abstract_text
