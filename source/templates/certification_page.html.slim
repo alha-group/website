@@ -9,15 +9,15 @@ section.certifications
       .grid--center
         .grid__item.desk-9-12
           .flag--certification
-            .flag__image--certification data-aos="fade-right" data-aos-offset="0" data-aos-duration="1500"
+            .flag__image--certification data-aos="fade-right" data-aos-duration="1500"
               = image_tag(content.logo.url(fm: :jpg, fit: :fill, h: 200, w: 200))
             .flag__body--certification
-              .certification__title data-aos="fade-down" data-aos-offset="300" data-aos-duration="1500"
+              .certification__title data-aos="fade-down" data-aos-duration="1500"
                 = content.title
-              .certification__content data-aos="fade-down" data-aos-offset="300" data-aos-duration="1500"
+              .certification__content data-aos="fade-down" data-aos-duration="1500"
                 .formatted-content
                   = content.text
-              .certification__action data-aos="fade-up" data-aos-offset="0" data-aos-duration="1500"
+              .certification__action data-aos="fade-up" data-aos-duration="1500"
                 = link_to content.url_site,
                   class: "certification--link" do
                   = t("certification.link")

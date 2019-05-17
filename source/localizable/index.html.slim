@@ -47,7 +47,7 @@ section.advanced_solutions
       .grid__item.lap-9-12.desk-7-12
         h2.advanced_solutions__title data-aos="fade-down" data-aos-duration="1500"
           = page.cargo_title
-        .advanced_solutions__body data-aos="fade-down" data-aos-offset="300" data-aos-duration="1500"
+        .advanced_solutions__body data-aos="fade-down" data-aos-duration="1500"
           .formatted-content
             = page.cargo_abstract
   .flex--nospace
@@ -73,7 +73,7 @@ section.numerics
       .grid
         - page.numeric_block.each do |numeric|
           .grid__item.width-6-12.lap-3-12
-            .numeric__block data-aos="fade-down" data-aos-offset="300" data-aos-duration="1500"
+            .numeric__block data-aos="fade-down" data-aos-duration="1500"
               .numeric__block__value= numeric.number
               .numeric__block__text= numeric.title
 
@@ -85,7 +85,7 @@ section.numerics
   section.gallery-news
     .wrap
       .gallery-news__carousel
-        - news_pages.take(3).each do |news|
+        - news_pages.select {|n| n.in_homepage }.each do |news|
           .gallery-news__carousel__item
             .gallery-news__carousel__item__inner
               .gallery-news__carousel__item__image

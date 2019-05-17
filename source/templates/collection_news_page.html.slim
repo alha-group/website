@@ -29,7 +29,7 @@ section.news
       - news_pages.each do |news|
         = link_to "/#{I18n.locale}/#{page.slug}/#{news.slug}",
           class: "grid__item desk-4-12",
-          data: { aos: "fade-right", 'aos-offset': "#{200 + (idx*100)}" } do
+          data: { aos: "fade-right", 'aos-duration': "#{200 + (idx*100)}" } do
           .news-block
             .news-block__image
               = image_tag(news.cover.url(fm: :jpg, fit: :crop, w: 800, h: 450))
