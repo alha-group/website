@@ -2,6 +2,20 @@
   == dato_meta_tags(page)
 
 header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)})"
+
+  .hero-video
+    video.visible--on-desk.hero-video__video playsinline="playsinline" autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted" poster="#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)}"
+      - if (page.mp4_video_full.present?)
+        source src=page.mp4_video_full.url type="video/mp4"
+      - if (page.webm_video_full.present?)
+        source src=page.webm_video_full.url type="video/webm"
+    video.hidden--on-desk.hero-video__video playsinline="playsinline" autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted" poster="#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)}"
+      - if (page.mp4_video_mobile.present?)
+        source src=page.mp4_video_mobile.url type="video/mp4"
+      - if (page.webm_video_mobile.present?)
+        source src=page.webm_video_mobile.url type="video/webm"
+    .hero-video__video--overlay
+
   .hero__body
     .hero__body__inner
       h1.hero__heading

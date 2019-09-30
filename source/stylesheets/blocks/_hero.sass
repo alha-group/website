@@ -78,6 +78,26 @@
   transform: rotate(-90deg) translateX(130%)
   transform-origin: center left
 
+.hero-video
+  position: relative
+  color: $white-color
+  max-height: 100vh
+  overflow: hidden
+  .wrap
+    +position(absolute, 0 0 0 0)
+
+.hero-video__video
+  display: block
+  width: 100%
+  vertical-align: top
+  margin: 0 auto
+
+.hero-video__video--overlay
+  @extend .hero-video__video
+  opacity: .6
+  background: image-url("overlay.png")
+  +position(absolute, 0 0 0 0)
+
 +at-breakpoint(lap)
 
 +at-breakpoint(desk)
