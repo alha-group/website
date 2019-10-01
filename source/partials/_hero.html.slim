@@ -1,25 +1,69 @@
-header class="#{hero_class}"
-  .header__hero style="background-image: url(#{hero.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: hero_alpha)})"
-    .header__hero__body
-      .header__hero__body__inner
-        h1.header__hero__heading
-          = hero.page_title
-          - if hero.respond_to?(:page_labeltitle)
-            .header__hero__label
-              .header__hero__label__text
-                = hero.page_labeltitle
-        - if hero.respond_to?(:page_subtitle)
-          p.header__hero__heading__sub= hero.page_subtitle
-  - if hero.respond_to?(:abstract_text)
-    div class="header__text#{hero_align_bg_col}"
-      .wrap
-        .grid
-          .grid__item.width-1-12
-          .grid__item.width-11-12
-            .header__text__inner
-              - if hero.respond_to?(:abstract_title)
-                h2.header__text__title= hero.abstract_title
-              .header__text__body
-                .header__text__body__inner
-                  .formatted-content
-                    = hero.abstract_text
+- if hero.video_or_image
+  header class="#{hero_class}"
+
+    .hero-video style="position: absolute;"
+      video.hidden--on-lap.hero-video__video playsinline="playsinline" autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted" poster="#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)}"
+        - if (page.mp4_video_mobile.present?)
+          source src=page.mp4_video_mobile.url type="video/mp4"
+        - if (page.webm_video_mobile.present?)
+          source src=page.webm_video_mobile.url type="video/webm"
+      video.visible--on-lap.hero-video__video playsinline="playsinline" autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted" poster="#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)}"
+        - if (page.mp4_video_full.present?)
+          source src=page.mp4_video_full.url type="video/mp4"
+        - if (page.webm_video_full.present?)
+          source src=page.webm_video_full.url type="video/webm"
+      .hero-video__video--overlay
+
+    .header__hero
+      .header__hero__body
+        .header__hero__body__inner
+          h1.header__hero__heading
+            = hero.page_title
+            - if hero.respond_to?(:page_labeltitle)
+              .header__hero__label
+                .header__hero__label__text
+                  = hero.page_labeltitle
+          - if hero.respond_to?(:page_subtitle)
+            p.header__hero__heading__sub= hero.page_subtitle
+    - if hero.respond_to?(:abstract_text)
+      div class="header__text#{hero_align_bg_col}"
+        .wrap
+          .grid
+            .grid__item.width-1-12
+            .grid__item.width-11-12
+              .header__text__inner
+                - if hero.respond_to?(:abstract_title)
+                  h2.header__text__title= hero.abstract_title
+                .header__text__body
+                  .header__text__body__inner
+                    .formatted-content
+                      = hero.abstract_text
+
+
+
+- else
+  header class="#{hero_class}"
+    .header__hero style="background-image: url(#{hero.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: hero_alpha)})"
+      .header__hero__body
+        .header__hero__body__inner
+          h1.header__hero__heading
+            = hero.page_title
+            - if hero.respond_to?(:page_labeltitle)
+              .header__hero__label
+                .header__hero__label__text
+                  = hero.page_labeltitle
+          - if hero.respond_to?(:page_subtitle)
+            p.header__hero__heading__sub= hero.page_subtitle
+    - if hero.respond_to?(:abstract_text)
+      div class="header__text#{hero_align_bg_col}"
+        .wrap
+          .grid
+            .grid__item.width-1-12
+            .grid__item.width-11-12
+              .header__text__inner
+                - if hero.respond_to?(:abstract_title)
+                  h2.header__text__title= hero.abstract_title
+                .header__text__body
+                  .header__text__body__inner
+                    .formatted-content
+                      = hero.abstract_text
