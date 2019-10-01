@@ -8,8 +8,11 @@
 .hero--large
   @extend .hero
   height: 770px
+  position: relative
   .hero__body
     height: 770px
+    position: absolute
+    top: 0
 
 @each $color, $value in $all-colors
   .hero--#{$color}
@@ -82,6 +85,7 @@
   position: relative
   color: $white-color
   max-height: 100vh
+  height: 770px
   overflow: hidden
   .wrap
     +position(absolute, 0 0 0 0)
