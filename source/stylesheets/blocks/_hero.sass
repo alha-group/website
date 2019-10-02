@@ -7,12 +7,13 @@
 
 .hero--large
   @extend .hero
-  height: 770px
+  max-height: 770px
   position: relative
-  .hero__body
-    height: 770px
-    position: absolute
+  top: 80px
+  +at-breakpoint(desk)
     top: 0
+  .hero__body
+    +center-vertically
 
 @each $color, $value in $all-colors
   .hero--#{$color}
@@ -52,6 +53,9 @@
   +position(absolute, null null 0 0)
   width: 100%
   +margin-bottom(2)
+  bottom: 80px
+  +at-breakpoint(desk)
+    bottom: 0
   .flex__item
     position: relative
 
@@ -68,7 +72,7 @@
 
 .hero__label
   content: ''
-  +position(absolute, null null 0% 50%)
+  +position(absolute, null null 0% 0%)
   width: 100%
   height: 100px
   border-left: 2px solid $orange-color
@@ -85,7 +89,6 @@
   position: relative
   color: $white-color
   max-height: 100vh
-  height: 770px
   overflow: hidden
   .wrap
     +position(absolute, 0 0 0 0)
