@@ -88,8 +88,9 @@
 .hero-video
   position: relative
   color: $white-color
-  max-height: 100vh
+  max-height: 80vh
   overflow: hidden
+
   .wrap
     +position(absolute, 0 0 0 0)
 
@@ -101,11 +102,18 @@
 
 .hero-video__video--overlay
   @extend .hero-video__video
+  background-color: rgba($blue-color, .6)
   opacity: .6
-  background: image-url("overlay.png")
+  background-image: image-url("overlay.png")
   +position(absolute, 0 0 0 0)
 
 +at-breakpoint(lap)
+  .hero__heading
+    +font-size(beta)
+
++at-breakpoint(eq-palm)
+  .hero__heading
+    +font-size(gamma)
 
 +at-breakpoint(desk)
   .hero__heading

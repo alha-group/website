@@ -4,6 +4,14 @@
 .grid__item
   +grid-item
 
+.grid__item--5-column
+  @extend .grid__item
+  width: 50%
+  +at-breakpoint(lap)
+    width: 33.33%
+  +at-breakpoint(desk)
+    width: 20%
+
 .grid--rev
   @extend .grid
   direction: rtl

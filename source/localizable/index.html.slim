@@ -20,9 +20,9 @@
       .wrap
         .flex.justify--between
           .flex__item.flex-desk-2-12
-            .hero__label
-              .hero__label__text
-                = t("home.scroll-down")
+            / .hero__label
+              / .hero__label__text
+              /   = t("home.scroll-down")
           .flex__item.flex-desk-3-12
             .hero__social.visible--on-desk
               - dato.contact.social_block.each do |social|
@@ -40,9 +40,9 @@
       .wrap
         .flex.justify--between
           .flex__item.flex-desk-2-12
-            .hero__label
-              .hero__label__text
-                = t("home.scroll-down")
+            /.hero__label
+              / .hero__label__text
+              /   = t("home.scroll-down")
           .flex__item.flex-desk-3-12
             .hero__social.visible--on-desk
               - dato.contact.social_block.each do |social|
@@ -63,7 +63,7 @@ section.services
       - idx = 0
       - dato.service_pages.each do |service|
         = link_to "/#{I18n.locale}/services/#{service.slug}",
-          class: "grid__item lap-5-12 desk-3-12",
+          class: "grid__item--5-column",
           data: { aos: "fade-right", 'aos-duration': "#{1000 + (idx*100)}" } do
           .service__block
             .service__block__image
