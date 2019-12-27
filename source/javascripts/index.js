@@ -35,7 +35,7 @@ $(document).ready(function() {
 
   $('.milestone-carousel').slick({
     mobileFirst: true,
-    infinite: true,
+    infinite: false,
     arrows: true,
     dots: false,
     autoplay: false,

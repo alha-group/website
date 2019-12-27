@@ -150,8 +150,7 @@
   background-position: bottom center
   background-repeat: no-repeat
   background-size: cover
-  position: relative
-  display: table
+  position: absolute
   width: 100%
   color: $white-color
   .header--medium &
@@ -161,15 +160,23 @@
   +padding-top(5)
   text-align: center
   +margin-bottom(2)
+  color: white
+  z-index: 10
+  position: relative
+
 
 .header__news__heading
   text-align: center
+  color: white
+  z-index: 10
+  position: relative
+  +margin-bottom(3)
   +heading-font-family
   +font-size(gamma)
 
 .header__cover
   position: relative
-  +space-rule("top", -12)
+  // +space-rule("top", -12)
 
 .header__hero__map
   +position(absolute, null 24px -200px null)
@@ -294,8 +301,8 @@
     width: 70%
     display: inline-block
 
-  .header__cover
-    +space-rule("top", -10)
+  // .header__cover
+  //   +space-rule("top", -10)
 
   .header__news__heading
     +font-size(beta)
