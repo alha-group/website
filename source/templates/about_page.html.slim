@@ -5,7 +5,7 @@
 
 section.milestones
   .wrap
-    .milestones__title data-aos="fade-down" data-aos-duration="1500"
+    .milestones__title
       = page.timeline_title
     .milestone-carousel
       - milestones.each do |milestone|
@@ -24,9 +24,9 @@ section.teams id="teams"
   .wrap
     .grid--center
       .grid__item.lap-9-12.desk-7-12
-        .teams__title data-aos="fade-down" data-aos-duration="1500"
+        .teams__title
           = page.team_title
-        .teams__abstract data-aos="fade-down" data-aos-duration="1500"
+        .teams__abstract
           .formatted-content
             = page.team_abstract
     .grid

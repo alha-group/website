@@ -90,6 +90,8 @@
   color: $white-color
   max-height: 80vh
   overflow: hidden
+  +at-breakpoint(eq-palm)
+    max-height: 50vh
 
   .wrap
     +position(absolute, 0 0 0 0)
@@ -99,6 +101,9 @@
   width: 100%
   vertical-align: top
   margin: 0 auto
+  +at-breakpoint(eq-palm)
+    height: 100%
+    width: auto
 
 .hero-video__video--overlay
   @extend .hero-video__video
