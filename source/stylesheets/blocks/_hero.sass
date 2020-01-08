@@ -7,7 +7,6 @@
 
 .hero--large
   @extend .hero
-  // max-height: 770px
   position: relative
   top: 80px
   +at-breakpoint(desk)
@@ -38,6 +37,10 @@
   margin-right: auto
   max-width: 80rem
   color: $white-color
+  +at-breakpoint(lte-tab)
+    font-size: 2.6rem
+    line-height: 3rem
+    max-width: 70%
 
 .hero__text
   +heading-font-family
@@ -90,11 +93,16 @@
   color: $white-color
   max-height: 80vh
   overflow: hidden
+  width: 100vw
   +at-breakpoint(eq-palm)
     max-height: 50vh
 
   .wrap
     +position(absolute, 0 0 0 0)
+
+  & + .header__hero
+    margin-top: -540px  
+
 
 .hero-video__video
   display: block
@@ -102,15 +110,16 @@
   vertical-align: top
   margin: 0 auto
   +at-breakpoint(eq-palm)
-    height: 100%
+    height: 50vh
     width: auto
 
 .hero-video__video--overlay
   @extend .hero-video__video
-  background-color: rgba($blue-color, .6)
-  opacity: .6
-  background-image: image-url("overlay.png")
+  background-color: $blue-color
+  // opacity: .6
+  // background-image: image-url("overlay.png")
   +position(absolute, 0 0 0 0)
+  mix-blend-mode: color
 
 +at-breakpoint(lap)
   .hero__heading
@@ -118,7 +127,7 @@
 
 +at-breakpoint(eq-palm)
   .hero__heading
-    +font-size(gamma)
+    // +font-size(gamma)
 
 +at-breakpoint(desk)
   .hero__heading
