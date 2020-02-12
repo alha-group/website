@@ -19,5 +19,5 @@ section.cta-block
                   = i("arrow_dx")
       .flex__item--nospace.flex-desk-6-12
         .cta-block__contain data-aos="fade-left" data-aos-duration="1500"
-          = image_tag(content.attachment.url(h: 1200, w: 1200, crop: "edges", format: :pjpeg), class: "visible--on-desk")
-          = image_tag(content.attachment.url(h: 700, w: 700, crop: "edges", format: :pjpeg), class: "hidden--on-desk")
+          = image_tag(content.attachment.url(format: :pjpeg), class: "visible--on-desk")
+          = image_tag(content.attachment.url(format: :pjpeg), class: "hidden--on-desk")
