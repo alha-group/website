@@ -4,10 +4,11 @@ section.contact-us
       .grid__item.desk-7-12
         .contact-us__inner
           .contact-us__inner__title data-aos="fade-down" data-aos-duration="1500"
-            = t("contact_us.title")
-          .contact-us__inner__abstract data-aos="fade-down" data-aos-duration="1500"
-            .formatted-content
-              = t("contact_us.abstract")
+            = dato.contact.title_box_contact
+          - if dato.contact.text_box_contact.present?
+            .contact-us__inner__abstract data-aos="fade-down" data-aos-duration="1500"
+              .formatted-content
+                = dato.contact.text_box_contact
           .contact-us__inner__person
             .grid
               .grid__item.lap-3-12
