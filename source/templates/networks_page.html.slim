@@ -53,7 +53,10 @@ section.networks
             class: "network__block",
             id: "#{airport.id}" do
             .network__block__inner__image
-              = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
+              - if airport.cover.present?
+                = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
+              - else  
+                = image_tag(dato.networks_page.standard_image_network.url(fm: :jpg, fit: :crop, h: 740, w: 540))
             .network__block__inner__content
               .network__block__inner__name= airport.page_title
               .network__block__inner__address= airport.address
