@@ -1,42 +1,44 @@
 - content_for(:head)
   == dato_meta_tags(page)
 
+- if page.cover.present?
+  - hero_image_url = page.cover
+- else
+  - hero_image_url = dato.networks_page.standard_image_network
+
 header class="header--terminal"
-  - if page.cover.present?
-    .header__hero style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 65)})"
-  - else
-    .header__hero style="background-image: url(#{dato.networks_page.standard_image_network.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 65)})"
-      .header__hero__body
-        .header__hero__body__inner
-          h1.header__hero__heading data-aos="fade-down" data-aos-duration="1500"
-            span= page.location_name
-            span= page.page_title
-            .header__hero__label
-              .header__hero__label__text
-                = t("network.label.contact")
-          p.header__hero__heading__sub= page.page_labeltitle
-          .header__hero__heading__info data-aos="fade-down" data-aos-duration="1500"
-            .header__hero__heading__info__col
-              .header__hero__heading__info__label= t("network.label.address")
-              .header__hero__heading__info__text
-                = page.address
-            .header__hero__heading__info__col
-              .header__hero__heading__info__label= t("network.label.opening")
-              .header__hero__heading__info__text
-                = page.openings
-    div class="header__text--terminal"
-      .wrap
-        .grid
-          .grid__item.width-4-12.tab-1-12
-          .grid__item.width-8-12.tab-5-12
-            .header__info__inner data-aos="fade-left" data-aos-duration="1800"
-              .header__info__inner__label= page.contact_role
-              .header__info__inner__text= page.contact_name
-              .header__info__inner__label= t("terminal.email")
-              .header__info__inner__text= page.contact_email
-          .grid__item.tab-6-12.header__text__before__inner
-            .header__text__inner data-aos="fade-left" data-aos-duration="1800"
-              = page.abstract
+  .header__hero style="background-image: url(#{hero_image_url.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 65)})"
+    .header__hero__body
+      .header__hero__body__inner
+        h1.header__hero__heading data-aos="fade-down" data-aos-duration="1500"
+          span= page.location_name
+          span= page.page_title
+          .header__hero__label
+            .header__hero__label__text
+              = t("network.label.contact")
+        p.header__hero__heading__sub= page.page_labeltitle
+        .header__hero__heading__info data-aos="fade-down" data-aos-duration="1500"
+          .header__hero__heading__info__col
+            .header__hero__heading__info__label= t("network.label.address")
+            .header__hero__heading__info__text
+              = page.address
+          .header__hero__heading__info__col
+            .header__hero__heading__info__label= t("network.label.opening")
+            .header__hero__heading__info__text
+              = page.openings
+  .header__text--terminal
+    .wrap
+      .grid
+        .grid__item.width-4-12.tab-1-12
+        .grid__item.width-8-12.tab-5-12
+          .header__info__inner data-aos="fade-left" data-aos-duration="1800"
+            .header__info__inner__label= page.contact_role
+            .header__info__inner__text= page.contact_name
+            .header__info__inner__label= t("terminal.email")
+            .header__info__inner__text= page.contact_email
+        .grid__item.tab-6-12.header__text__before__inner
+          .header__text__inner data-aos="fade-left" data-aos-duration="1800"
+            = page.abstract
 
 - page.modular_block.each do |modular|
   = partial "partials/modular-contents/#{modular.item_type.api_key}",

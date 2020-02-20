@@ -73,18 +73,19 @@ section.networks
     .grid
       - network_airport_pages.select { |nap| nap.section == "off" }.each do |airport|
         .grid__item.lap-6-12.desk-3-12
-          = link_to "/#{I18n.locale}/airport/#{airport.slug}",
-            class: "network__block",
-            id: "#{airport.id}" do
-            .network__block__inner__image
-              = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
-            .network__block__inner__content
-              .network__block__inner__name= airport.page_title
-              .network__block__inner__address= airport.address
-              - if !airport.contact_phone.blank? || !airport.contact_email.blank?
-                .network__block__inner__info
-                  - if !airport.contact_phone.blank?
-                    span= "T #{airport.contact_phone}"
-                  span= "M #{airport.contact_email}"
-            .network__block__inner__plus
-              = i("plus")
+          - if airport.cover.present?
+            = link_to "/#{I18n.locale}/airport/#{airport.slug}",
+              class: "network__block",
+              id: "#{airport.id}" do
+              .network__block__inner__image
+                = image_tag(airport.cover.url(fm: :jpg, fit: :crop, h: 740, w: 540))
+              .network__block__inner__content
+                .network__block__inner__name= airport.page_title
+                .network__block__inner__address= airport.address
+                - if !airport.contact_phone.blank? || !airport.contact_email.blank?
+                  .network__block__inner__info
+                    - if !airport.contact_phone.blank?
+                      span= "T #{airport.contact_phone}"
+                    span= "M #{airport.contact_email}"
+              .network__block__inner__plus
+                = i("plus")
