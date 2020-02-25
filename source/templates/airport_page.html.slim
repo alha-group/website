@@ -53,9 +53,10 @@ section.info-gallery
                 .info-gallery__info__inner__title
                   = t("airport.contact")
                 .grid
-                  .grid__item.desk-4-12
-                    .info-gallery__info__inner__image
-                      = image_tag(page.contact_photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
+                  - if page.contact_photo.present?
+                    .grid__item.desk-4-12
+                      .info-gallery__info__inner__image
+                        = image_tag(page.contact_photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
                   .grid__item.desk-8-12
                     .info-gallery__info__inner__data
                       .info-gallery__info__inner__data__label= page.contact_role

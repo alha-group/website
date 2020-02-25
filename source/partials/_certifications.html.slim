@@ -1,18 +1,19 @@
-section.certification-part
-  .wrap
-    .grid
-      .grid__item.desk-1-12
-      .grid__item.desk-11-12
-        .certification-part__inner
-          .certification-part__inner__title= t("certification.partial.title")
-          .grid
-            - certs.each do |cert|
-              .grid__item.lap-4-12 data-aos="fade-right" data-aos-duration="1500"
-                .certification-part__inner__block
-                  .certification-part__inner__block__image
-                    = image_tag(cert.logo.url(fm: :jpg, fit: :fill, h: 200, w: 200))
-                  .certification-part__inner__block__content
-                    .certification-part__inner__block__name= cert.title
-                    = link_to t("certification.discover"),
-                      "/#{I18n.locale}/#{dato.certification_page.slug}",
-                      class: "certification-part__inner__block__link"
+- if certs.present?
+  section.certification-part
+    .wrap
+      .grid
+        .grid__item.desk-1-12
+        .grid__item.desk-11-12
+          .certification-part__inner
+            .certification-part__inner__title= t("certification.partial.title")
+            .grid
+              - certs.each do |cert|
+                .grid__item.lap-4-12 data-aos="fade-right" data-aos-duration="1500"
+                  .certification-part__inner__block
+                    .certification-part__inner__block__image
+                      = image_tag(cert.logo.url(fm: :jpg, fit: :fill, h: 200, w: 200))
+                    .certification-part__inner__block__content
+                      .certification-part__inner__block__name= cert.title
+                      = link_to t("certification.discover"),
+                        "/#{I18n.locale}/#{dato.certification_page.slug}",
+                        class: "certification-part__inner__block__link"
