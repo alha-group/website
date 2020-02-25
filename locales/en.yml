@@ -25,7 +25,7 @@ en:
     network: "Network"
     network_child:
       terminal: "Cargo Terminals"
-      airport: "In Airport"
+      airport: "Offline Network"
 
   aside:
     social:
