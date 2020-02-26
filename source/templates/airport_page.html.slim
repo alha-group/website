@@ -75,17 +75,18 @@ section.info-gallery
                 .info-gallery__gallery__item
                   = image_tag(image.url(fm: :jpg, fit: :crop, w: 1024, h: 826))
 
-section.addition-info
-  .wrap
-    .grid
-      .grid__item.desk-1-12
-      .grid__item.desk-11-12
-        .addition-info__inner
-          .addition-info__inner__title= t("airport.additional_info")
-          .addition-info__inner__list
-            - page.additional_info.each do |ai|
-              .addition-info__inner__item
-                = ai.label
+- if page.additional_info.present?
+  section.addition-info
+    .wrap
+      .grid
+        .grid__item.desk-1-12
+        .grid__item.desk-11-12
+          .addition-info__inner
+            .addition-info__inner__title= t("airport.additional_info")
+            .addition-info__inner__list
+              - page.additional_info.each do |ai|
+                .addition-info__inner__item
+                  = ai.label
 
 = partial "partials/certifications",
   locals: { certs: page.certification_block }

@@ -5,9 +5,10 @@ div class=block_class
     div class="#{block_class}__inner__right"
       - items.each do |item|
         ul class="#{block_class}__inner__menu"
-          li class="#{block_class}__label"= item.menu_label
-          - item.pages.each do |page|
-            li class="#{block_class}__menu__item"
-              = active_link_to page.menu_label,
-                "/#{I18n.locale}#{item.base_slug}/#{page.slug}",
-                class: "#{block_class}__menu__link"
+          div class="#{block_class}__label"= item.menu_label
+          .column-count-2
+            - item.pages.each do |page|
+              li class="#{block_class}__menu__item"
+                = active_link_to page.menu_label,
+                  "/#{I18n.locale}#{item.base_slug}/#{page.slug}",
+                  class: "#{block_class}__menu__link"
