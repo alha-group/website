@@ -36,8 +36,9 @@ section.teams id="teams"
         - teams.select { |t| t.label == l}.each do |team|
           .grid__item.tab-6-12.lap-4-12.desk-3-12
             .team__block
-              .team__image
-                = image_tag(team.avatar.url(fm: :jpg, fit: :crop, h: 350, w: 350))
+              - if team.avatar.present?
+                .team__image
+                  = image_tag(team.avatar.url(fm: :jpg, fit: :crop, h: 350, w: 350))
               .team__inner
                 .team__inner__name= team.full_name
                 .team__inner__role= team.role

@@ -38,6 +38,11 @@
       border-top: 15px solid $orange-color
       +position(absolute, 40% 18px null null)
 
+.has-triangle:nth-child(-n+3)
+  .site-nav__menu__link
+    pointer-events: none
+    
+
 .aside-nav__menu-toggler
   +font-size(alpha)
   +position(absolute, 20px 20px null null)

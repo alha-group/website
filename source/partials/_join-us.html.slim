@@ -3,13 +3,14 @@ section.join-us
     .grid--center
       .grid__item.desk-7-12
         .join-us__inner
-          .join-us__inner__title data-aos="fade-down" data-aos-duration="1500"
-            = t("join_us.title")
-          .join-us__inner__abstract data-aos="fade-down" data-aos-duration="1500"
-            .formatted-content
-              = t("join_us.abstract")
-          .join-us__inner__action
-            = link_to "#",
-              class: "join-us__inner__link" do
-              = t("join_us.link")
-              = i("arrow_dx")
+          - dato.contact.join_us.each do |block|
+            .join-us__inner__title
+              = block.title
+            .join-us__inner__abstract
+              .formatted-content
+                = block.text
+            .join-us__inner__action
+              = link_to "/#{locale}/#{dato.collaboration_page.slug}/index.html",
+                class: "join-us__inner__link" do
+                = block.cta
+                = i("arrow_dx")

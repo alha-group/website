@@ -18,9 +18,9 @@
 
 .addition-info__inner__list
   list-style: none
-  -webkit-columns: 100px 1
-  -moz-columns: 100px 1
-  columns: 100px 1
+  // -webkit-columns: 100px 1
+  // -moz-columns: 100px 1
+  // columns: 100px 1
 
 .addition-info__inner__item
   +font-size(delta)
@@ -29,25 +29,26 @@
   position: relative
   &::before
     content: ''
-    +position(absolute, 40% null null 0)
+    +position(absolute, 20px null null 0)
+    border-radius: 10px
     width: 10px
     height: 10px
-    transform: rotate(45deg) skew(10deg, 10deg)
+    // transform: rotate(45deg) skew(10deg, 10deg)
     +bg-variant($blue-color)
 
 +at-breakpoint(lap)
   .addition-info__inner__list
     list-style: none
-    -webkit-columns: 100px 2
-    -moz-columns: 100px 2
-    columns: 100px 2
+    // -webkit-columns: 100px 2
+    // -moz-columns: 100px 2
+    // columns: 100px 2
 
 +at-breakpoint(desk)
   .addition-info__inner__list
     list-style: none
-    -webkit-columns: 100px 3
-    -moz-columns: 100px 3
-    columns: 100px 3
+    // -webkit-columns: 100px 3
+    // -moz-columns: 100px 3
+    // columns: 100px 3
 
   .addition-info__inner
     +padding-bottom(0)

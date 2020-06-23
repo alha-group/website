@@ -4,7 +4,7 @@ section class="cta-block#{variant}"
   .wrap--on-lap.min-height-fixed
     .flex--nospace--reverse.align--center
       .flex__item--nospace.flex-desk-6-12
-        .cta-block__data data-aos="fade-left" data-aos-duration="1500"
+        .cta-block__data
           - if !content.title.blank?
             div class="cta-block__title"
               h2= content.title
@@ -20,6 +20,6 @@ section class="cta-block#{variant}"
                   = content.label_link
                   = i("arrow_dx")
       .flex__item--nospace.flex-desk-6-12
-        .cta-block__contain data-aos="fade-right" data-aos-duration="1500"
+        .cta-block__contain 
           = image_tag(content.attachment.url(format: :pjpeg), class: "visible--on-desk")
           = image_tag(content.attachment.url(format: :pjpeg), class: "hidden--on-desk")

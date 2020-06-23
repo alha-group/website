@@ -84,9 +84,11 @@ section.info-gallery
           .addition-info__inner
             .addition-info__inner__title= t("airport.additional_info")
             .addition-info__inner__list
-              - page.additional_info.each do |ai|
-                .addition-info__inner__item
-                  = ai.label
+              .grid
+                - page.additional_info.each do |ai|
+                  .grid__item.tab-6-12.lap-4-12
+                    .addition-info__inner__item
+                      = ai.label
 
 = partial "partials/certifications",
   locals: { certs: page.certification_block }

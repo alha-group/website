@@ -4,6 +4,31 @@
 = partial "partials/hero", locals: { hero: page, hero_alpha: 95, hero_class: "header", hero_align_bg_col: "" }
 
 .padding--both-6
-  - page.modular_block.each do |modular|
-    = partial "partials/modular-contents/#{modular.item_type.api_key}",
-      locals: {content: modular, variant: ""}
+  - page.modular_block.each_with_index do |modular, n|
+
+    - if n == 0
+      section.news-evidence
+        .wrap
+          .grid
+            .grid__item.desk-6-12
+              = image_tag(modular.attachment.url(fm: :jpg, fit: :crop, w: 1024, h: 850))
+            .grid__item.desk-6-12
+              .news-evidence__block
+                .news-evidence__block__title= modular.title
+                .news-evidence__block__abstract= modular.text
+
+  section.news
+    .wrap
+      .grid
+        - page.modular_block.each_with_index do |modular, n|
+          - if n > 1
+            .grid__item.lap-4-12
+              .news-block
+                .news-block__image
+                  = image_tag(modular.attachment.url(fm: :jpg, fit: :crop, w: 800, h: 450))
+                .award-block__content
+                  .news-block__content__title
+                    = modular.title
+                  .award-block__content__text
+                    .margin--top-2
+                      = modular.text
