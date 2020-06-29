@@ -61,7 +61,7 @@ helpers do
     sitemap.resources.each do |resource|
       next if !resource.is_a?(Middleman::Sitemap::ProxyResource)
       unless current_page.path == "404.html" || current_page.path == "index.html"
-        if resource.target_resource == page.target_resource
+        if resource.target_resource == page.target_resource && resource.metadata[:locals] == page.metadata[:locals]
           localized_paths[resource.metadata[:options][:locale]] = resource.url
         end
       end
