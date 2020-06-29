@@ -24,7 +24,8 @@ header class="header--map"
 
 section.networks
   .wrap.margin--both-3
-    .networks__title= t("network.terminal")
+    .networks__title
+      = page.title_networks
     .grid
       - network_terminal_pages.each do |terminal|
         .grid__item.lap-6-12.desk-3-12
@@ -45,7 +46,8 @@ section.networks
               = i("plus")
 
   .wrap.margin--both-3
-    .networks__title= t("network.in_airport")
+    .networks__title
+      = page.title_airport
     .grid
       - network_airport_pages.each do |airport|
         .grid__item.lap-6-12.desk-3-12
