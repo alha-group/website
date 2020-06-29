@@ -264,7 +264,7 @@ dato.tap do |dato|
           locale: locale
       end
 
-      dato.awards_page.modular_block.each do |award|
+      dato.award_page_details.each do |award|
         I18n.locale = locale
         proxy "/#{locale}/#{dato.awards_page.slug}/#{award.slug}/index.html",
           "/templates/awards_detail_page.html",
