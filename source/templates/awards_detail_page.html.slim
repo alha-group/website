@@ -1,0 +1,27 @@
+- content_for(:head)
+  == dato_meta_tags(page)
+
+header class="header--medium"
+  .header__news style="background-image: url(#{page.attachment.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 95)})"
+  .wrap.padding--top-11
+    .grid--center
+      .grid__item.desk-7-12
+        / .header__news__date
+        /   = page.published_date.strftime("%d %b %Y")
+        h1.header__news__heading
+          = page.title
+    .header__cover
+      .wrap
+        .grid--center
+          .grid__item.width-12-12.desk-10-12
+            = image_tag(page.attachment.url(fm: :jpg, fit: :crop, w: 1440, h: 770), class: "visible--on-desk")
+            = image_tag(page.attachment.url(fm: :jpg, fit: :crop, w: 1024, h: 570), class: "visible--on-lap hidden--on-desk")
+            = image_tag(page.attachment.url(fm: :jpg, fit: :crop, w: 1024, h: 970), class: "hidden--on-lap")
+
+section.page-body
+  .wrap
+    .grid--center
+      .grid__item.desk-8-12
+        .margin--bottom-5
+          .formatted-content
+            = page.text

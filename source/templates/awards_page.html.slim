@@ -16,6 +16,11 @@
               .news-evidence__block
                 .news-evidence__block__title= modular.title
                 .news-evidence__block__abstract= modular.text
+                .news-evidence__block__action
+                  = link_to "/#{I18n.locale}/#{page.slug}/#{modular.slug}",
+                    class: "news-evidence__block__link" do
+                    = t("awards.read_more")
+                    = i("arrow_dx")                
 
   section.news
     .wrap
@@ -24,11 +29,15 @@
           - if n > 1
             .grid__item.lap-4-12
               .news-block
-                .news-block__image
-                  = image_tag(modular.attachment.url(fm: :jpg, fit: :crop, w: 800, h: 450))
-                .award-block__content
-                  .news-block__content__title
-                    = modular.title
-                  .award-block__content__text
-                    .margin--top-2
-                      = modular.text
+                = link_to "/#{I18n.locale}/#{page.slug}/#{modular.slug}",
+                  class: "news-evidence__block__link" do              
+                  .news-block__image
+                    = image_tag(modular.attachment.url(fm: :jpg, fit: :crop, w: 800, h: 450))
+                  .award-block__content
+                    = link_to "/#{I18n.locale}/#{page.slug}/#{modular.slug}",
+                      class: "news-evidence__block__link" do                    
+                      .news-block__content__title
+                        = modular.title
+                    .award-block__content__text
+                      / .margin--top-2
+                      /   = modular.text

@@ -162,6 +162,12 @@
   .site-nav__menu__item:hover &
     display: block
 
+  &:after
+    content: ""
+    background: rgba($blue-l, 0.8)
+    +position(absolute, -1000px 0 100% 0)
+    z-index: -1
+
 .site-nav__menu__item__dropdown__inner
   +horizontal-margin(2)
 

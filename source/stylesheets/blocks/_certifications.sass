@@ -35,14 +35,13 @@
       transform: translateX(15px)
 
 .certification-part
-  +padding-top(7)
-  +margin-bottom(6)
+  +vertical-padding(6)
   position: relative
   &::before
     content: ''
     +position(absolute, 0 0 null 0)
     width: 100%
-    height: 80%
+    height: 100%
     +bg-variant($blue-xl)
     z-index: -1
 

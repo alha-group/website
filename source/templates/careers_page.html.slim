@@ -7,3 +7,12 @@
   - page.modular_block.each do |modular|
     = partial "partials/modular-contents/#{modular.item_type.api_key}",
       locals: {content: modular, variant: "--careers"}
+
+section.join-us
+  .wrap
+    .grid--center
+      .grid__item
+        .flex.flex--justify-center
+          - page.blocchi_carrers.each do |modular|
+            = partial "partials/#{modular.item_type.api_key}",
+              locals: {content: modular}

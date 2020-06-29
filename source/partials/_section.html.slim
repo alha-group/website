@@ -1,0 +1,13 @@
+
+.flex__item.lap-6-12
+  .join-us__inner
+    .join-us__inner__title
+      = content.title
+    .join-us__inner__abstract
+      .formatted-content
+        = content.abstract
+    .join-us__inner__action
+      = link_to content.link_url,
+        class: "join-us__inner__link" do
+        = content.label_link
+        = i("arrow_dx")

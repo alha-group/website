@@ -14,12 +14,12 @@
         .header__hero__body__inner
           h1.header__hero__heading
             = hero.page_title
-            - if hero.respond_to?(:page_labeltitle)
-              .header__hero__label
-                .header__hero__label__text
-                  = hero.page_labeltitle
           - if hero.respond_to?(:page_subtitle)
             p.header__hero__heading__sub= hero.page_subtitle
+      - if hero.respond_to?(:page_labeltitle)
+        .header__hero__label
+          .header__hero__label__text
+            = hero.page_labeltitle
     - if hero.respond_to?(:abstract_text)
       div class="header__text#{hero_align_bg_col}"
         .wrap
@@ -43,9 +43,9 @@
         .header__hero__body__inner
           h1.header__hero__heading
             = hero.page_title
-            - if hero.respond_to?(:page_labeltitle)
-              .header__hero__label
-                .header__hero__label__text
+      - if hero.respond_to?(:page_labeltitle)
+        .header__hero__label
+          .header__hero__label__text
                   = hero.page_labeltitle
           - if hero.respond_to?(:page_subtitle)
             p.header__hero__heading__sub= hero.page_subtitle

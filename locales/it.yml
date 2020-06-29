@@ -21,7 +21,7 @@ it:
     menu_close: "Chiudi"
     about: "Azienda"
     services: "Servizi"
-    advanced_solutions: "Advanced Cargo Solutions"
+    advanced_solutions: "Soluzioni avanzate"
     network: "Network"
     network_child:
       terminal: "Cargo Terminals"
@@ -87,6 +87,9 @@ it:
 
   news:
     read_more: "Leggi la news"
+
+  awards:
+    read_more: "Leggi"
 
   footer:
     collaborators: "Collaborazioni"

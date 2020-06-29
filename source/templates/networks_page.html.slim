@@ -7,14 +7,14 @@ header class="header--map"
       .header__hero__body__inner
         h1.header__hero__heading data-aos="fade-down" data-aos-duration="1500"
           = page.page_title
-          - if page.respond_to?(:page_labeltitle)
-            .header__hero__label
-              .header__hero__label__text
-                = page.page_labeltitle
         - if page.respond_to?(:page_subtitle)
           p.header__hero__heading__sub= page.page_subtitle
         .header__hero__map.visible--on-desk data-aos="fade-left" data-aos-duration="1500"
           = partial "partials/map", locals: {points: networks_points}
+      - if page.respond_to?(:page_labeltitle)
+        .header__hero__label
+          .header__hero__label__text
+            = page.page_labeltitle
   div class="header__text--center-gray"
     .wrap
       .grid

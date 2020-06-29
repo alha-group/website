@@ -88,6 +88,9 @@ en:
   news:
     read_more: "Leggi la news"
 
+  awards:
+    read_more: "Read"
+
   footer:
     collaborators: "Collaborations"
     newsletter: "Newsletter"

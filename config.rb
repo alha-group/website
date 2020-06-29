@@ -239,6 +239,7 @@ dato.tap do |dato|
           locals: { page: terminal },
           locale: locale
       end
+      
       dato.network_airport_pages.each do |airport|
         I18n.locale = locale
         proxy "/#{locale}/airport/#{airport.slug}/index.html",
@@ -260,6 +261,14 @@ dato.tap do |dato|
         proxy "/#{locale}/#{dato.collection_news_page.slug}/#{news.slug}/index.html",
           "/templates/news_page.html",
           locals: { page: news },
+          locale: locale
+      end
+
+      dato.awards_page.modular_block.each do |award|
+        I18n.locale = locale
+        proxy "/#{locale}/#{dato.awards_page.slug}/#{award.slug}/index.html",
+          "/templates/awards_detail_page.html",
+          locals: { page: award },
           locale: locale
       end
     end
