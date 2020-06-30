@@ -41,7 +41,7 @@ section.networks
                 .network__block__inner__info
                   - if !terminal.contact_phone.blank?
                     span= "T #{terminal.contact_phone}"
-                  span= "M #{terminal.contact_email}"
+                  / span= "M #{terminal.contact_email}"
             .network__block__inner__plus
               = i("plus")
 
@@ -66,7 +66,7 @@ section.networks
                 .network__block__inner__info
                   - if !airport.contact_phone.blank?
                     span= "T #{airport.contact_phone}"
-                  span= "M #{airport.contact_email}"
+                  / span= "M #{airport.contact_email}"
             .network__block__inner__plus
               = i("plus")
 
