@@ -26,7 +26,7 @@
     .wrap
       .grid
         - dato.award_page_details.each_with_index do |modular, n|
-          - if n > 1
+          - if n > 0
             .grid__item.lap-4-12
               .news-block
                 = link_to "/#{I18n.locale}/#{page.slug}/#{modular.slug}",
