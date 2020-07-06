@@ -1,4 +1,6 @@
 .cta-block
+  +at-breakpoint(lte-tab)
+    +margin-bottom(4)
 
 .cta-block__data
   +vertical-padding(3)
@@ -13,6 +15,10 @@
     object-fit: cover
 
 .cta-block__contain
+  +at-breakpoint(lte-desk)
+    height: 400px
+  +at-breakpoint(lte-tab)
+    height: 250px
   // height: 100%
   img
     // height: 100%

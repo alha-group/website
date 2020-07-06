@@ -38,6 +38,11 @@
   +margin(1)
   +padding(1)
   text-align: center
+  +at-breakpoint(lte-desk)
+    min-height: 250px
+  +at-breakpoint(lte-tab)
+    min-height: 210px
+
   &:hover,
   &:active
     +base-transition("ease-in-out", "base")

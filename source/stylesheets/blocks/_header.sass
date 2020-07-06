@@ -44,7 +44,9 @@
 
 .header__hero__heading
   +heading-font-family
-  +font-size(beta)
+  +font-size(50px)
+  +at-breakpoint(wall)
+    +font-size(beta)
   position: relative
   span
     display: block
@@ -265,8 +267,8 @@
   .header__hero__heading__link_map
     display: none
 
-  .header__hero__heading
-    +font-size(alpha)
+  // .header__hero__heading
+  //   +font-size(alpha)
 
   .header__hero__heading__sub
     width: 30%

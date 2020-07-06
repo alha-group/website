@@ -42,7 +42,7 @@ it:
 
   certification:
     link: "Vai al sito"
-    discover: "Scopri piu"
+    discover: "Scopri di più"
     partial:
       block:
         dnv_gl: "Quality Management System: ISO 9001"
