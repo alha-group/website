@@ -11,9 +11,10 @@ section.contact-us
                 = dato.contact.text_box_contact
           .contact-us__inner__person
             .grid
-              .grid__item.lap-3-12
-                .contact-us__person__image
-                  = image_tag(page.contact_photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
+              - if page.contact_photo.present?
+                .grid__item.lap-3-12
+                  .contact-us__person__image
+                    = image_tag(page.contact_photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
               .grid__item.lap-4-12
                 .contact-us__person__role= page.contact_role
                 .contact-us__person__full_name= page.contact_name
