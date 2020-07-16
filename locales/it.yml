@@ -56,11 +56,11 @@ it:
     link: "Invia candidatura"
 
   contact_us:
-    title: "Contact us"
+    title: "Contatti"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     role: "Sales Manager"
     full_name: "Andrea D. Piai Walpot"
-    label: "Contact"
+    label: "Contatti"
     phone: "0039 02 74866701"
     email: "andrea.piai@alhagroup.com"
 
@@ -69,9 +69,9 @@ it:
     in_airport: "In Airport"
     off_airport: "Off Airport"
     label:
-      opening: "Opening Hours"
-      address: "Address"
-      contact: "Contact"
+      opening: "Orari di apertura"
+      address: "Indirizzo"
+      contact: "Contatti"
 
   terminal:
     email: "Email"
@@ -79,9 +79,9 @@ it:
   airport:
     office: "Uffici"
     warehouse: "Magazzino"
-    contact: "Contact"
+    contact: "Contatti"
     email: "Email"
-    phone: "Phone"
+    phone: "Telefono"
     additional_info: "Informazioni Addizionali"
     google_map: "Vedi sulla mappa"
 
