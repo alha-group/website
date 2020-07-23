@@ -19,8 +19,9 @@ nav.site-nav
                 locals: {block_class: "site-nav__menu__item__dropdown", items: page.children}
 
       .site-nav__topbar
-        = link_to "#",
-          class: "header-plus" do
+        = link_to "https://cargoplus.alhagroup.com/ords/f?p=2999:LOGIN_DESKTOP:102998996772977:::::",
+          class: "header-plus",
+          target: "_blank" do
           = i("cargoplus")
         = partial "partials/locale-switcher",
           locals: {block_class: "site-nav__topbar__locale"}
