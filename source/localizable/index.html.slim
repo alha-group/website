@@ -63,7 +63,7 @@ section.services
       - idx = 0
       - dato.service_pages.each do |service|
         = link_to "/#{I18n.locale}/services/#{service.slug}",
-          class: "grid__item--5-column",
+          class: "grid__item width-6-12 lap-4-12 desk-2-12",
           data: { aos: "fade-right", 'aos-duration': "#{1000 + (idx*100)}" } do
           .service__block
             .service__block__image
