@@ -107,7 +107,8 @@ helpers do
         dato.collaboration_page,
         dato.certification_page,
         dato.awards_page,
-        dato.careers_page
+        dato.careers_page, 
+        dato.ethical_code_page
       ])
     ]
   end

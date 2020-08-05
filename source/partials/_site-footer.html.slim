@@ -46,7 +46,13 @@ footer.site-footer
   .site-footer__inner
     .wrap
       p.site-footer__copy
-        = ["©#{Time.now.year}",
+        = ["© Copyright 2014-#{Time.now.year}",
+            ("Alha Holding SpA"),
+            ("Società Unipersonale. All Rights Reserved."),
+            ("Via Alfonso Lamarmora n.29 - 50121 Firenze"),
+            ("C.f.: 94082540488 - P.IVA: 05092430486"),
+            ("R.E.A.: 517769 FI"),
+            ("Cap.Sociale ult. bil.€ 3.150.000 i.v."),
             (link_to "Privacy Policy",
               "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}",
               class: "iubenda-nostyle no-brand iubenda-embed",

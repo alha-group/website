@@ -2,3 +2,11 @@
   == dato_meta_tags(page)
 
 = partial "partials/hero", locals: { hero: page, hero_alpha: 40, hero_class: "header--large", hero_align_bg_col: "--center-gray" }
+
+section.page-body
+  .wrap
+    .grid--center
+      .grid__item.desk-8-12
+        .margin--bottom-5
+          .formatted-content
+            = page.body
