@@ -33,9 +33,10 @@ header class="header--terminal"
         .grid__item.width-8-12.tab-5-12
           .header__info__inner data-aos="fade-left" data-aos-duration="1800"
             .header__info__inner__label= page.contact_role
-            .header__info__inner__text= page.contact_name
-            .header__info__inner__label= t("terminal.email")
-            .header__info__inner__text= page.contact_email
+            - page.block_contact.each do |item|
+              .margin--bottom-2
+                .header__info__inner__text= item.name
+                .header__info__inner__text= item.email
         .grid__item.tab-6-12.header__text__before__inner
           .header__text__inner data-aos="fade-left" data-aos-duration="1800"
             = page.abstract

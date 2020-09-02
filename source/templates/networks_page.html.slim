@@ -37,7 +37,7 @@ section.networks
             .network__block__inner__content
               .network__block__inner__name= terminal.page_title
               .network__block__inner__address= terminal.address
-              - if !terminal.contact_phone.blank? || !terminal.contact_email.blank?
+              / - if !terminal.contact_phone.blank? || !terminal.contact_email.blank?
                 / .network__block__inner__info
                 /   - if !terminal.contact_phone.blank?
                 /     span= "T #{terminal.contact_phone}"

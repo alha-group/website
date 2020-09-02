@@ -53,22 +53,24 @@ section.info-gallery
                 .info-gallery__info__inner__title
                   = t("airport.contact")
                 .grid
-                  - if page.contact_photo.present?
-                    .grid__item.desk-4-12
-                      .info-gallery__info__inner__image
-                        = image_tag(page.contact_photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
-                  .grid__item.desk-8-12
-                    .info-gallery__info__inner__data
-                      .info-gallery__info__inner__data__label= page.contact_role
-                      .info-gallery__info__inner__data__text= page.contact_name
-                      - if !page.contact_email.blank?
-                        .info-gallery__info__inner__data__label= t("airport.email")
-                        .info-gallery__info__inner__data__text
-                          = page.contact_email
-                      - if !page.contact_phone.blank?
-                        .info-gallery__info__inner__data__label= t("airport.phone")
-                        .info-gallery__info__inner__data__text
-                          = page.contact_phone
+                  - page.block_contact.each do |item|
+                    .margin--bottom-2
+                      - if item.photo.present?
+                        .grid__item.desk-4-12
+                          .info-gallery__info__inner__image
+                            = image_tag(item.photo.url(fm: :jpg, fit: :crop, w: 250, h: 250))
+                      .grid__item.desk-8-12
+                        .info-gallery__info__inner__data
+                          .info-gallery__info__inner__data__label= item.role
+                          .info-gallery__info__inner__data__text= item.name
+                          - if !item.email.blank?
+                            / .info-gallery__info__inner__data__label= t("airport.email")
+                            .info-gallery__info__inner__data__text
+                              = item.email
+                          - if !item.phone.blank?
+                            / .info-gallery__info__inner__data__label= t("airport.phone")
+                            .info-gallery__info__inner__data__text
+                              = item.phone
           .grid__item.desk-6-12
             .info-gallery__gallery
               - page.gallery.each do |image|
