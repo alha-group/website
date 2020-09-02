@@ -32,9 +32,9 @@ header class="header--terminal"
         .grid__item.width-4-12.tab-1-12
         .grid__item.width-8-12.tab-5-12
           .header__info__inner data-aos="fade-left" data-aos-duration="1800"
-            .header__info__inner__label= page.contact_role
             - page.block_contact.each do |item|
               .margin--bottom-2
+                .header__info__inner__label= item.role
                 .header__info__inner__text= item.name
                 .header__info__inner__text= item.email
         .grid__item.tab-6-12.header__text__before__inner
