@@ -119,3 +119,8 @@ en:
       message: "Message"
       privacy: "Accetto le condizioni della"
     submit: "Subscribe"
+
+  not_found: "Sorry, page not found"
+
+  button: 
+    home: "Came back homepage"

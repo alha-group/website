@@ -119,3 +119,8 @@ it:
       message: "Messaggio"
       privacy: "Accetto le condizioni della"
     submit: "Registrati"
+
+  not_found: "Spiacenti, pagina non trovata"
+
+  button: 
+    home: "Torna alla home"

@@ -3,4 +3,16 @@ directory_index: false
 hide_from_sitemap: true
 ---
 
-h1 Page not found
+.hero__body
+  .hero__body__inner--404
+    h1.hero__heading
+      = "404"
+
+    .margin--bottom-2
+      .join-us__inner__title--white = t('not_found')
+    .margin--top-2
+      = link_to "/",
+        class: "button--cta",
+        target: "_blank" do
+        = t('button.home')
+        = i("arrow_dx")
