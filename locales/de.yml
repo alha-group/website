@@ -1,0 +1,126 @@
+en:
+  iubenda_id: 204258
+  contact_email: "test@cantierecreativo.net"
+
+  index_lang:
+    it: "Versione italiana"
+    en: "English version"
+
+  locales_label:
+    it: "Italiano"
+    en: "English"
+
+  credits:
+    button_label: "Design & Development by Lean Panda"
+    url: "https://www.leanpanda.com"
+    title: "Ruby on Rails Agency Lean Panda based in Florence"
+
+  nav:
+    menu: "Menu"
+    home: "HOME"
+    menu_close: "Close"
+    about: "About us"
+    services: "Services"
+    advanced_solutions: "Advanced Cargo Solutions"
+    network: "Network"
+    network_child:
+      terminal: "Cargo Terminals"
+      airport: "Offline Network"
+
+  aside:
+    social:
+      label: "Social"
+
+  home:
+    scroll-down: "Scroll Down"
+    social:
+      twitter: "twitter"
+      linkedin: "linkedin"
+
+  about:
+    milestones: "Milestone"
+
+  certification:
+    link: "Go to site"
+    discover: "Discover more"
+    partial:
+      block:
+        dnv_gl: "Quality Management System: ISO 9001"
+        ceiv: "IATA CEIV Pharma Certification"
+        tapa: "TAPA TSR 1"
+      title: "Certifications"
+
+  join_us:
+    title: "Vuoi entrare a far parte del nostro team di esperti?"
+    abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+    link: "Invia candidatura"
+
+  contact_us:
+    title: "Contact us"
+    abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    role: "Sales Manager"
+    full_name: "Andrea D. Piai Walpot"
+    label: "Contact"
+    phone: "0039 02 74866701"
+    email: "andrea.piai@alhagroup.com"
+
+  network:
+    terminal: "Cargo Terminals"
+    in_airport: "In Airport"
+    off_airport: "Off Airport"
+    label:
+      opening: "Opening Hours"
+      address: "Address"
+      contact: "Contact"
+
+  terminal:
+    email: "Email"
+
+  airport:
+    office: "Office"
+    warehouse: "Warehouse"
+    contact: "Contact"
+    email: "Email"
+    phone: "Phone"
+    additional_info: "Additional Info"
+    google_map: "Show into map"
+
+  news:
+    read_more: "Leggi la news"
+
+  awards:
+    read_more: "Read"
+
+  footer:
+    collaborators: "Collaborations"
+    newsletter: "Newsletter"
+    newsletter_success: "Subscribed at newsletter"
+    contacts: "Contacts"
+    contact:
+      address: "Address"
+      phone: "Phone"
+      fax: "Fax"
+      email: "Email"
+      pec: "Pec"
+
+  form:
+    label:
+      first_name: "Name"
+      last_name: "Surname"
+      email: "Email"
+      phone: "Phone"
+      message: "Message"
+      privacy: "Accetto le condizioni della"
+    placeholder:
+      first_name: "Name"
+      last_name: "Surname"
+      email: "Email"
+      phone: "Phone"
+      message: "Message"
+      privacy: "Accetto le condizioni della"
+    submit: "Subscribe"
+
+  not_found: "Sorry, page not found"
+
+  button: 
+    home: "Came back homepage"
