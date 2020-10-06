@@ -5,10 +5,12 @@ it:
   index_lang:
     it: "Versione italiana"
     en: "English version"
+    es: "Versión en español"
 
   locales_label:
     it: "Italiano"
     en: "English"
+    es: "Español"
 
   credits:
     button_label: "Design & Development Cantiere Creativo"
