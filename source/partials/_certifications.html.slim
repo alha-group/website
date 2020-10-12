@@ -16,4 +16,5 @@
                       .certification-part__inner__block__name= cert.title
                       = link_to t("certification.discover"),
                         "/#{I18n.locale}/#{dato.certification_page.slug}",
+                        title: t("certification.discover"),
                         class: "certification-part__inner__block__link"

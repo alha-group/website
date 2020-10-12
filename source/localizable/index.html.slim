@@ -13,7 +13,7 @@
 
     .hero__body
       .hero__body__inner
-        h1.hero__heading
+        h2.hero__heading
           = page.page_title
 
     .hero__wrap
@@ -28,13 +28,14 @@
               - dato.contact.social_block.each do |social|
                 = link_to t("home.social.#{social.social_type}"),
                   social.url,
+                  title: social.social_type,
                   class: "hero__social__link"
 
 - else
   header.hero--large style="background-image: url(#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)})"
     .hero__body
       .hero__body__inner
-        h1.hero__heading
+        h2.hero__heading
           = page.page_title
     .hero__wrap
       .wrap
@@ -48,6 +49,7 @@
               - dato.contact.social_block.each do |social|
                 = link_to t("home.social.#{social.social_type}"),
                   social.url,
+                  title: social.social_type,
                   class: "hero__social__link"
 
 section.services
@@ -64,6 +66,7 @@ section.services
       - dato.service_pages.each do |service|
         = link_to "/#{I18n.locale}/services/#{service.slug}",
           class: "grid__item width-6-12 lap-4-12",
+          title: service.menu_label,
           data: { aos: "fade-right", 'aos-duration': "#{1000 + (idx*100)}" } do
           .service__block
             .service__block__image
@@ -83,6 +86,7 @@ section.advanced_solutions
   .flex--nospace
     - dato.advanced_solution_pages.each do |solution|
       = link_to "/#{I18n.locale}/cargo-solutions/#{solution.slug}",
+        title: solution.menu_label,
         class: "flex__item--nospace flex-lap-6-12" do
         .advanced_solution__block
           .advanced_solution__image

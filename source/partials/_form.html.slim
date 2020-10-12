@@ -1,24 +1,3 @@
-/ form.form.js-form-send data-hook-main="https://hooks.zapier.com/hooks/catch/2426044/j6mhfh/"
-  .form__field
-    = email_field_tag :email,
-      value: "",
-      name: t('form.label.email'),
-      placeholder: t('form.placeholder.email'),
-      class: "form__input",
-      required: "required"
-  .form__actions
-    .form__field.space--top-1
-      label.input--checkbox
-        input required="required" type="checkbox"
-        span.input__label.formatted-content
-          = t('form.label.privacy')
-          =< link_to "Privacy Policy",
-            "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}",
-            class: "iubenda-nostyle no-brand iubenda-embed"
-    button.button--cta type="submit"
-      ="#{t("form.submit")}"
-      = i("arrow_dx")
-
 #mc_embed_signup
   form#mc-embedded-subscribe-form.validate[action="https://alhagroup.us17.list-manage.com/subscribe/post?u=a7932fa0fd1ff05524eacec22&amp;id=ea9d71c94e" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate]
     #mc_embed_signup_scroll
@@ -37,6 +16,7 @@
               = t('form.label.privacy')
               =< link_to "Privacy Policy",
                 "//www.iubenda.com/privacy-policy/#{I18n.t('iubenda_id')}",
+                title: "Privacy Policy",
                 class: "iubenda-nostyle no-brand iubenda-embed"
       .clear.margin--top-2
         button#mc-embedded-subscribe.button--cta[type="submit" value="Subscribe" name="subscribe"]

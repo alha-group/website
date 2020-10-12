@@ -5,6 +5,7 @@ nav.aside-nav
         li.aside-nav__menu__item class="#{(!page.children.blank?) ? "has-triangle" : ""}"
           = active_link_to page.menu_label,
             "/#{I18n.locale}/#{page.slug}",
+            title: page.menu_label,
             class: "aside-nav__menu__link"
           - if !page.children.blank?
             = partial "partials/aside-nav-dropdown",
@@ -12,6 +13,7 @@ nav.aside-nav
 
     .aside-nav__topbar
       = link_to "https://cargoplus.alhagroup.com/ords/f?p=2999:LOGIN_DESKTOP:102998996772977:::::",
+        title: "Cargo plus",
         class: "aside-nav__topbar__header-plus" do
         = i("cargoplus")
       = partial "partials/locale-switcher",
@@ -23,5 +25,6 @@ nav.aside-nav
           - dato.contact.social_block.each do |social|
             = link_to social.social_type,
               social.url,
+              title: social.social_type,
               class: "aside-nav__social__inner__link"
 

@@ -1,0 +1,11 @@
+- if defined?(page.seo.title)
+  h1.h1--hidden
+    = page.seo.title
+- else
+  - if defined?(page.title)
+    h1.h1--hidden
+      = page.title
+      = " | Alha Group Air Cargo Italy"
+  - else
+    h1.h1--hidden
+      |Alha Group Air Cargo Italy

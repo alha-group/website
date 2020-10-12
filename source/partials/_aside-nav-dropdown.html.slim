@@ -9,4 +9,5 @@ div class=block_class
           li class="#{block_class}__menu__item"
             = active_link_to page.menu_label,
               "/#{I18n.locale}#{item.base_slug}/#{page.slug}",
+              title: page.menu_label,
               class: "#{block_class}__menu__link"
