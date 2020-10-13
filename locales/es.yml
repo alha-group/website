@@ -1,16 +1,19 @@
 en:
-  iubenda_id: 204258
+  iubenda_id: 81618346
   contact_email: "test@cantierecreativo.net"
 
   index_lang:
     it: "Versione italiana"
     en: "English version"
     es: "Versión en español"
+    fr: "Version française"
+
 
   locales_label:
     it: "Italiano"
     en: "English"
     es: "Español"
+    fr: "Français"
 
   credits:
     button_label: "Diseño y desarrollo por Lean Panda"

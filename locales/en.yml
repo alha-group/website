@@ -6,12 +6,15 @@ en:
     it: "Versione italiana"
     en: "English version"
     es: "Versión en español"
+    fr: "Version française"
+
 
 
   locales_label:
     it: "Italiano"
     en: "English"
     es: "Español"
+    fr: "Français"
 
   credits:
     button_label: "Design & Development by Lean Panda"

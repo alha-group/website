@@ -1,30 +1,35 @@
 en:
-  iubenda_id: 204258
+  iubenda_id: 74496370
   contact_email: "test@cantierecreativo.net"
 
   index_lang:
     it: "Versione italiana"
     en: "English version"
+    es: "Versión en español"
+    fr: "Version française"
 
   locales_label:
     it: "Italiano"
     en: "English"
+    es: "Español"
+    fr: "Français"
+
 
   credits:
-    button_label: "Design & Development by Lean Panda"
+    button_label: "Design et développement par Lean Panda"
     url: "https://www.leanpanda.com"
-    title: "Ruby on Rails Agency Lean Panda based in Florence"
+    title: "Ruby on Rails Agency Lean Panda basée à Florence"
 
   nav:
     menu: "Menu"
-    home: "HOME"
-    menu_close: "Close"
-    about: "About us"
+    home: "Homepage"
+    menu_close: "Fermer"
+    about: "A propos de nous"
     services: "Services"
-    advanced_solutions: "Advanced Cargo Solutions"
+    advanced_solutions: "solutions avancées"
     network: "Network"
     network_child:
-      terminal: "Cargo Terminals"
+      terminal: "Terminal"
       airport: "Offline Network"
 
   aside:
@@ -32,17 +37,17 @@ en:
       label: "Social"
 
   home:
-    scroll-down: "Scroll Down"
+    scroll-down: "Faire défiler vers le bas"
     social:
       twitter: "twitter"
       linkedin: "linkedin"
 
   about:
-    milestones: "Milestone"
+    milestones: "étapes"
 
   certification:
-    link: "Go to site"
-    discover: "Discover more"
+    link: "Aller au site"
+    discover: "En savoir plus"
     partial:
       block:
         dnv_gl: "Quality Management System: ISO 9001"
@@ -51,12 +56,12 @@ en:
       title: "Certifications"
 
   join_us:
-    title: "Vuoi entrare a far parte del nostro team di esperti?"
+    title: "Voulez-vous vous joindre à notre équipe d'experts?"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-    link: "Invia candidatura"
+    link: "Envoyer la demande"
 
   contact_us:
-    title: "Contact us"
+    title: "Contactez-nous"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     role: "Sales Manager"
     full_name: "Andrea D. Piai Walpot"
@@ -69,58 +74,58 @@ en:
     in_airport: "In Airport"
     off_airport: "Off Airport"
     label:
-      opening: "Opening Hours"
-      address: "Address"
+      opening: "Heures d'ouverture"
+      address: "Addresse"
       contact: "Contact"
 
   terminal:
     email: "Email"
 
   airport:
-    office: "Office"
-    warehouse: "Warehouse"
+    office: "Bureau"
+    warehouse: "Entrepôt"
     contact: "Contact"
     email: "Email"
-    phone: "Phone"
-    additional_info: "Additional Info"
-    google_map: "Show into map"
+    phone: "Téléphone"
+    additional_info: "Informations complémentaires"
+    google_map: "Montrer sur la carte"
 
   news:
-    read_more: "Leggi la news"
+    read_more: "Lire les nouvelles"
 
   awards:
-    read_more: "Read"
+    read_more: "Lire"
 
   footer:
     collaborators: "Collaborations"
     newsletter: "Newsletter"
-    newsletter_success: "Subscribed at newsletter"
+    newsletter_success: "Abonnement à la newsletter"
     contacts: "Contacts"
     contact:
-      address: "Address"
-      phone: "Phone"
+      address: "Addresse"
+      phone: "Téléphone"
       fax: "Fax"
       email: "Email"
       pec: "Pec"
 
   form:
     label:
-      first_name: "Name"
-      last_name: "Surname"
+      first_name: "Prénom"
+      last_name: "Nom"
       email: "Email"
-      phone: "Phone"
+      phone: "Téléphone"
       message: "Message"
-      privacy: "Accetto le condizioni della"
+      privacy: "J'accepte les termes de la"
     placeholder:
-      first_name: "Name"
-      last_name: "Surname"
+      first_name: "Prénom"
+      last_name: "Nom"
       email: "Email"
-      phone: "Phone"
+      phone: "Téléphone"
       message: "Message"
-      privacy: "Accetto le condizioni della"
-    submit: "Subscribe"
+      privacy: "J'accepte les termes de la"
+    submit: "Souscrire"
 
-  not_found: "Sorry, page not found"
+  not_found: "Désolé, page non trouvée"
 
   button: 
-    home: "Came back homepage"
+    home: "Retour à la page d'accueil"
