@@ -1,69 +1,70 @@
-de:
-  iubenda_id: 204258
+fr:
+  iubenda_id: 74496370
   contact_email: "test@cantierecreativo.net"
 
   index_lang:
     it: "Versione italiana"
     en: "English version"
-    fr: "Français"
+    fr: "Version française"
+    de: "Deutsche Version"
 
   locales_label:
     it: "Italiano"
     en: "English"
-    fr: "Version française"
-
+    fr: "Français"
+    de: "Deutsch"
 
   credits:
-    button_label: "Design & Development by Lean Panda"
+    button_label: "Entwurf und Entwicklung von Lean Panda"
     url: "https://www.leanpanda.com"
-    title: "Ruby on Rails Agency Lean Panda based in Florence"
+    title: "Ruby on Rails Agentur Lean Panda mit Sitz in Florenz"
 
   nav:
-    menu: "Menu"
-    home: "HOME"
-    menu_close: "Close"
-    about: "About us"
-    services: "Services"
-    advanced_solutions: "Advanced Cargo Solutions"
-    network: "Network"
+    menu: "Menü"
+    home: "Homepage"
+    menu_close: "schließen"
+    about: "Über uns"
+    services: "Dienstleistungen"
+    advanced_solutions: "fortgeschrittene Lösungen"
+    network: "Netzwerk"
     network_child:
-      terminal: "Cargo Terminals"
-      airport: "Offline Network"
+      terminal: "Terminal"
+      airport: "Offline Netzwerk"
 
   aside:
     social:
-      label: "Social"
+      label: "Sozial"
 
   home:
-    scroll-down: "Scroll Down"
+    scroll-down: "Nach unten blättern"
     social:
-      twitter: "twitter"
-      linkedin: "linkedin"
+      twitter: "Twitter"
+      linkedin: "Linkedin"
 
   about:
-    milestones: "Milestone"
+    milestones: "Meilenstein"
 
   certification:
-    link: "Go to site"
-    discover: "Discover more"
+    link: "Weiter zur Website"
+    discover: "Um mehr darüber zu erfahren"
     partial:
       block:
         dnv_gl: "Quality Management System: ISO 9001"
         ceiv: "IATA CEIV Pharma Certification"
         tapa: "TAPA TSR 1"
-      title: "Certifications"
+      title: "Zertifizierungen"
 
   join_us:
-    title: "Vuoi entrare a far parte del nostro team di esperti?"
+    title: "Möchten Sie unserem Expertenteam beitreten?"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-    link: "Invia candidatura"
+    link: "Senden Sie die Anfrage"
 
   contact_us:
-    title: "Contact us"
+    title: "Kontaktieren Sie uns"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     role: "Sales Manager"
     full_name: "Andrea D. Piai Walpot"
-    label: "Contact"
+    label: "Kontakte"
     phone: "0039 02 74866701"
     email: "andrea.piai@alhagroup.com"
 
@@ -72,36 +73,36 @@ de:
     in_airport: "In Airport"
     off_airport: "Off Airport"
     label:
-      opening: "Opening Hours"
-      address: "Address"
-      contact: "Contact"
+      opening: "Öffnungszeiten"
+      address: "Adresse"
+      contact: "Kontakt"
 
   terminal:
     email: "Email"
 
   airport:
-    office: "Office"
-    warehouse: "Warehouse"
-    contact: "Contact"
+    office: "Büro"
+    warehouse: "Lagerhaus"
+    contact: "Kontakt"
     email: "Email"
-    phone: "Phone"
-    additional_info: "Additional Info"
-    google_map: "Show into map"
+    phone: "Telefon“"
+    additional_info: "Weitere Informationen"
+    google_map: "Auf Karte anzeigen"
 
   news:
-    read_more: "Leggi la news"
+    read_more: "Lesen Sie die Nachrichten"
 
   awards:
-    read_more: "Read"
+    read_more: "Lesen Sie"
 
   footer:
-    collaborators: "Collaborations"
+    collaborators: "Kollaborationen"
     newsletter: "Newsletter"
-    newsletter_success: "Subscribed at newsletter"
-    contacts: "Contacts"
+    newsletter_success: "Abonnieren Sie den Newsletter"
+    contacts: "Kontakte"
     contact:
-      address: "Address"
-      phone: "Phone"
+      address: "Addresse"
+      phone: "Telefon"
       fax: "Fax"
       email: "Email"
       pec: "Pec"
@@ -109,21 +110,21 @@ de:
   form:
     label:
       first_name: "Name"
-      last_name: "Surname"
+      last_name: "Nachname"
       email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
+      phone: "Telefon"
+      message: "Nachricht"
+      privacy: "Ich akzeptiere die Bedingungen der"
     placeholder:
       first_name: "Name"
-      last_name: "Surname"
+      last_name: "Nachname"
       email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
-    submit: "Subscribe"
+      phone: "Telefon"
+      message: "Nachricht"
+      privacy: "Ich akzeptiere die Bedingungen der"
+    submit: "Abonnieren Sie"
 
-  not_found: "Sorry, page not found"
+  not_found: "Entschuldigung, Seite nicht gefunden"
 
   button: 
-    home: "Came back homepage"
+    home: "Zurück zur Startseite"
