@@ -7,14 +7,14 @@ en:
     en: "English version"
     es: "Versión en español"
     fr: "Version française"
-
-
+    ru: "Русская версия"
 
   locales_label:
     it: "Italiano"
     en: "English"
-    es: "Español"
     fr: "Français"
+    de: "Deutsch"
+    ru: "русский"
 
   credits:
     button_label: "Design & Development by Lean Panda"

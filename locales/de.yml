@@ -1,18 +1,20 @@
 de:
-  iubenda_id: 74496370
+  iubenda_id: 11639956
   contact_email: "test@cantierecreativo.net"
 
   index_lang:
     it: "Versione italiana"
     en: "English version"
+    es: "Versión en español"
     fr: "Version française"
-    de: "Deutsche Version"
+    ru: "Русская версия"
 
   locales_label:
     it: "Italiano"
     en: "English"
     fr: "Français"
     de: "Deutsch"
+    ru: "русский"
 
   credits:
     button_label: "Entwurf und Entwicklung von Lean Panda"

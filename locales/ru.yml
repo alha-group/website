@@ -1,5 +1,5 @@
 ru:
-  iubenda_id: 204258
+  iubenda_id: 87883838
   contact_email: "test@cantierecreativo.net"
 
   index_lang:
@@ -7,27 +7,27 @@ ru:
     en: "English version"
     es: "Versión en español"
     fr: "Version française"
-
-
+    ru: "Русская версия"
 
   locales_label:
     it: "Italiano"
     en: "English"
-    es: "Español"
     fr: "Français"
+    de: "Deutsch"
+    ru: "русский"
 
   credits:
-    button_label: "Design & Development by Lean Panda"
+    button_label: "Дизайн и разработка Lean Panda"
     url: "https://www.leanpanda.com"
-    title: "Ruby on Rails Agency Lean Panda based in Florence"
+    title: "Агентство Ruby on Rails Lean Panda, расположенное во Флоренции."
 
   nav:
-    menu: "Menu"
-    home: "HOME"
-    menu_close: "Close"
-    about: "About us"
-    services: "Services"
-    advanced_solutions: "Advanced Cargo Solutions"
+    menu: "Меню"
+    home: "Домашняя страница"
+    menu_close: "Закрыть"
+    about: "О нас"
+    services: "Услуги"
+    advanced_solutions: "Передовые решения в области грузоперевозок"
     network: "Network"
     network_child:
       terminal: "Cargo Terminals"
@@ -35,38 +35,38 @@ ru:
 
   aside:
     social:
-      label: "Social"
+      label: "Социальный сайт"
 
   home:
-    scroll-down: "Scroll Down"
+    scroll-down: "Прокрутка вниз"
     social:
-      twitter: "twitter"
+      twitter: "твиттер"
       linkedin: "linkedin"
 
   about:
-    milestones: "Milestone"
+    milestones: "Веха"
 
   certification:
-    link: "Go to site"
-    discover: "Discover more"
+    link: "Зайти на сайт"
+    discover: "Узнать больше"
     partial:
       block:
         dnv_gl: "Quality Management System: ISO 9001"
         ceiv: "IATA CEIV Pharma Certification"
         tapa: "TAPA TSR 1"
-      title: "Certifications"
+      title: "Сертификаты"
 
   join_us:
-    title: "Vuoi entrare a far parte del nostro team di esperti?"
+    title: "Хотите присоединиться к нашей команде экспертов?"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-    link: "Invia candidatura"
+    link: "Отправить заявку"
 
   contact_us:
-    title: "Contact us"
+    title: "Свяжитесь с нами"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     role: "Sales Manager"
     full_name: "Andrea D. Piai Walpot"
-    label: "Contact"
+    label: "Контактная информация"
     phone: "0039 02 74866701"
     email: "andrea.piai@alhagroup.com"
 
@@ -75,58 +75,58 @@ ru:
     in_airport: "In Airport"
     off_airport: "Off Airport"
     label:
-      opening: "Opening Hours"
-      address: "Address"
-      contact: "Contact"
+      opening: "Часы работы"
+      address: "Адрес"
+      contact: "Контактная информация"
 
   terminal:
-    email: "Email"
+    email: "Электронный адрес"
 
   airport:
-    office: "Office"
-    warehouse: "Warehouse"
-    contact: "Contact"
-    email: "Email"
-    phone: "Phone"
-    additional_info: "Additional Info"
-    google_map: "Show into map"
+    office: "Офис"
+    warehouse: "Склад"
+    contact: "Контактная информация"
+    email: "Электронный адрес"
+    phone: "Телефон"
+    additional_info: "Дополнительная информация"
+    google_map: "Показать на карте"
 
   news:
-    read_more: "Read the news"
+    read_more: "Читайте новости"
 
   awards:
-    read_more: "Read"
+    read_more: "Читать"
 
   footer:
-    collaborators: "Collaborations"
-    newsletter: "Newsletter"
-    newsletter_success: "Subscribed at newsletter"
-    contacts: "Contacts"
+    collaborators: "Сотрудничество"
+    newsletter: "Информационный бюллетень"
+    newsletter_success: "Подписаться на рассылку новостей"
+    contacts: "Контакты"
     contact:
-      address: "Address"
-      phone: "Phone"
-      fax: "Fax"
-      email: "Email"
+      address: "Адрес"
+      phone: "Телефон"
+      fax: "Факс"
+      email: "Электронный адрес"
       pec: "Pec"
 
   form:
     label:
-      first_name: "Name"
-      last_name: "Surname"
-      email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
+      first_name: "Имя"
+      last_name: "Фамилия"
+      email: "Электронный адрес"
+      phone: "Телефон"
+      message: "Сообщение"
+      privacy: "Я принимаю условия"
     placeholder:
-      first_name: "Name"
-      last_name: "Surname"
-      email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
-    submit: "Subscribe"
+      first_name: "Имя"
+      last_name: "Фамилия"
+      email: "Электронный адрес"
+      phone: "Телефон"
+      message: "Сообщение"
+      privacy: "Я принимаю условия"
+    submit: "Подписаться на сайт"
 
-  not_found: "Sorry, page not found"
+  not_found: "Извините, страница не найдена"
 
   button: 
-    home: "Came back homepage"
+    home: "Вернулась главная страница"
