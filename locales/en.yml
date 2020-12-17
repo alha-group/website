@@ -8,6 +8,8 @@ en:
     es: "Versión en español"
     fr: "Version française"
     ru: "Русская версия"
+    zh: "中文版"
+    ar: "النسخة العربية"
 
   locales_label:
     it: "Italiano"
@@ -15,6 +17,9 @@ en:
     fr: "Français"
     de: "Deutsch"
     ru: "русский"
+    zh: "中文"
+    ar: "العربية"
+
 
   credits:
     button_label: "Design & Development by Lean Panda"

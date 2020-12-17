@@ -5,14 +5,21 @@ fr:
   index_lang:
     it: "Versione italiana"
     en: "English version"
+    es: "Versión en español"
     fr: "Version française"
-    de: "Deutsche Version"
+    ru: "Русская версия"
+    zh: "中文版"
+    ar: "النسخة العربية"
 
   locales_label:
     it: "Italiano"
     en: "English"
     fr: "Français"
     de: "Deutsch"
+    ru: "русский"
+    zh: "中文"
+    ar: "العربية"
+
 
   credits:
     button_label: "Design et développement par Lean Panda"

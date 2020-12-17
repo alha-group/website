@@ -8,6 +8,7 @@ zh:
     es: "Versión en español"
     fr: "Version française"
     ru: "Русская версия"
+    zh: "中文版"
 
   locales_label:
     it: "Italiano"
@@ -15,118 +16,119 @@ zh:
     fr: "Français"
     de: "Deutsch"
     ru: "русский"
+    zh: "中文"
 
   credits:
-    button_label: "Design & Development by Lean Panda"
+    button_label: "设计与开发：精益熊猫"
     url: "https://www.leanpanda.com"
-    title: "Ruby on Rails Agency Lean Panda based in Florence"
+    title: "Ruby on Rails代理公司Lean Panda总部设在佛罗伦萨"
 
   nav:
-    menu: "Menu"
-    home: "HOME"
-    menu_close: "Close"
-    about: "About us"
-    services: "Services"
-    advanced_solutions: "Advanced Cargo Solutions"
-    network: "Network"
+    menu: "菜单"
+    home: "首页"
+    menu_close: "关闭"
+    about: "关于我们"
+    services: "服务项目"
+    advanced_solutions: "高级货运解决方案"
+    network: "网络"
     network_child:
-      terminal: "Cargo Terminals"
-      airport: "Offline Network"
+      terminal: "位置端子"
+      airport: "离线网络"
 
   aside:
     social:
-      label: "Social"
+      label: "社会"
 
   home:
-    scroll-down: "Scroll Down"
+    scroll-down: "向下滚动"
     social:
-      twitter: "twitter"
-      linkedin: "linkedin"
+      twitter: "啭"
+      linkedin: "链接网络"
 
   about:
-    milestones: "Milestone"
+    milestones: "里程碑"
 
   certification:
-    link: "Go to site"
-    discover: "Discover more"
+    link: "前往网站"
+    discover: "了解更多"
     partial:
       block:
         dnv_gl: "Quality Management System: ISO 9001"
         ceiv: "IATA CEIV Pharma Certification"
         tapa: "TAPA TSR 1"
-      title: "Certifications"
+      title: "资格认证"
 
   join_us:
-    title: "Vuoi entrare a far parte del nostro team di esperti?"
+    title: "您想加入我们的专家团队吗"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-    link: "Invia candidatura"
+    link: "发送申请"
 
   contact_us:
-    title: "Contact us"
+    title: "联系我们"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     role: "Sales Manager"
     full_name: "Andrea D. Piai Walpot"
-    label: "Contact"
+    label: "联系我们"
     phone: "0039 02 74866701"
     email: "andrea.piai@alhagroup.com"
 
   network:
-    terminal: "Cargo Terminals"
+    terminal: "联系我们"
     in_airport: "In Airport"
     off_airport: "Off Airport"
     label:
-      opening: "Opening Hours"
-      address: "Address"
-      contact: "Contact"
+      opening: "开放时间"
+      address: "地址"
+      contact: "联系我们"
 
   terminal:
-    email: "Email"
+    email: "电子邮件"
 
   airport:
-    office: "Office"
-    warehouse: "Warehouse"
-    contact: "Contact"
-    email: "Email"
-    phone: "Phone"
-    additional_info: "Additional Info"
-    google_map: "Show into map"
+    office: "办公室"
+    warehouse: "仓库"
+    contact: "联系我们"
+    email: "电子邮件"
+    phone: "联系电话"
+    additional_info: "其他信息"
+    google_map: "显示到地图上"
 
   news:
-    read_more: "Read the news"
+    read_more: "阅读新闻"
 
   awards:
-    read_more: "Read"
+    read_more: "阅览"
 
   footer:
-    collaborators: "Collaborations"
-    newsletter: "Newsletter"
-    newsletter_success: "Subscribed at newsletter"
-    contacts: "Contacts"
+    collaborators: "协作"
+    newsletter: "通讯"
+    newsletter_success: "订阅电子报"
+    contacts: "联系我们"
     contact:
-      address: "Address"
-      phone: "Phone"
-      fax: "Fax"
-      email: "Email"
+      address: "地址"
+      phone: "联系电话"
+      fax: "传真机"
+      email: "电子邮件"
       pec: "Pec"
 
   form:
     label:
-      first_name: "Name"
-      last_name: "Surname"
-      email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
+      first_name: "名称"
+      last_name: "姓氏"
+      email: "电子邮件"
+      phone: "联系电话"
+      message: "留言内容"
+      privacy: "我接受以下条件"
     placeholder:
-      first_name: "Name"
-      last_name: "Surname"
-      email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
-    submit: "Subscribe"
+      first_name: "名称"
+      last_name: "姓氏"
+      email: "电子邮件"
+      phone: "联系电话"
+      message: "留言内容"
+      privacy: "我接受以下条件"
+    submit: "订阅"
 
-  not_found: "Sorry, page not found"
+  not_found: "对不起，没有找到页面"
 
   button: 
-    home: "Came back homepage"
+    home: "回来的主页"

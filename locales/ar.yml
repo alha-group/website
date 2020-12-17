@@ -8,6 +8,8 @@ ar:
     es: "Versión en español"
     fr: "Version française"
     ru: "Русская версия"
+    zh: "中文版"
+    ar: "النسخة العربية"
 
   locales_label:
     it: "Italiano"
@@ -15,118 +17,121 @@ ar:
     fr: "Français"
     de: "Deutsch"
     ru: "русский"
+    zh: "中文"
+    ar: "العربية"
 
   credits:
-    button_label: "Design & Development by Lean Panda"
+    button_label: "التصميم والتطوير من قبل لين باندا"
     url: "https://www.leanpanda.com"
-    title: "Ruby on Rails Agency Lean Panda based in Florence"
+    title: "التصميم والتطوير من قبل لين باندا"
 
   nav:
-    menu: "Menu"
-    home: "HOME"
-    menu_close: "Close"
-    about: "About us"
-    services: "Services"
-    advanced_solutions: "Advanced Cargo Solutions"
-    network: "Network"
+    menu: "القائمة"  
+    home: "الصفحة الرئيسية" 
+    menu_close: "إغلاق"  
+    about: "معلومات عنا"
+    services: "الخدمات"   
+    advanced_solutions: "حلول الشحن المتقدمة"  
+    network: "الشبكة"  
     network_child:
-      terminal: "Cargo Terminals"
-      airport: "Offline Network"
+      terminal: "محطات الشحن"  
+      airport: "شبكة غير متصلة"  
 
   aside:
     social:
-      label: "Social"
+      label: "الاجتماعية"
 
   home:
-    scroll-down: "Scroll Down"
+    scroll-down: "مرر لأسفل"
     social:
-      twitter: "twitter"
+      twitter: "تويتر"
       linkedin: "linkedin"
 
   about:
-    milestones: "Milestone"
+    milestones: "معلم"
 
   certification:
-    link: "Go to site"
-    discover: "Discover more"
+    link: "انتقل إلى الموقع"  
+    discover: "اكتشف المزيد"  
     partial:
       block:
-        dnv_gl: "Quality Management System: ISO 9001"
-        ceiv: "IATA CEIV Pharma Certification"
-        tapa: "TAPA TSR 1"
-      title: "Certifications"
+        dnv_gl: "Quality Management System: ISO 9001"  
+        ceiv: "IATA CEIV Pharma Certification" 
+        tapa: "TAPA TSR 1"  
+      title: "الشهادات" 
+
 
   join_us:
-    title: "Vuoi entrare a far parte del nostro team di esperti?"
+    title: "هل ترغب في الانضمام إلى فريق العمل لدينا من الخبراء ؟"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-    link: "Invia candidatura"
+    link: "إرسال الطلب"
 
   contact_us:
-    title: "Contact us"
+    title: "الاتصال بنا" 
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    role: "Sales Manager"
+    role: "Sales Manager"  
     full_name: "Andrea D. Piai Walpot"
-    label: "Contact"
+    label: "الاتصال"  
     phone: "0039 02 74866701"
     email: "andrea.piai@alhagroup.com"
 
   network:
-    terminal: "Cargo Terminals"
-    in_airport: "In Airport"
-    off_airport: "Off Airport"
+    terminal: "محطات الشحن"  
+    in_airport: "In Airport"  
+    off_airport: "Off Airport"  
     label:
-      opening: "Opening Hours"
-      address: "Address"
-      contact: "Contact"
+      opening: "ساعات العمل" 
+      address: "العنوان" 
+      contact: "الاتصال"  
 
   terminal:
-    email: "Email"
+    email: "البريد الإلكتروني" 
 
   airport:
-    office: "Office"
-    warehouse: "Warehouse"
-    contact: "Contact"
-    email: "Email"
-    phone: "Phone"
-    additional_info: "Additional Info"
-    google_map: "Show into map"
+    office: "المكتب" 
+    warehouse: "مستودع" 
+    contact: "الاتصال"  
+    email: "البريد الإلكتروني"  
+    phone: "الهاتف" 
+    additional_info: "معلومات إضافية"  
+    google_map: "تظهر في الخريطة"  
 
   news:
-    read_more: "Read the news"
+    read_more: "قراءة الأخبار"  
 
   awards:
-    read_more: "Read"
+    read_more: "اقرأ"
 
   footer:
-    collaborators: "Collaborations"
-    newsletter: "Newsletter"
-    newsletter_success: "Subscribed at newsletter"
-    contacts: "Contacts"
+    collaborators: "التعاون"  
+    newsletter: "النشرة الإخبارية"  
+    newsletter_success: "الاشتراك في النشرة الإخبارية"  
+    contacts: "جهات الاتصال" 
     contact:
-      address: "Address"
-      phone: "Phone"
+      address: "العنوان"  
+      phone: "الهاتف" 
       fax: "Fax"
-      email: "Email"
-      pec: "Pec"
+      email: "البريد الإلكتروني" 
+      pec: "Pec" 
 
   form:
     label:
-      first_name: "Name"
-      last_name: "Surname"
-      email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
+      first_name: "الاسم"  
+      last_name: "اللقب"  
+      email: "البريد الإلكتروني"  
+      phone: "الهاتف"  
+      message: "الرسالة" 
+      privacy: "أنا أقبل شروط"  
     placeholder:
-      first_name: "Name"
-      last_name: "Surname"
-      email: "Email"
-      phone: "Phone"
-      message: "Message"
-      privacy: "Accetto le condizioni della"
-    submit: "Subscribe"
+      first_name: "الاسم"  
+      last_name: "اللقب"   
+      email: "البريد الإلكتروني" 
+      phone: "الهاتف" 
+      message: "الرسالة" 
+      privacy: "أنا أقبل شروط" 
+    submit: "اشترك"
 
-  not_found: "Sorry, page not found"
+  not_found: "عذرا, لم يتم العثور على الصفحة"
 
   button: 
-    home: "Came back homepage"
+    home: "عادت الصفحة الرئيسية"
