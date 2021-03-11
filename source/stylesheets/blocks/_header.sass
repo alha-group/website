@@ -163,6 +163,11 @@
   color: $white-color
   .header--medium &
     height: 530px
+  
+  &::after
+    content: ""
+    +position(absolute,0)
+    background-color: rgba($blue-color, .8)
 
 .header__news__date
   +padding-top(5)
