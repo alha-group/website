@@ -35,6 +35,11 @@
     +position(absolute,0)
     mix-blend-mode: color
     background-color: $blue-color
+  &::before
+    content: ""
+    +position(absolute,0)
+    background-color: $blue-color
+    opacity: .5
 
 .header__hero__body
   display: table-cell

@@ -118,21 +118,23 @@
 .site-nav__topbar__locale__switcher
   color: $white-color
   +heading-font-family
-  text-transform: uppercase
 
 .site-nav__topbar__locale__dropdown
-  display: none
-  +position(absolute, 100% null null 0)
+  +position(absolute, 100% 74px null -158px)
   background: $blue-l
-  width: 100%
   text-align: center
+  max-height: 0
+  transition: .6s
+  overflow: hidden
+  +at-breakpoint(monitor)
+    left: -216px
+    right: 98px
   .site-nav__topbar__locale:hover &
-    display: block
+    max-height: 600px
 
 .site-nav__topbar__locale__link
   display: block
   color: #FFFFFF
-  text-transform: uppercase
   +vertical-padding(1)
   &.is-current
     background: $blue-color
@@ -277,10 +279,8 @@
 
   .site-nav__topbar__locale
     +horizontal-padding(2)
-    +vertical-padding(2.78)
-
-  .site-nav__topbar__locale__switcher
-    +font-size(regular)
+    +vertical-padding(2.68)
+    transform: translateY(-1px)
 
   .site-nav__topbar__locale__link
     +font-size(regular)
@@ -288,7 +288,7 @@
 
   .header-plus
     +horizontal-padding(4)
-    +vertical-padding(2.8)
+    +vertical-padding(2.4)
     svg
       height: 24px
       width: 120px

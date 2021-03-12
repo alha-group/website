@@ -14,11 +14,12 @@ de:
   locales_label:
     it: "Italiano"
     en: "English"
-    fr: "Français"
+    es: "Spanish"
     de: "Deutsch"
     ru: "русский"
     zh: "中文"
     ar: "العربية"
+    fr: "Français"
 
   credits:
     button_label: "Entwurf und Entwicklung von Lean Panda"

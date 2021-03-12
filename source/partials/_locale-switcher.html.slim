@@ -3,10 +3,10 @@
 - base_url = ENV['BASE_URL']
 
 div class=block_class
-  div class="#{block_class}__switcher"= I18n.locale
+  div class="#{block_class}__switcher" = t("locales_label.#{locale}")
   div class="#{block_class}__dropdown"
     - localized_paths_for(current_page).each do |locale, path|
-      =< link_to complete_label ? I18n.t("locales_label.#{locale}") : locale,
+      =< link_to complete_label ? I18n.t("locales_label.#{locale}") : t("locales_label.#{locale}"),
         "#{base_url}#{path}",
         class: "#{block_class}__link lang__#{locale} #{'is-current' if locale == I18n.locale}",
         title: "switcher lenguage"

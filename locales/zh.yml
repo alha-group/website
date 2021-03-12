@@ -13,10 +13,12 @@ zh:
   locales_label:
     it: "Italiano"
     en: "English"
-    fr: "Français"
+    es: "Spanish"
     de: "Deutsch"
     ru: "русский"
     zh: "中文"
+    ar: "العربية"
+    fr: "Français"
 
   credits:
     button_label: "设计与开发：精益熊猫"
