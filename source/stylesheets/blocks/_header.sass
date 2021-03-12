@@ -32,12 +32,12 @@
   
   &::after
     content: ""
-    +position(absolute,0)
+    +position(absolute,-1000px 0 0 0)
     mix-blend-mode: color
     background-color: $blue-color
   &::before
     content: ""
-    +position(absolute,0)
+    +position(absolute,-1000px 0 0 0)
     background-color: $blue-color
     opacity: .5
 
@@ -45,6 +45,8 @@
   display: table-cell
   vertical-align: bottom
   +padding-bottom(3.5)
+  position: relative
+  z-index: 10
 
 .header__hero__body__inner
   +margin-bottom(5)
@@ -76,6 +78,7 @@
   border-left: 2px solid $orange-color
   margin-top: -50px
   margin-left: 70px
+  z-index: 1
   +at-breakpoint(wall)
     margin-left: 40px
   .header--large--careers &
