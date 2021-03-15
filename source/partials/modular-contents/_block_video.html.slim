@@ -1,0 +1,23 @@
+.video-banner
+  - if defined?(content.video_mp4) || defined?(content.video_webm)
+    - if content.video_mp4.present? || content.video_webem.present?
+      video#video.image-banner__video playsinline="playsinline" loop="loop" class="checkAnim animation--video" autobuffer="autobuffer" muted="muted" poster="#{content.cover_image.url(fm: :jpg, fit: :crop, w: 1600, bm: :normal)}"
+        - if (content.video_mp4.present?)
+          source src=content.video_mp4.url type="video/mp4"
+        - if (content.video_webm.present?)
+          source src=content.video_webm.url type="video/webm"
+
+  .button-play#button-play
+    .video__title = content.title_video
+
+javascript:
+  var playButton = document.getElementById("button-play");
+  playButton.addEventListener("click", function() {
+    if (video.paused == true) {
+      video.play();
+      playButton.classList.toggle('button-pause');
+    } else {
+      video.pause();
+      playButton.classList.toggle('button-pause');
+    }
+  });

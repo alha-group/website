@@ -1,0 +1,65 @@
+.video-banner
+  height: 300px
+  position: relative
+  background-color: $blue-xl
+  +vertical-margin(.5)
+  +at-breakpoint(tab)
+    height: 400px
+  +at-breakpoint(lap)
+    height: 800px
+
+  video
+    width: 100%
+    height: 100%
+    object-fit: cover
+    +at-breakpoint(lap)
+      +center
+      width: 820px
+      height: 460px
+    +at-breakpoint(monitor)
+      width: 1024px
+      height: 576px
+
+.button-pause, .button-play  
+  +center
+  z-index: 10
+  width: 100px
+  height: 100px
+  transition: .3
+  cursor: pointer
+  +at-breakpoint(lap)
+    width: 150px
+    height: 150px
+
+.button-play  
+  background-image: url("/fonts/svg/play.svg")
+  &.button-pause
+    background-image: url("/fonts/svg/pause.svg")
+    +at-breakpoint(lap)
+      opacity: .2
+      transition: .3s
+      &:hover
+        opacity: 1
+  
+  &::after
+    content: ""
+    +position(absolute,0 null null 0)
+    background-color: $blue-color
+    mix-blend-mode: color
+    opacity: .5
+    +at-breakpoint(lap)
+      +center
+      width: 820px
+      height: 460px
+    +at-breakpoint(monitor)
+      width: 1024px
+      height: 576px    
+
+
+.video__title
+  +heading-font-family
+  +font-size(delta)
+  color: white
+  width: 500px
+  text-align: center
+  +center-horizontally
