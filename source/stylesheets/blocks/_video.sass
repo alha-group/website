@@ -20,6 +20,24 @@
       width: 1024px
       height: 576px
 
+.video-banner--news
+  position: relative
+  width: 100%
+  height: 240px
+  +at-breakpoint(lap)
+    height: 460px
+  +at-breakpoint(monitor)
+    width: 1024px
+    height: 576px
+
+  video
+    width: 100%
+    height: 100%
+
+  .button-play
+    &::after
+      display: none
+
 .button-pause, .button-play  
   +center
   z-index: 10

@@ -1,4 +1,4 @@
-.video-banner
+.video-banner--news
   - if defined?(content.video_mp4) || defined?(content.video_webm)
     - if content.video_mp4.present? || content.video_webem.present?
       video#video.image-banner__video playsinline="playsinline" loop="loop" class="checkAnim animation--video" autobuffer="autobuffer" muted="muted" poster="#{content.cover.url(fm: :jpg, fit: :crop, w: 1600, bm: :normal)}"
@@ -7,12 +7,10 @@
         - if (content.video_webm.present?)
           source src=content.video_webm.url type="video/webm"
 
-  .button-play#button-play
-    - if content.title_video.present?
-      .video__title = content.title_video
+  .button-play#button-play-2
 
 javascript:
-  var playButton = document.getElementById("button-play");
+  var playButton = document.getElementById("button-play-2");
   playButton.addEventListener("click", function() {
     if (video.paused == true) {
       video.play();

@@ -14,9 +14,16 @@ header class="header--medium"
       .wrap
         .grid--center
           .grid__item.width-12-12.desk-10-12
-            = image_tag(page.cover.url(fm: :jpg, fit: :crop, w: 1440, h: 770), class: "visible--on-desk")
-            = image_tag(page.cover.url(fm: :jpg, fit: :crop, w: 1024, h: 570), class: "visible--on-lap hidden--on-desk")
-            = image_tag(page.cover.url(fm: :jpg, fit: :crop, w: 1024, h: 970), class: "hidden--on-lap")
+          
+            - if page.video_mp4.present? || page.video_webm.present?
+              = partial "partials/video",
+                locals: {content: page}                
+
+            - else
+
+              = image_tag(page.cover.url(fm: :jpg, fit: :crop, w: 1440, h: 770), class: "visible--on-desk")
+              = image_tag(page.cover.url(fm: :jpg, fit: :crop, w: 1024, h: 570), class: "visible--on-lap hidden--on-desk")
+              = image_tag(page.cover.url(fm: :jpg, fit: :crop, w: 1024, h: 970), class: "hidden--on-lap")
 
 section.page-body
   .wrap
@@ -25,3 +32,17 @@ section.page-body
         .margin--bottom-5
           .formatted-content
             = page.body
+
+javascript:
+  var playButton = document.getElementById("button-play");
+  playButton.addEventListener("click", function() {
+    if (video.paused == true) {
+      video.play();
+      playButton.classList.toggle('button-pause');
+    } else {
+      video.pause();
+      playButton.classList.toggle('button-pause');
+    }
+  });
+
+

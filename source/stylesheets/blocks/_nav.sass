@@ -120,15 +120,13 @@
   +heading-font-family
 
 .site-nav__topbar__locale__dropdown
-  +position(absolute, 100% 74px null -158px)
+  +position(absolute, 100% 0 null auto)
   background: $blue-l
   text-align: center
   max-height: 0
+  width: 240px
   transition: .6s
   overflow: hidden
-  +at-breakpoint(monitor)
-    left: -216px
-    right: 98px
   .site-nav__topbar__locale:hover &
     max-height: 600px
 
@@ -283,7 +281,6 @@
     transform: translateY(-1px)
 
   .site-nav__topbar__locale__link
-    +font-size(regular)
     +vertical-padding(1)
 
   .header-plus
