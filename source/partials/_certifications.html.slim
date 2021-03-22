@@ -5,6 +5,77 @@
         .grid__item.desk-1-12
         .grid__item.desk-11-12
           .certification-part__inner
+
+            - if page.staff.present? || page.wharehouse_info.present? || page.docks_cargo.present? || page.docs_bups.present? || page.freezer.present? || page.crt.present? || page.act.present? || page.cage.present? || page.vault.present?
+              .certification-part__inner__title= t("info.title")
+              .grid
+                .grid__item.monitor-11-12
+                  .grid.margin--bottom-2
+                    - if page.staff.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("staff")
+                          .info-add__texts
+                            .info-add__title = t('info.staff')
+                            .info-add__text = page.staff  
+                    - if page.wharehouse_info.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("wharehouse")
+                          .info-add__texts
+                            .info-add__title = t('info.wharehouse')
+                            .info-add__text = page.wharehouse_info  
+                    - if page.docks_cargo.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("docks_cargo")
+                          .info-add__texts
+                            .info-add__title = t('info.docks_cargo')
+                            .info-add__text = page.docks_cargo  
+                    - if page.docs_bups.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("bups")
+                          .info-add__texts
+                            .info-add__title = t('info.docks_bups')
+                            .info-add__text = page.docs_bups
+                    - if page.freezer.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("freezer")
+                          .info-add__texts
+                            .info-add__title = t('info.freezer')
+                            .info-add__text = page.freezer
+                    - if page.crt.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("crt")
+                          .info-add__texts
+                            .info-add__title = t('info.crt')
+                            .info-add__text = page.crt
+                    - if page.act.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("act")
+                          .info-add__texts
+                            .info-add__title = t('info.act')
+                            .info-add__text = page.act
+                    - if page.cage.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("cage")
+                          .info-add__texts
+                            .info-add__title = t('info.cage')
+                            .info-add__text = page.cage
+                    - if page.vault.present?
+                      .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                        .info-add
+                          .info-add__icon = i("vault")
+                          .info-add__texts
+                            .info-add__title = t('info.vault')
+                            .info-add__text = page.vault
+
+
             .certification-part__inner__title= t("certification.partial.title")
             .grid
               - certs.each do |cert|
@@ -18,3 +89,4 @@
                         "/#{I18n.locale}/#{dato.certification_page.slug}",
                         title: t("certification.discover"),
                         class: "certification-part__inner__block__link"
+
