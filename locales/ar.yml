@@ -136,3 +136,16 @@ ar:
 
   button: 
     home: "عادت الصفحة الرئيسية"
+
+  info:
+    title: "Additional Info"
+    staff: "Staff"
+    wharehouse: "Warehouse"
+    docks_cargo: "Dock for loose cargo"
+    docks_bups: "Dock for BUPs"
+    freezer: "Freezer"
+    cold_room: "Cold Room"
+    crt: "CRT"
+    act: "ACT Plugs"
+    cage: "Cage"
+    vault: "Vault" 
