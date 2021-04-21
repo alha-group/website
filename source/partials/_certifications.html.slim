@@ -48,6 +48,13 @@
                             .info-add__texts
                               .info-add__title = t('info.freezer')
                               .info-add__text = page.freezer
+                      - if page.cold_room.present?
+                        .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
+                          .info-add
+                            .info-add__icon = i("cold_room")
+                            .info-add__texts
+                              .info-add__title = t('info.cold_room')
+                              .info-add__text = page.cold_room
                       - if page.crt.present?
                         .grid__item.lap-6-12.desk-4-12.monitor-3-12.margin--bottom-1.margin--bottom-2-on-desk
                           .info-add
