@@ -1,0 +1,16 @@
+.buttons__container
+  - dato.buttons.each do |button|
+
+    = link_to button.link,
+      class: "button__link",
+      title: button.link do
+
+      div class="button-hp--#{button.color.slug}"
+
+        .button__icon
+          = image_tag(button.icon.url)
+
+        .button__label
+          = button.label
+
+        

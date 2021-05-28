@@ -1,0 +1,55 @@
+.buttons__container
+  +position(fixed, 120px 0 null null)
+  z-index: 10
+  border-radius: 10px 0 0 10px
+  overflow: hidden
+  width: 250px
+  +at-breakpoint(lte-tab)
+    display: none
+
+.button-hp
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin-bottom: 2px
+  align-items: center
+  padding: 12px 15px 10px 20px
+  +font-size(smallprint)
+
+  &:last-of-type
+    margin-bottom: 0
+
+.button__icon
+  height: 100%
+  width: 18px
+
+.button-hp--orange
+  @extend .button-hp
+  background-color: #ED6A4D
+  color: white
+  .button__icon
+    filter: invert(100%) sepia(1%) saturate(2131%) hue-rotate(339deg) brightness(114%) contrast(100%)    
+
+.button-hp--white
+  @extend .button-hp
+  background-color: #fff
+
+.button-hp--yellow
+  @extend .button-hp
+  background-color: $orange-color
+  color: white
+  .button__icon
+    filter: invert(100%) sepia(1%) saturate(2131%) hue-rotate(339deg) brightness(114%) contrast(100%)    
+
+.button-hp--blue
+  @extend .button-hp
+  background-color: $blue-l
+  color: white
+  .button__icon
+    filter: invert(100%) sepia(1%) saturate(2131%) hue-rotate(339deg) brightness(114%) contrast(100%)    
+
+.button__label
+  transition: .5s
+
+  .button__link:hover &
+    margin-right: 5px
