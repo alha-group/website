@@ -1,16 +1,18 @@
-.buttons__container
-  - dato.buttons.each do |button|
+- if dato.buttons.any?
 
-    = link_to button.link,
-      class: "button__link",
-      title: button.link do
+  .buttons__container
+    - dato.buttons.each do |button|
 
-      div class="button-hp--#{button.color.slug}"
+      = link_to button.link,
+        class: "button__link",
+        title: button.link do
 
-        .button__icon
-          = image_tag(button.icon.url)
+        div class="button-hp--#{button.color.slug}"
 
-        .button__label
-          = button.label
+          .button__icon
+            = image_tag(button.icon.url)
+
+          .button__label
+            = button.label
 
         
