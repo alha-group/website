@@ -22,9 +22,9 @@ ru:
     fr: "Français"
 
   credits:
-    button_label: "Дизайн и разработка Lean Panda"
-    url: "https://www.leanpanda.com"
-    title: "Агентство Ruby on Rails Lean Panda, расположенное во Флоренции."
+    button_label: "Агентство по дизайну и развитию Верфь"
+    url: "https://www.cantiere.agency/"
+    title: "Веб-агентство Флоренция."
 
   nav:
     menu: "Меню"
