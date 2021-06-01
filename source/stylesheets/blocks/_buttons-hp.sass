@@ -1,9 +1,14 @@
 .buttons__container
-  +position(fixed, 120px 0 null null)
+  +position(fixed, 42% 0 null null)
   z-index: 10
   border-radius: 10px 0 0 10px
   overflow: hidden
   width: 250px
+  transform: translateY(-50%)
+  .header--large &
+    top: 42%!important
+  .hero--small &
+    top: 28%
   +at-breakpoint(lte-tab)
     display: none
 
@@ -50,6 +55,11 @@
 
 .button__label
   transition: .5s
-
   .button__link:hover &
     margin-right: 5px
+
+.button__link
+  margin-bottom: 3px
+  display: block
+  &:last-of-type
+    margin-bottom: 0

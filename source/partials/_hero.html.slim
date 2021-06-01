@@ -1,6 +1,8 @@
 - if hero.video_or_image
   header class="#{hero_class}"
 
+    = partial "partials/buttons"
+
     .hero-video
       video.hero-video__video playsinline="playsinline" autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted" poster="#{page.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: 40)}"
         - if (page.mp4_video_full.present?)
@@ -37,7 +39,8 @@
 
 
 - else
-  header class="#{hero_class}"
+  header class="#{hero_class} hero--small"
+    = partial "partials/buttons"
     .header__hero style="background-image: url(#{hero.cover.url(fm: :jpg, fit: :crop, w: 1920, h: 770, blend: "00509C", bm: :normal, balph: hero_alpha)})"
       .header__hero__body
         .header__hero__body__inner
