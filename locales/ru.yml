@@ -46,7 +46,8 @@ ru:
     scroll-down: "Прокрутка вниз"
     social:
       twitter: "твиттер"
-      linkedin: "linkedin"
+      linkedin: "связанный"
+      instagram: "инстаграм"
 
   about:
     milestones: "Веха"
@@ -133,7 +134,7 @@ ru:
 
   not_found: "Извините, страница не найдена"
 
-  button: 
+  button:
     home: "Вернулась главная страница"
 
   info:

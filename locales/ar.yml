@@ -27,16 +27,16 @@ ar:
     title: "وكالة Cantiere Creativo ويب فلورنسا"
 
   nav:
-    menu: "القائمة"  
-    home: "الصفحة الرئيسية" 
-    menu_close: "إغلاق"  
+    menu: "القائمة"
+    home: "الصفحة الرئيسية"
+    menu_close: "إغلاق"
     about: "معلومات عنا"
-    services: "الخدمات"   
-    advanced_solutions: "حلول الشحن المتقدمة"  
-    network: "الشبكة"  
+    services: "الخدمات"
+    advanced_solutions: "حلول الشحن المتقدمة"
+    network: "الشبكة"
     network_child:
-      terminal: "محطات الشحن"  
-      airport: "شبكة غير متصلة"  
+      terminal: "محطات الشحن"
+      airport: "شبكة غير متصلة"
 
   aside:
     social:
@@ -46,21 +46,21 @@ ar:
     scroll-down: "مرر لأسفل"
     social:
       twitter: "تويتر"
-      linkedin: "linkedin"
+      linkedin: "ينكدين"
+      instagram: "الانستغرام"
 
   about:
     milestones: "معلم"
 
   certification:
-    link: "انتقل إلى الموقع"  
-    discover: "اكتشف المزيد"  
+    link: "انتقل إلى الموقع"
+    discover: "اكتشف المزيد"
     partial:
       block:
-        dnv_gl: "Quality Management System: ISO 9001"  
-        ceiv: "IATA CEIV Pharma Certification" 
-        tapa: "TAPA TSR 1"  
-      title: "الشهادات" 
-
+        dnv_gl: "Quality Management System: ISO 9001"
+        ceiv: "IATA CEIV Pharma Certification"
+        tapa: "TAPA TSR 1"
+      title: "الشهادات"
 
   join_us:
     title: "هل ترغب في الانضمام إلى فريق العمل لدينا من الخبراء ؟"
@@ -68,73 +68,73 @@ ar:
     link: "إرسال الطلب"
 
   contact_us:
-    title: "الاتصال بنا" 
+    title: "الاتصال بنا"
     abstract: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    role: "Sales Manager"  
+    role: "Sales Manager"
     full_name: "Andrea D. Piai Walpot"
-    label: "الاتصال"  
+    label: "الاتصال"
     phone: "0039 02 74866701"
     email: "andrea.piai@alhagroup.com"
 
   network:
-    terminal: "محطات الشحن"  
-    in_airport: "In Airport"  
-    off_airport: "Off Airport"  
+    terminal: "محطات الشحن"
+    in_airport: "In Airport"
+    off_airport: "Off Airport"
     label:
-      opening: "ساعات العمل" 
-      address: "العنوان" 
-      contact: "الاتصال"  
+      opening: "ساعات العمل"
+      address: "العنوان"
+      contact: "الاتصال"
 
   terminal:
-    email: "البريد الإلكتروني" 
+    email: "البريد الإلكتروني"
 
   airport:
-    office: "المكتب" 
-    warehouse: "مستودع" 
-    contact: "الاتصال"  
-    email: "البريد الإلكتروني"  
-    phone: "الهاتف" 
-    additional_info: "معلومات إضافية"  
-    google_map: "تظهر في الخريطة"  
+    office: "المكتب"
+    warehouse: "مستودع"
+    contact: "الاتصال"
+    email: "البريد الإلكتروني"
+    phone: "الهاتف"
+    additional_info: "معلومات إضافية"
+    google_map: "تظهر في الخريطة"
 
   news:
-    read_more: "قراءة الأخبار"  
+    read_more: "قراءة الأخبار"
 
   awards:
     read_more: "اقرأ"
 
   footer:
-    collaborators: "التعاون"  
-    newsletter: "النشرة الإخبارية"  
-    newsletter_success: "الاشتراك في النشرة الإخبارية"  
-    contacts: "جهات الاتصال" 
+    collaborators: "التعاون"
+    newsletter: "النشرة الإخبارية"
+    newsletter_success: "الاشتراك في النشرة الإخبارية"
+    contacts: "جهات الاتصال"
     contact:
-      address: "العنوان"  
-      phone: "الهاتف" 
+      address: "العنوان"
+      phone: "الهاتف"
       fax: "Fax"
-      email: "البريد الإلكتروني" 
-      pec: "Pec" 
+      email: "البريد الإلكتروني"
+      pec: "Pec"
 
   form:
     label:
-      first_name: "الاسم"  
-      last_name: "اللقب"  
-      email: "البريد الإلكتروني"  
-      phone: "الهاتف"  
-      message: "الرسالة" 
-      privacy: "أنا أقبل شروط"  
+      first_name: "الاسم"
+      last_name: "اللقب"
+      email: "البريد الإلكتروني"
+      phone: "الهاتف"
+      message: "الرسالة"
+      privacy: "أنا أقبل شروط"
     placeholder:
-      first_name: "الاسم"  
-      last_name: "اللقب"   
-      email: "البريد الإلكتروني" 
-      phone: "الهاتف" 
-      message: "الرسالة" 
-      privacy: "أنا أقبل شروط" 
+      first_name: "الاسم"
+      last_name: "اللقب"
+      email: "البريد الإلكتروني"
+      phone: "الهاتف"
+      message: "الرسالة"
+      privacy: "أنا أقبل شروط"
     submit: "اشترك"
 
   not_found: "عذرا, لم يتم العثور على الصفحة"
 
-  button: 
+  button:
     home: "عادت الصفحة الرئيسية"
 
   info:

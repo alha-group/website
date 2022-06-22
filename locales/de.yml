@@ -24,7 +24,7 @@ de:
   credits:
     button_label: "Entwurf und Entwicklung von Cantiere Agency"
     url: "https://www.cantiere.agency/"
-    title: "Cantiere Creativo Webagentur Florenz"    
+    title: "Cantiere Creativo Webagentur Florenz"
 
   nav:
     menu: "Menü"
@@ -47,6 +47,7 @@ de:
     social:
       twitter: "Twitter"
       linkedin: "Linkedin"
+      instagram: "Instagram"
 
   about:
     milestones: "Meilenstein"
@@ -133,7 +134,7 @@ de:
 
   not_found: "Entschuldigung, Seite nicht gefunden"
 
-  button: 
+  button:
     home: "Zurück zur Startseite"
 
   info:

@@ -21,7 +21,6 @@ fr:
     ar: "العربية"
     fr: "Français"
 
-
   credits:
     button_label: "Design et développement par Cantiere Agency"
     url: "https://www.cantiere.agency/"
@@ -48,6 +47,7 @@ fr:
     social:
       twitter: "twitter"
       linkedin: "linkedin"
+      instagram: "Instagram"
 
   about:
     milestones: "étapes"
@@ -134,7 +134,7 @@ fr:
 
   not_found: "Désolé, page non trouvée"
 
-  button: 
+  button:
     home: "Retour à la page d'accueil"
 
   info:

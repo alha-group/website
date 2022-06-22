@@ -26,7 +26,6 @@ es:
     url: "https://www.cantiere.agency/"
     title: "Agencia web Cantiere Creativo con sede en Florencia"
 
-
   nav:
     menu: "Menu"
     home: "Página de inicio"
@@ -48,6 +47,7 @@ es:
     social:
       twitter: "twitter"
       linkedin: "linkedin"
+      instagram: "Instagram"
 
   about:
     milestones: "Hito"
@@ -78,12 +78,12 @@ es:
 
   network:
     terminal: "Terminales de carga"
-    in_airport: "In Airport"  
-    off_airport: "Off Airport" 
+    in_airport: "In Airport"
+    off_airport: "Off Airport"
 
     label:
-      opening:  "Horario de apertura"
-      address:  "Dirección"
+      opening: "Horario de apertura"
+      address: "Dirección"
       contact: "Contactos"
 
   terminal:
@@ -107,7 +107,7 @@ es:
   footer:
     collaborators: "Colaboraciones"
     newsletter: "Boletín de noticias"
-    newsletter_success:  "Suscrito al boletín de noticias"
+    newsletter_success: "Suscrito al boletín de noticias"
     contacts: "Contactos"
 
     contact:
@@ -134,9 +134,9 @@ es:
       privacy: Acepto los términos de la"
     submit: "Suscríbete"
 
-  not_found:  "Perdón, no se encontró la página"
+  not_found: "Perdón, no se encontró la página"
 
-  button: 
+  button:
     home: "Vuelve a la página de inicio"
 
   info:

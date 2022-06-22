@@ -21,7 +21,6 @@ it:
     ar: "العربية"
     fr: "Français"
 
-
   credits:
     button_label: "Design & Development Cantiere Agency"
     url: "https://www.cantiere.agency/"
@@ -48,6 +47,7 @@ it:
     social:
       twitter: "twitter"
       linkedin: "linkedin"
+      instagram: "Instagram"
 
   about:
     milestones: "Milestone"
@@ -134,7 +134,7 @@ it:
 
   not_found: "Spiacenti, pagina non trovata"
 
-  button: 
+  button:
     home: "Torna alla home"
 
   info:
@@ -148,4 +148,4 @@ it:
     crt: "CRT"
     act: "ACT Plugs"
     cage: "Cage"
-    vault: "Vault"     
+    vault: "Vault"

@@ -46,6 +46,7 @@ zh:
     social:
       twitter: "啭"
       linkedin: "链接网络"
+      instagram: "拍照并上传至社交网络分享"
 
   about:
     milestones: "里程碑"
@@ -132,7 +133,7 @@ zh:
 
   not_found: "对不起，没有找到页面"
 
-  button: 
+  button:
     home: "回来的主页"
 
   info:
