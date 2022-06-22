@@ -134,3 +134,8 @@ section.numerics
                   .gallery-news__carousel__item__text
                     .formatted-content
                       = news.abstract
+                  .news-evidence__block__action.margin--top-2
+                    = link_to "/#{I18n.locale}/#{dato.collection_news_page.slug}/#{news.slug}",
+                      class: "news-evidence__block__link" do
+                      = t("news.read_more")
+                      = i("arrow_dx")
