@@ -122,7 +122,7 @@ de:
       email: "Email"
       phone: "Telefon"
       message: "Nachricht"
-      privacy: "Ich akzeptiere die Bedingungen der"
+      privacy: "Ich gebe meine Zustimmung zur Verarbeitung von meine persönlichen Daten, um Mitteilungen über die von der Alha Group angebotenen Produkte und Dienstleistungen zu erhalten. Ich kann meine Bestellung widerrufen die Zustimmung gemäß Art. 7 GDPR jederzeit auf die in der Datenschutzerklärung beschriebene Art und Weise"
     placeholder:
       first_name: "Name"
       last_name: "Nachname"

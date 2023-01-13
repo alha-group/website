@@ -124,7 +124,7 @@ es:
       email: "Correo electrónico"
       phone: "Teléfono"
       message: "Mensaje"
-      privacy: Acepto los términos de la"
+      privacy: "Doy mi consentimiento para el tratamiento de mis datos personales para recibir comunicaciones sobre productos y servicios ofrecidos por el Grupo Alha. Puedo revocar mi consentimiento de conformidad con el art. 7 GDPR en cualquier momento en la forma descrita en la política de privacidad"
     placeholder:
       first_name: "Nombre"
       last_name: "Apellido"
