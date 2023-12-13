@@ -4,8 +4,8 @@ nav.site-nav
       = link_to "/#{I18n.locale}",
         class: "site-nav__logo",
         title: t('nav.home')
-          = inline_svg("logo.svg", id: 'site_nav_logo', title: 'LOGO', class: "visible--on-desk")
-          = inline_svg("logo_mobile.svg", id: 'site_nav_logo', title: 'LOGO', class: "hidden--on-desk")
+          = image_tag("logo.svg", id: 'site_nav_logo', title: 'Logo Alha group', class: "logo-desk visible--on-desk")
+          = image_tag("logo_mobile.svg", id: 'site_nav_logo_mobile', title: 'Logo Alha group', class: "logo-mobile hidden--on-desk")
 
     .site-nav__right
       ul.site-nav__menu
@@ -22,7 +22,7 @@ nav.site-nav
         = link_to "https://cargoplus.alhagroup.com/ords/f?p=2999:LOGIN_DESKTOP:102998996772977:::::",
           class: "header-plus",
           target: "_blank" do
-          = i("cargoplus")
+          i class="icon-svg--cargoplus icon" aria-hidden="true" data-icon="cargoplus"
         = partial "partials/locale-switcher",
           locals: {block_class: "site-nav__topbar__locale"}
     = link_to "#",

@@ -19,7 +19,7 @@ header class="header--airport"
           = link_to "https://maps.google.com/?q=#{page.location.latitude},#{page.location.longitude}",
             class: "header__hero__heading__link_map" do
             = t("airport.google_map")
-            = i("arrow_dx")
+            i class="icon" aria-hidden="true" data-icon="arrow_dx"
           .header__hero__map.visible--on-desk data-aos="fade-left" data-aos-duration="1800"
             = partial "partials/single_map", locals: {point: networks_point(page).to_json}
       .header__hero__label

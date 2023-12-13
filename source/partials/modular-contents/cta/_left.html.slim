@@ -18,7 +18,7 @@ section class="cta-block#{variant}"
                   class: "button--cta",
                   target: "_blank" do
                   = content.label_link
-                  = i("arrow_dx")
+                  i class="icon--big" aria-hidden="true" data-icon="arrow_dx"
       .flex__item--nospace.flex-desk-6-12
         .cta-block__contain 
           = image_tag(content.attachment.url(format: :pjpeg), class: "visible--on-desk")

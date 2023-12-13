@@ -48,13 +48,15 @@
 .news-evidence__block__link
   color: $blue-l
   +font-size(smallprint)
-  svg
+  display: flex
+  align-items: center
+  i
     +base-transition("bounce", "base")
     +font-size(35px)
     +margin-left(1)
   &:hover
     color: $blue-l
-    svg
+    i
       color: $orange-color
       transform: translateX(15px)
 

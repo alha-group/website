@@ -13,9 +13,11 @@ nav.aside-nav
 
     .aside-nav__topbar
       = link_to "https://cargoplus.alhagroup.com/ords/f?p=2999:LOGIN_DESKTOP:102998996772977:::::",
+        class: "aside-nav__topbar__header-plus",
         title: "Cargo plus",
-        class: "aside-nav__topbar__header-plus" do
-        = i("cargoplus")
+        target: "_blank" do
+        i class="icon" aria-hidden="true" data-icon="cargoplus"
+
       = partial "partials/locale-switcher",
         locals: {block_class: "aside-nav__topbar__locale"}
     .aside-nav__social

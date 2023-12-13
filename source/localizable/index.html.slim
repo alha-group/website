@@ -71,7 +71,7 @@ section.services
           data: { aos: "fade-right", 'aos-duration': "#{1000 + (idx*100)}" } do
           .service__block
             .service__block__image
-              = inline_svg(service.icon.url, size: "130px*130px", no_defs: true)
+              = image_tag(service.icon.url)
             .service__block__title= service.page_title
         - idx += 1
 
@@ -96,7 +96,7 @@ section.advanced_solutions
             .advanced_solution__title= solution.page_title
             .advanced_solution__abstract= solution.presentation
           .advanced_solution__plus
-            = i("plus")
+            i class="icon" aria-hidden="true" data-icon="plus"
 
 section.numerics
   .numerics__content
@@ -127,8 +127,10 @@ section.numerics
                 = image_tag(news.cover.url(fm: :jpg, fit: :crop, h: 750, w: 1024))
               .gallery-news__carousel__item__content
                 .gallery-arrows
-                  button class="slick-prev-gallery" type="button"= i("arrow-left")
-                  button class="slick-next-gallery" type="button"= i("arrow-right")
+                  button class="slick-prev-gallery" type="button"
+                    i class="icon" aria-hidden="true" data-icon="arrow-left"
+                  button class="slick-next-gallery" type="button"
+                    i class="icon" aria-hidden="true" data-icon="arrow-right"
                 .gallery-news__carousel__item__content__inner
                   .gallery-news__carousel__item__title= news.title
                   .gallery-news__carousel__item__text
@@ -138,4 +140,4 @@ section.numerics
                     = link_to "/#{I18n.locale}/#{dato.collection_news_page.slug}/#{news.slug}",
                       class: "news-evidence__block__link" do
                       = t("news.read_more")
-                      = i("arrow_dx")
+                      i class="icon--big--too" aria-hidden="true" data-icon="arrow_dx"

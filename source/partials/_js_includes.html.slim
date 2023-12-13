@@ -4,32 +4,41 @@
 
 = yield_content :page_js
 
-<script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 javascript:
   var _iub = _iub || [];
   _iub.csConfiguration = {
-      "askConsentAtCookiePolicyUpdate":true,
-      "countryDetection":true,
-      "enableLgpd":true,
-      "enableUspr":true,
-      "invalidateConsentWithoutLog":true,
-      "lgpdAppliesGlobally":false,
-      "perPurposeConsent":true,
-      "siteId":#{data.config.iubenda_site_id},
-      "cookiePolicyId":#{I18n.t('iubenda_id')},
-      "lang":"#{I18n.locale}",
-      "banner":{
-        "acceptButtonDisplay":true,
-        "closeButtonRejects":true,
-        "customizeButtonDisplay":true,
-        "explicitWithdrawal":true,
-        "listPurposes":true,
-        "rejectButtonDisplay":true
-      }
-    };
+    "askConsentAtCookiePolicyUpdate":true,
+    "countryDetection":true,
+    "enableFadp":true,
+    "enableLgpd":true,
+    "enableUspr":true,
+    "floatingPreferencesButtonDisplay":"bottom-right",
+    "floatingPreferencesButtonIcon":false,
+    "lgpdAppliesGlobally":false,
+    "perPurposeConsent":true,
+    "siteId":#{data.config.iubenda_site_id},
+    "cookiePolicyId":#{I18n.t('iubenda_id')},
+    "lang":"#{I18n.locale}",
+    "floatingPreferencesButtonCaption":true,
+    "banner":{
+      "acceptButtonDisplay":true,
+      "closeButtonRejects":true,
+      "customizeButtonDisplay":true,
+      "explicitWithdrawal":true,
+      "listPurposes":true,
+      "prependOnBody":true,
+      "rejectButtonDisplay":true,
+      "showPurposesToggles":true
+    }
+  };
 
-<script type='plain/text' class="_iub_cs_activate" data-iub-purposes="4" async src="https://www.googletagmanager.com/gtag/js?id=G-0R0JNQKT6M"></script>
+script type="text/javascript" src="//cs.iubenda.com/sync/#{data.config.iubenda_site_id}.js"
+script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"
+script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async="async"
+
+script type='plain/text' class="_iub_cs_activate" data-iub-purposes="4" async src="https://www.googletagmanager.com/gtag/js?id=G-0R0JNQKT6M"
+
 <script type='plain/text' class="_iub_cs_activate" data-iub-purposes="4">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', 'G-0R0JNQKT6M');
 </script>
+
 

@@ -19,7 +19,7 @@
 .site-nav__logo
   display: block
   height: 61px
-  svg
+  i
     height: 100%
 
 .site-nav__right
@@ -148,8 +148,12 @@
   +horizontal-padding(2.5)
   +vertical-padding(2)
   +font-size(28px)
-  svg
+  i
     width: 120px
+    height: 25px
+  &:hover
+    color: $white-color
+
 
 // Site dropdown
 .site-nav__menu__item__dropdown
@@ -250,6 +254,7 @@
     +horizontal-padding(1)
     +padding-top(2.5833333333)
     +padding-bottom(2.5)
+    transform: translateY(-5px)
 
   .site-nav__topbar__locale__switcher
     +font-size(smallprint)
@@ -261,10 +266,10 @@
   .header-plus
     font-size: inherit
     +horizontal-padding(2)
-    +vertical-padding(2.2)
+    +vertical-padding(2)
     position: relative
     top: -1px
-    svg
+    i
       height: 24px
       width: 110px
 
@@ -278,15 +283,16 @@
   .site-nav__topbar__locale
     +horizontal-padding(2)
     +vertical-padding(2.68)
-    transform: translateY(-1px)
+    transform: translateY(-10px)
 
   .site-nav__topbar__locale__link
     +vertical-padding(1)
 
   .header-plus
     +horizontal-padding(4)
-    +vertical-padding(2.4)
-    svg
+    +padding-top(2.7)
+    +padding-bottom(1.8)
+    i
       height: 24px
       width: 120px
 

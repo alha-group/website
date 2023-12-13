@@ -20,17 +20,20 @@
   +margin-bottom(2)
 
 .certification__action
+  display: inline-block
 
 .certification--link
   +font-size(smallprint)
   color: $blue-l
-  svg
+  display: flex
+  align-items: center
+  i
     +base-transition("bounce", "base")
     +font-size(35px)
     +margin-left(1)
   &:hover
     color: $blue-l
-    svg
+    i
       color: $orange-color
       transform: translateX(15px)
 

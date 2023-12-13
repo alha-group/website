@@ -108,6 +108,7 @@ en:
     newsletter: "Newsletter"
     newsletter_success: "Subscribed at newsletter"
     contacts: "Contacts"
+    preferences: "Edit privacy preferences"
     contact:
       address: "Address"
       phone: "Phone"

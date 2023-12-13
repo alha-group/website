@@ -12,7 +12,7 @@ activate :i18n, langs: langs, mount_at_root: false
 activate :asset_hash
 activate :directory_indexes
 activate :pagination
-activate :inline_svg
+# activate :inline_svg
 activate :dato, token: ENV.fetch('DATO_API_TOKEN'), live_reload: true
 
 webpack_command =

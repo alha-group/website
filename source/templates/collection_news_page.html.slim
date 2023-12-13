@@ -19,7 +19,7 @@ section.news-evidence
             = link_to "/#{I18n.locale}/#{page.slug}/#{evidence_news.slug}",
               class: "news-evidence__block__link" do
               = t("news.read_more")
-              = i("arrow_dx")
+              i class="icon--big--too" aria-hidden="true" data-icon="arrow_dx"
 
 - if news_pages.length > 1
 section.news

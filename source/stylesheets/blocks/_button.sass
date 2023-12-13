@@ -30,12 +30,14 @@
   @include button-variant($orange-color, $orange-color)
   color: $white-color
   +padding-right(3)
-  svg
+  display: flex
+  align-items: center
+  i
     +base-transition("bounce", "base")
     +font-size(gamma)
     +margin-left(1)
   &:hover
-    svg
+    i
       transform: translateX(15px)
 
 //

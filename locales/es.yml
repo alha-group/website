@@ -109,7 +109,7 @@ es:
     newsletter: "Boletín de noticias"
     newsletter_success: "Suscrito al boletín de noticias"
     contacts: "Contactos"
-
+    preferences: "Editar preferencias de privacidad"
     contact:
       address: "Dirección"
       phone: "Teléfono"

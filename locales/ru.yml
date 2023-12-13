@@ -108,6 +108,7 @@ ru:
     newsletter: "Информационный бюллетень"
     newsletter_success: "Подписаться на рассылку новостей"
     contacts: "Контакты"
+    preferences: "Изменить настройки конфиденциальности"
     contact:
       address: "Адрес"
       phone: "Телефон"

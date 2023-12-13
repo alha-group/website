@@ -108,6 +108,7 @@ ar:
     newsletter: "النشرة الإخبارية"
     newsletter_success: "الاشتراك في النشرة الإخبارية"
     contacts: "جهات الاتصال"
+    preferences: "تحرير تفضيلات الخصوصية"
     contact:
       address: "العنوان"
       phone: "الهاتف"

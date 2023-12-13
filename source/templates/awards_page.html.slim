@@ -20,7 +20,7 @@
                   = link_to "/#{I18n.locale}/#{page.slug}/#{modular.slug}",
                     class: "news-evidence__block__link" do
                     = t("awards.read_more")
-                    = i("arrow_dx")                
+                    i class="icon--big--too" aria-hidden="true" data-icon="arrow_dx"
 
   section.news
     .wrap
@@ -30,14 +30,12 @@
             .grid__item.lap-4-12
               .news-block
                 = link_to "/#{I18n.locale}/#{page.slug}/#{modular.slug}",
-                  class: "news-evidence__block__link" do              
+                  class: "news-evidence__block__link" do
                   .news-block__image
                     = image_tag(modular.attachment.url(fm: :jpg, fit: :crop, w: 800, h: 450))
                   .award-block__content
                     = link_to "/#{I18n.locale}/#{page.slug}/#{modular.slug}",
-                      class: "news-evidence__block__link" do                    
+                      class: "news-evidence__block__link" do
                       .news-block__content__title
                         = modular.title
                     .award-block__content__text
-                      / .margin--top-2
-                      /   = modular.text
