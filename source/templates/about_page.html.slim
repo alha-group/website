@@ -19,28 +19,4 @@ section.milestones
             .milestone-carousel__content__title= milestone.title
             .milestone-carousel__content__image
               = image_tag(milestone.attachment.url(fm: :jpg, fit: :crop, h: 450, w: 650, sat: "-100"))
-
-section.teams id="teams"
-  .wrap
-    .grid--center
-      .grid__item.lap-9-12.desk-7-12
-        .teams__title
-          = page.team_title
-        .teams__abstract
-          .formatted-content
-            = page.team_abstract
-    .grid
-      - dato.team_labels.each do |l|
-        .grid__item
-          .teams__title= l.label
-        - teams.select { |t| t.label == l}.each do |team|
-          .grid__item.tab-6-12.lap-4-12.desk-3-12
-            .team__block
-              - if team.avatar.present?
-                .team__image
-                  = image_tag(team.avatar.url(fm: :jpg, fit: :crop, h: 350, w: 350))
-              .team__inner
-                .team__inner__name= team.full_name
-                .team__inner__role= team.role
-
 = partial "partials/join-us"
