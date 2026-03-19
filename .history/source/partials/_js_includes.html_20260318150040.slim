@@ -1,6 +1,11 @@
 = javascript_include_tag  "application"
 = yield_content :page_js
 
+- if data.config.google_maps_key
+  - if development?
+    <script async src="//maps.googleapis.com/maps/api/js?key=#{data.config.google_maps_key}&callback=initMap"></script>
+  - else
+    <script type='plain/text' class="_iub_cs_activate" data-iub-purposes="3" async src="//maps.googleapis.com/maps/api/js?key=#{data.config.google_maps_key}&callback=initMap"></script>
 
 - if development?
   script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-0R0JNQKT6M"

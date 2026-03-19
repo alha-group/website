@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yarn install:*)",
+      "Bash(npx webpack:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

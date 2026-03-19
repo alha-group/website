@@ -1,55 +1,19 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const autoprefixer = require("autoprefixer");
+const glob = require('glob');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
-var svgoConfig = {
-  multipass: true,
-  pretty: true,
-  plugins: [
-    {cleanupAttrs: true},
-    {cleanupEnableBackground: true},
-    {cleanupIDs: true},
-    {cleanupListOfValues: true},
-    {cleanupNumericValues: true},
-    {collapseGroups: true},
-    {convertColors: true},
-    {convertPathData: true},
-    {convertShapeToPath: true},
-    {convertStyleToAttrs: true},
-    {convertTransform: true},
-    {mergePaths: true},
-    {moveElemsAttrsToGroup: true},
-    {moveGroupAttrsToElems: true},
-    //{removeAttrs: {attrs: '(fill|stroke)'}}, // if you don't want any color from the original SVG - see also the removeStyleElement option
-    {removeComments: true},
-    {removeDesc: false}, // for usability reasons
-    {removeDimensions: true},
-    {removeDoctype: true},
-    {removeEditorsNSData: true},
-    {removeEmptyAttrs: true},
-    {removeEmptyContainers: true},
-    {removeEmptyText: true},
-    {removeHiddenElems: true},
-    {removeMetadata: true},
-    {removeNonInheritableGroupAttrs: true},
-    {removeRasterImages: true}, // bitmap! you shall not pass!
-    {removeScriptElement: true}, // shoo, javascript!
-    //{removeStyleElement: true}, // if you really really want to remove ANY <style> tag from the original SVG, watch out as it could be too much disruptive - see also the removeAttrs option
-    {removeTitle: false}, // for usability reasons
-    {removeUnknownsAndDefaults: true},
-    {removeUnusedNS: true},
-    {removeUselessDefs: true},
-    {removeUselessStrokeAndFill: true},
-    {removeViewBox: false},
-    {removeXMLProcInst: true},
-    {sortAttrs: true}
-  ]
-};
-
-const extractSass = new ExtractTextPlugin({
-  filename: "stylesheets/[name].css"
-});
+// Custom Sass importer to resolve glob patterns like 'functions/**/*'
+function globImporter(url, prev) {
+  if (!url.includes('*')) return null;
+  const basePath = prev === 'stdin' ? path.join(__dirname, 'source/stylesheets') : path.dirname(prev);
+  const pattern = url.includes('.') ? url : url + '.+(sass|scss)';
+  const files = glob.sync(pattern, { cwd: basePath, nodir: true });
+  if (files.length === 0) return null;
+  const contents = files.map(f => `@import '${path.join(basePath, f)}';`).join('\n');
+  return { contents };
+}
 
 module.exports = {
   entry: {
@@ -61,10 +25,10 @@ module.exports = {
     modules: [
       path.join(__dirname, 'source/stylesheets'),
       path.join(__dirname, 'source/javascripts'),
-      "node_modules"
+      'node_modules'
     ],
     alias: {
-      modernizr$: path.resolve(__dirname, ".modernizrrc.js")
+      modernizr$: path.resolve(__dirname, '.modernizrrc.js')
     }
   },
   output: {
@@ -74,7 +38,7 @@ module.exports = {
   module: {
     rules: [
       {
-        loader: "webpack-modernizr-loader",
+        loader: 'webpack-modernizr-loader',
         test: /\.modernizrrc\.js$/
       },
       {
@@ -88,24 +52,29 @@ module.exports = {
         }
       },
       {
-        enforce: 'pre',
-        test: /\.s[ac]ss/,
-        use: 'import-glob-loader'
-      },
-      {
         test: /\.s[ac]ss$/,
-        use: extractSass.extract({
-          use: [
-            { loader: "css-loader" },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [autoprefixer()]
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { url: false } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [autoprefixer()]
               }
-            },
-            { loader: "sass-loader" }
-          ]
-        })
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              api: 'legacy',
+              sassOptions: {
+                importer: [globImporter],
+                includePaths: [path.join(__dirname, 'source/stylesheets'), 'node_modules']
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.svg$/,
@@ -114,24 +83,65 @@ module.exports = {
             loader: 'svg-sprite-loader',
             options: {
               extract: true,
-              spriteFilename: "fonts/svg/sprite.svg"
+              spriteFilename: 'fonts/svg/sprite.svg'
             }
           },
           {
             loader: 'svgo-loader',
-            options: svgoConfig
+            options: {
+              multipass: true,
+              plugins: [
+                'cleanupAttrs',
+                'cleanupEnableBackground',
+                'cleanupIds',
+                'cleanupListOfValues',
+                'cleanupNumericValues',
+                'collapseGroups',
+                'convertColors',
+                'convertPathData',
+                'convertShapeToPath',
+                'convertStyleToAttrs',
+                'convertTransform',
+                'mergePaths',
+                'moveElemsAttrsToGroup',
+                'moveGroupAttrsToElems',
+                'removeComments',
+                { name: 'removeDesc', params: { removeAny: false } },
+                'removeDimensions',
+                'removeDoctype',
+                'removeEditorsNSData',
+                'removeEmptyAttrs',
+                'removeEmptyContainers',
+                'removeEmptyText',
+                'removeHiddenElems',
+                'removeMetadata',
+                'removeNonInheritableGroupAttrs',
+                'removeRasterImages',
+                'removeScriptElement',
+                { name: 'removeTitle', params: { removeAny: false } },
+                'removeUnknownsAndDefaults',
+                'removeUnusedNS',
+                'removeUselessDefs',
+                'removeUselessStrokeAndFill',
+                { name: 'removeViewBox', active: false },
+                'removeXMLProcInst',
+                'sortAttrs'
+              ]
+            }
           }
         ]
       }
     ]
   },
   plugins: [
-    extractSass,
+    new MiniCssExtractPlugin({
+      filename: 'stylesheets/[name].css'
+    }),
     new SpriteLoaderPlugin({
       plainSprite: true,
       spriteAttrs: {
         id: 'svg-sprite-inline'
       }
-    }) // render plain sprite without styles and usages in extract mode, as we want it
+    })
   ]
 };

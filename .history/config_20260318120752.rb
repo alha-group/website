@@ -14,18 +14,18 @@ activate :directory_indexes
 activate :pagination
 activate :dato, token: ENV.fetch('DATO_API_TOKEN'), live_reload: true
 
-webpack_command =
-  if build?
-    "npm run build"
-  else
-    "npm run dev"
-  end
+# webpack_command =
+#   if build?
+#     "npm run build"
+#   else
+#     "npm run dev"
+#   end
 
-activate :external_pipeline,
-  name: :webpack,
-  command: webpack_command,
-  source: ".tmp/dist",
-  latency: 1
+# activate :external_pipeline,
+#   name: :webpack,
+#   command: webpack_command,
+#   source: ".tmp/dist",
+#   latency: 1
 
 configure :build do
   activate :minify_html do |html|
@@ -38,8 +38,6 @@ end
 
 configure :development do
   activate :livereload
-  # Serve webpack assets from .tmp/dist
-  set :static_cache_control, [:public, :max_age => 0]
 end
 
 require "lib/menu_helpers"

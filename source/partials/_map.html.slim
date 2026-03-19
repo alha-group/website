@@ -1,63 +1,30 @@
+link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""
+script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""
+
 #map class="map__google" style="width: 100%; height: 640px; background: #ececec; position: relative; z-index: 1;"
 
 javascript:
-  var map_style = [
-    {
-        "featureType": "all",
-        "elementType": "all",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
+  (function() {
+    var points = #{points};
+    var map = L.map('map', {
+      scrollWheelZoom: false,
+      dragging: window.innerWidth > 480
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 20
+    }).addTo(map);
+
+    var bounds = L.latLngBounds();
+
+    for (var i = 0; i < points.length; i++) {
+      var elem = points[i];
+      var marker = L.marker([elem.lat, elem.long]).addTo(map);
+      marker.bindPopup("<div class='marker__info'><div class='marker__info__heading'><a href='" + elem.path + "'>" + elem.name + "</a></div><div class='marker__info__body'>" + elem.address + "</div></div>");
+      bounds.extend([elem.lat, elem.long]);
     }
-  ];
 
-  var points = #{points}
-  function initMap() {
-    var isDraggable = jQuery(document).width() > 480 ? true : false;
-    var container = document.getElementById('map');
-    var bounds = new google.maps.LatLngBounds();
-    var map = new google.maps.Map(container, {
-      zoom: 14,
-      mapTypeControl: false,
-      zoomControl: true,
-      zoomControlOptions: {
-        position: google.maps.ControlPosition.LEFT_CENTER
-      },
-      scaleControl: false,
-      streetViewControl: false,
-      scrollwheel: false,
-      draggable: isDraggable,
-      styles: map_style
-    });
-
-    var image = new google.maps.MarkerImage(
-      window.location.origin+"#{image_path("map-marker.png")}",
-      new google.maps.Size(30, 30),
-      new google.maps.Point(0, 0),
-      new google.maps.Point(0, 0),
-      new google.maps.Size(30, 30)
-    );
-
-    jQuery.each(points, function(i, elem) {
-      var position = new google.maps.LatLng(elem.lat, elem.long);
-      var infowindow = new google.maps.InfoWindow({
-        content: "<div class='marker__info'><div class='marker__info__heading'><a href='"+elem.path+"'>"+elem.name+"<a/></div><div class='marker__info__body'>"+elem.address+"</div></div>"
-      });
-
-      var marker = new google.maps.Marker({
-        position: position,
-        map: map,
-        icon: image,
-        title: "Alha Group"
-      });
-
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
-      bounds.extend(marker.position);
-    });
-
-    map.fitBounds(bounds);
-  }
+    map.fitBounds(bounds, { padding: [30, 30] });
+  })();

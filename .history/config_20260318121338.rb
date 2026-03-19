@@ -38,8 +38,6 @@ end
 
 configure :development do
   activate :livereload
-  # Serve webpack assets from .tmp/dist
-  set :static_cache_control, [:public, :max_age => 0]
 end
 
 require "lib/menu_helpers"
